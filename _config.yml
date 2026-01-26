@@ -5,7 +5,18 @@ title: "Portfolio | Lydia Cortez"
 description: "Portfolio | Lydia Cortez"
 
 # A brief blurb about yourself
-content: I am a Data Operations Manager focused on translating complex system logic, edge cases, and program data into scalable, decision-ready reporting. At Alliance for Community Empowerment, I own data governance, reporting architecture, and operational data workflows across nine programs, enabling leadership to make informed operational and strategic decisions. My work centers on developing and maintaining custom SQL reporting layers on vendor-managed platforms using ODBC connections, including complex queries, views, and derived tables that model system logic and operational workflows. I partner closely with program teams and leadership to define reporting and system requirements and lead EHR configuration and workflow improvements grounded in day-to-day operational realities. I primarily work in Oracle SQL and have supported platforms built on React, native applications, Docker, microservices, and PostgreSQL. I joined ACE during the final phase of a large-scale EHR migration and quickly assumed ownership of system logic validation, reporting accuracy, and post-migration stabilization. As the organization’s first Data Manager, I introduced structured planning, Agile-style execution, and continuous improvement practices to bring clarity and reliability to data operations. Beyond technical delivery, I am a people-focused leader who values clear communication, strong collaboration, and thoughtful execution. I build trust within teams, support skill development, and align technical systems with organizational goals. Outside of work, I spend time exploring Los Angeles, discovering new food spots, attending live music shows, and walking my Manchester Terrier, Aries.
+content: 
+  I am a Data Operations Manager focused on translating complex system logic, edge cases, and program data into scalable, decision-ready reporting. At Alliance for Community Empowerment, I own data governance, reporting architecture, and operational data workflows across nine programs, enabling leadership to make informed operational and strategic decisions.
+
+  My work centers on developing and maintaining custom SQL reporting layers on vendor-managed platforms using ODBC connections, including complex queries, views, and derived tables that model system logic and operational workflows. I partner closely with program teams and leadership to define reporting and system requirements and lead EHR configuration and workflow improvements grounded in day-to-day operational realities.
+
+  I primarily work in Oracle SQL and have supported platforms built on React, native applications, Docker, microservices, and PostgreSQL. I joined ACE during the final phase of a large-scale EHR migration and quickly assumed ownership of system logic validation, reporting accuracy, and post-migration stabilization.
+
+  As the organization’s first Data Manager, I introduced structured planning, Agile-style execution, and continuous improvement practices to bring clarity and reliability to data operations.
+
+  Beyond technical delivery, I am a people-focused leader who values clear communication, strong collaboration, and thoughtful execution. I build trust within teams, support skill development, and align technical systems with organizational goals.
+
+  Outside of work, I spend time exploring Los Angeles, discovering new food spots, attending live music shows, and walking my Manchester Terrier, Aries.
 
 # Add your social links
 social:
@@ -16,10 +27,9 @@ social:
 
 # General settings
 markdown: kramdown
-sharing_image: AriesLydia.JPG
+sharing_image: "aries-lydia.jpg"
 
 #### LAYOUT OPTIONS #####
-
 # Half layout
 half_side: right
 

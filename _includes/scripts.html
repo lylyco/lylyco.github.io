@@ -2,3 +2,20 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ \'/assets/js/jquery-1.11.2.min.js\' | prepend: site.baseurl }}"><\/script>')</script>
 <script src="{{ '/assets/js/scripts.js' | prepend: site.baseurl }}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const email = "cortez0715@gmail.com";
+  const btn = document.getElementById("copyEmail");
+  const confirm = document.getElementById("copyConfirm");
+
+  if (btn) {
+    btn.addEventListener("click", function () {
+      navigator.clipboard.writeText(email).then(() => {
+        confirm.style.display = "inline";
+        setTimeout(() => confirm.style.display = "none", 1500);
+      });
+    });
+  }
+});
+</script>

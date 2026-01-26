@@ -27,9 +27,7 @@ content: |
       thinking and creativity.
     </p>
   </div>
-
-  <br><br>
-  📧 <span id="copyEmail" style="cursor:pointer; color:#9a3864; font-weight:600; text-decoration:underline;">
+  📧<span id="copyEmail" style="cursor:pointer; color:#9a3864; font-weight:600; text-decoration:underline;">
     cortez0715@gmail.com
   </span>
   <span id="copyConfirm" style="display:none; font-size:0.9em; color:#9a3864; margin-left:6px;">Copied!</span>

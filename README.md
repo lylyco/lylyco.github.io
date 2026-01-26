@@ -49,32 +49,6 @@ The main settings can be found inside the `_config.yml` file:
   * **url**: destination for the link
 * **google_analytics** Google Analytics key (optional)
 
----
-
-![Uni Jekyll Theme](layout--half.jpg)
-
-## Half Layout
-
-* **half_side:** which side of the page your content is on [left or right]
-
----
-
-![Uni Jekyll Theme](layout--full.jpg)
-
-## Full layout
-
-* **full_text_position:** where on the page the text will appear [left, center, or right]
-
----
-
-![Uni Jekyll Theme](layout--card.jpg)
-
-## Card layout
-
-The background image and other style customizations can be changed in `assets/scss/layouts/_card.scss`
-
----
-
 ## Further Customizations
 
 ### Change Layout

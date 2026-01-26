@@ -9,14 +9,17 @@ content: I am a Data Operations Manager focused on translating complex system lo
 
 # Add your social links
 social:
-  - platform: github
-    url: "https://github.com/lylyco"
+  - platform: Email
+    url: "mailto:cortez0715@gmail.com"
   - platform: linkedin
     url: "https://www.linkedin.com/in/lydia-cortez"
+  - platform: github
+    url: "https://github.com/lylyco"
+  
 
 # General settings
 markdown: kramdown
-sharing_image: share.jpg
+sharing_image: half-sm.jpg
 
 #### LAYOUT OPTIONS #####
 # Half layout

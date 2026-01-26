@@ -9,11 +9,10 @@ content: |
   I am currently a Data Operations Manager focused on translating complex system logic, edge cases, and program data into scalable, decision-ready reporting. At Alliance for Community Empowerment, I own data governance, reporting architecture, and operational data workflows across nine programs, enabling leadership to make informed operational and strategic decisions. My work centers on developing and maintaining custom SQL reporting layers on vendor-managed platforms using ODBC connections, including complex queries, views, and derived tables that model system logic and operational workflows. I partner closely with program teams and leadership to define reporting and system requirements and lead EHR configuration and workflow improvements grounded in day-to-day operational realities.
 
   <br><br>
-  📧 <span id="copyEmail" style="cursor:pointer; color:#ff4fa3; font-weight:600; text-decoration:underline;">
+  📧 <span id="copyEmail" style="cursor:pointer; color:#FF7FBC; font-weight:600; text-decoration:underline;">
     cortez0715@gmail.com
   </span>
-  <span id="copyConfirm" style="display:none; font-size:0.9em; color:#ff4fa3; margin-left:6px;">Copied!</span>
-
+  <span id="copyConfirm" style="display:none; font-size:0.9em; color:#FF7FBC; margin-left:6px;">Copied!</span>
 
 
 # Add your social links

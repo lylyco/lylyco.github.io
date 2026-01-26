@@ -1,7 +1,6 @@
 # Uni – A one-page Jekyll theme
 
-[View Half Demo](http://brianmaierjr.com/uni/) | [View Full Demo](http://brianmaierjr.com/uni/full) | [View Card Demo](http://brianmaierjr.com/uni/card)
-
+[View Half Demo](http://brianmaierjr.com/uni/) 
 ## Features
 
 * Minimal, One-Page Design
@@ -53,16 +52,8 @@ The main settings can be found inside the `_config.yml` file:
 
 ### Change Layout
 
-By default, Uni is set to use the `half` layout. To change the `layout` change the front matter in `index.html`
+By default, Uni is set to use the `half` layout. 
 
-For example, the layout below is using the `full` layout. The other options available are `half` and `card`.
-
-```
----
-layout: full
-title: Uni – A one-page Jekyll theme
----
-```
 
 ### Styling
 

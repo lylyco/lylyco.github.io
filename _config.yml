@@ -16,6 +16,7 @@ social:
 
 # General settings
 markdown: kramdown
+sharing_image: share.jpg
 
 #### LAYOUT OPTIONS #####
 # Half layout

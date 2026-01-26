@@ -1,12 +1,32 @@
 # Name
-title: "Portfolio | Lydia Cortez"
+title: "Hi, I'm Lydia!"
 
 # Description of your website. This is used for social sharing.
 description: "Portfolio | Lydia Cortez"
 
 # A brief blurb about yourself
 content: |
-  I am currently a Data Operations Manager focused on translating complex system logic, edge cases, and program data into scalable, decision-ready reporting. At Alliance for Community Empowerment, I own data governance, reporting architecture, and operational data workflows across nine programs, enabling leadership to make informed operational and strategic decisions. My work centers on developing and maintaining custom SQL reporting layers on vendor-managed platforms using ODBC connections, including complex queries, views, and derived tables that model system logic and operational workflows. I partner closely with program teams and leadership to define reporting and system requirements and lead EHR configuration and workflow improvements grounded in day-to-day operational realities.
+  <div class="bio">
+    <p>
+      I am a Data Operations Manager with <span class="hl">10+ years</span> of experience across ecommerce, SaaS,
+      transactional platforms, and complex technical systems. My strength sits at the intersection of
+      <span class="hl">systems</span>, <span class="hl">data</span>, and <span class="hl">operations</span>, where I turn messy,
+      high impact problems into reliable, scalable processes.
+    </p>
+
+    <p>
+      I ramp quickly on unfamiliar systems, trace difficult root causes, and spot edge cases others miss that
+      materially influence strategy and outcomes. Operational workflows, data integrity, system reliability, and
+      cross team execution are core to my work. I care deeply about quality, thoughtful planning, and building
+      solutions that last.
+    </p>
+
+    <p>
+      I am both technical and people focused. I build trust through accountability and consistency, and I am
+      naturally curious, solution oriented, and energized by complex challenges that require both critical
+      thinking and creativity.
+    </p>
+  </div>
 
   <br><br>
   📧 <span id="copyEmail" style="cursor:pointer; color:#9a3864; font-weight:600; text-decoration:underline;">

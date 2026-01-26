@@ -5,7 +5,7 @@ title: "Portfolio | Lydia Cortez"
 description: "Portfolio | Lydia Cortez"
 
 # A brief blurb about yourself
-content: 
+content: |
   I am a Data Operations Manager focused on translating complex system logic, edge cases, and program data into scalable, decision-ready reporting. At Alliance for Community Empowerment, I own data governance, reporting architecture, and operational data workflows across nine programs, enabling leadership to make informed operational and strategic decisions.
 
   My work centers on developing and maintaining custom SQL reporting layers on vendor-managed platforms using ODBC connections, including complex queries, views, and derived tables that model system logic and operational workflows. I partner closely with program teams and leadership to define reporting and system requirements and lead EHR configuration and workflow improvements grounded in day-to-day operational realities.
@@ -27,7 +27,6 @@ social:
 
 # General settings
 markdown: kramdown
-sharing_image: "aries-lydia.jpg"
 
 #### LAYOUT OPTIONS #####
 # Half layout

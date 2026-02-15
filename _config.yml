@@ -1,5 +1,5 @@
 # Name
-title: "Hi, I'm Lydia!"
+title: "Portfolio | Lydia Cortez"
 
 # Description of your website. This is used for social sharing.
 description: "Portfolio | Lydia Cortez"
@@ -7,6 +7,10 @@ description: "Portfolio | Lydia Cortez"
 # A brief blurb about yourself
 content: |
   <div class="bio">
+    <p>
+    <strong>Hi, I am Lydia!</strong>
+   </p> 
+
     <p>
       Systems Strategy and Technical Operations Leader with over eight years of experience leading platform strategy and technical operations across ecommerce, SaaS, EHR, and financial services. I 
       design and operationalize scalable systems that eliminate failure points, reduce customer friction, and improve cost efficiency and execution speed.
@@ -19,8 +23,8 @@ content: |
     </p>
 
     <p>
-      Equally technical and people focused, I build trust through accountability and consistency. Curious and solution driven, I apply critical thinking and creativity to design 
-      systems that work for everyone and support sustainable growth.
+      Equally technical and operationally aligned, I build trust through clear ownership, disciplined execution, and consistent delivery. I lead cross functional collaboration with accountability and 
+      critical thinking, ensuring systems are adopted, maintained, and built for long term scale.
     </p>
   </div>
 

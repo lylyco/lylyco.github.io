@@ -3,15 +3,16 @@
 
 {% include head.html %}
 
-<<body class="half">
-
+<body class="half">
   <main>
     <div class="half--{{ site.half_side }} half__content">
-    <a class="nav-work" href="{{ '/work/' | relative_url }}">Work</a>
+      <a class="nav-work" href="{{ '/work/' | relative_url }}">Work</a>
+
       {{ content }}
       {% include social.html %}
     </div>
     <div class="half__image"></div>
   </main>
-
 </body>
+
+</html>

@@ -30,6 +30,10 @@ body {
   }
 }
 
+.bio p {
+  margin: 0 0 1.5rem;
+}
+
 // Text Selection Styling
 ::-moz-selection {
   background: $primary-color;

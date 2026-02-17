@@ -12,7 +12,9 @@ social:
 description: "Lydia Cortez"
 
 # A brief blurb about yourself
-content: |
+content: | 
+  {% include social.html %}
+  
   <div class="bio">
     <p>About Me👋🏽</p>
 
@@ -23,6 +25,13 @@ content: |
 
     <p>In my current nonprofit leadership role, I advance data governance frameworks, enhance program management workflows, and stabilize data infrastructure to improve reporting integrity, accountability, and long term system resilience.</p>
 
+  </div>
+
+   <div class="email-row">
+    📧<span id="copyEmail" style="cursor:pointer; color:#9a3864; font-weight:600; text-decoration:underline;">
+    cortez0715@gmail.com
+    </span>
+    <span id="copyConfirm" style="display:none; font-size:0.9em; color:#9a3864; margin-left:6px;">Copied!</span>
   </div>
 
 # General settings

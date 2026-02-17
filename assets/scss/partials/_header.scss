@@ -1,0 +1,12 @@
+.nav-work {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.nav-work:hover {
+  text-decoration: underline;
+}

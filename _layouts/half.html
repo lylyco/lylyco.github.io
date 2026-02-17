@@ -20,6 +20,35 @@
 
       <div class="half__image"></div>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const emailEl = document.getElementById("copyEmail");
+        const confirmEl = document.getElementById("copyConfirm");
+        if (!emailEl || !confirmEl) return;
+
+        const email = emailEl.textContent.trim();
+
+        emailEl.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(email);
+          } catch (e) {
+            const ta = document.createElement("textarea");
+            ta.value = email;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+          }
+
+          confirmEl.style.display = "inline";
+          setTimeout(() => {
+            confirmEl.style.display = "none";
+          }, 1200);
+        });
+      });
+    </script>
+
   </body>
 </html>
 

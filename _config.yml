@@ -7,21 +7,17 @@ description: "Portfolio | Lydia Cortez"
 # A brief blurb about yourself
 content: |
   <div class="bio">
-    <p>
-      Hi, I am Lydia 👋🏽. Systems Strategy and Technical Operations Leader with over eight years of experience leading platform strategy and technical operations across Ecommerce, SaaS, EHR, and financial services. I 
-      design and operationalize scalable systems that eliminate failure points, reduce customer friction, and improve cost efficiency and execution speed.
-    </p>
+    <p>Hi, I am Lydia 👋🏽</p>
 
-    <p>
-      I specialize in translating business objectives into technical execution, converting complex requirements into scalable specifications and exposing structural blind spots before they become 
-      operational risk. I design workflows and automations that enable data driven decision making and measurable performance gains. I adapt quickly in new environments and prioritize durable system 
-      design over temporary fixes.
-    </p>
+    <p>I architect and lead business systems and technical operations that strengthen governance, reduce operational risk, and scale critical workflows.</p>
 
-    <p>
-      Equally technical and operationally aligned, I build trust through clear ownership, disciplined execution, and consistent delivery. I lead cross functional collaboration with accountability and 
-      critical thinking, ensuring systems are adopted, maintained, and built for long term scale.
-    </p>
+    <p>Over the past decade, I have owned strategy and execution across eCommerce, CRM, ERP, billing, payments, compliance, logistics, and healthcare integrations. I have improved commission and reconciliation systems by resolving complex
+    data failures, addressing edge cases, and partnering closely with engineering to implement durable solutions. My work has strengthened revenue integrity, reporting accuracy, and operational reliability across fulfillment and financial workflows.</p> 
+
+    <p>In my current nonprofit leadership role, I advance data governance frameworks, enhance program management workflows, and stabilize data infrastructure to improve reporting integrity, accountability, and long term system resilience.</p>
+
+    <p>I work at the intersection of technical depth and operational rigor, aligning product, systems, and operations around clear ownership and disciplined execution so solutions are adopted, sustained, and scalable.</p>
+
   </div>
 
   <div class="email-row">

@@ -1,13 +1,16 @@
-.nav-work {
-  position: fixed;
-  top: 40px;
-  right: 60px;
-  left: auto;
-  font-weight: 700;
-  text-align: right;
-  z-index: 9999;
+a.nav-work {
+  position: fixed !important;
+  top: 40px !important;
+  right: 60px !important;
+  left: auto !important;
+  bottom: auto !important;
+
+  display: inline-block !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  z-index: 99999 !important;
 }
 
-.nav-work:hover {
-  text-decoration: underline;
+a.nav-work:hover {
+  text-decoration: underline !important;
 }

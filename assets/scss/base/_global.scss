@@ -30,8 +30,8 @@ body {
   }
 }
 
-.bio p {
-  margin: 0 0 1.5rem;
+.bio p:last-child {
+  margin-bottom: 0;
 }
 
 // Text Selection Styling

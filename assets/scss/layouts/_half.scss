@@ -29,7 +29,7 @@
   }
 
   .socialLinks__link {
-    @include button--outline();
+    @include button--outline;
   }
 
   &__content {
@@ -49,6 +49,6 @@
     order: 1;
     background-size: cover;
     background-position: center;
-  @include responsivebackground("half-sm.jpg", "half-md.jpg", "half-lg.jpg");
+    @include responsivebackground("half-sm.jpg", "half-md.jpg", "half-lg.jpg");
   }
 }

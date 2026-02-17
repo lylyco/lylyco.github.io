@@ -2,30 +2,30 @@
 BUTTON DEFAULTS
 ***************/
 
-@mixin button--outline($btn-color: $primary-color, $btn-font-color: white) {
-  background-color: transparent;
+@mixin button--outline($btn-color: #dc0093, $btn-font-color: #ffffff) {
+  background-color: $btn-color;
   display: inline-block;
   position: relative;
   font-family: $sans-serif;
   text-decoration: none;
-  color: $btn-color;
+  color: $btn-font-color;
   font-size: 0.9em;
   line-height: 1.2em;
-  font-weight: 300;
-  padding: 0.5em 1.5em;
+  font-weight: 400;
+  padding: 0.6em 1.8em;
   border: 1px solid $btn-color;
-  border-radius: 4px;
+  border-radius: 999px;
   cursor: pointer;
   margin-bottom: 0.5em;
-  transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 
-  // hovering on the btn
   &:hover,
   &:focus {
-    color: $btn-font-color;
+    background-color: darken($btn-color, 10%);
+    border-color: darken($btn-color, 10%);
+    color: #ffffff;
     text-decoration: none;
-    background-color: $btn-color;
-  } // end hover
+  }
 } // end .button
 
 .socialLinks__link--work {

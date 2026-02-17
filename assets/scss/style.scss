@@ -5,6 +5,10 @@
 @import "base/typography";
 @import "base/global";
 
+// Partials
+@import "partials/header";
+@import "partials/footer";
+
 // Modules
 @import "modules/buttons";
 // @import "modules/forms";

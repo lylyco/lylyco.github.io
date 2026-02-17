@@ -1,11 +1,13 @@
+.half__content {
+  position: relative !important;
+}
+
 a.nav-work {
-  position: fixed !important;
+  position: absolute !important;
   top: 40px !important;
   right: 60px !important;
   left: auto !important;
-  bottom: auto !important;
 
-  display: inline-block !important;
   font-weight: 800 !important;
   text-decoration: none !important;
   z-index: 99999 !important;

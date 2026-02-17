@@ -3,12 +3,12 @@
 
 {% include head.html %}
 
-<body class="half">
-
-  <a class="nav-work" href="{{ '/work/' | relative_url }}">Work</a>
+<<body class="half">
 
   <main>
     <div class="half--{{ site.half_side }} half__content">
+      <a class="nav-work" href="{{ '/work/' | relative_url }}">Work</a>
+
       {{ content }}
       {% include social.html %}
     </div>
@@ -16,3 +16,4 @@
   </main>
 
 </body>
+>

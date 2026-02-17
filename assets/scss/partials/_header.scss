@@ -1,21 +1,17 @@
 .half__content {
-  position: relative !important;
+  position: relative;
 }
 
-.half__content { position: relative !important; }
-
-a.nav-work{
-  position: absolute !important;
-  top: 34px !important;
-  right: 48px !important;   /* smaller number moves it further right */
-  font-weight: 900 !important;
-  text-decoration: none !important;
-  z-index: 99999 !important;
+a.nav-work {
+  position: absolute;
+  top: 24px;      /* adjust if needed */
+  right: 16px;    /* smaller number = further right */
+  font-weight: 900;
+  text-decoration: none;
+  z-index: 99999;
 }
-
-a.nav-work:hover{ text-decoration: underline !important; }
-
 
 a.nav-work:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
+

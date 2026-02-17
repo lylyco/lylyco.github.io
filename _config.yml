@@ -20,7 +20,7 @@ content: |
       <span id="copyEmail" style="cursor:pointer; color:#f5007c; font-weight:600; text-decoration:underline;">
         cortez0715@gmail.com
       </span>
-      <span id="copyConfirm" style="display:none; font-size:0.9em; color:#ff11b0; margin-left:6px;">
+      <span id="copyConfirm" style="display:none; font-size:0.9em; color:#a1006c; margin-left:6px;">
         Copied!
       </span>
     </p>
@@ -38,7 +38,7 @@ content: |
       I have improved commission and reconciliation systems by resolving complex data failures,
       addressing edge cases, and partnering closely with engineering to implement durable solutions.
       My work has strengthened revenue integrity, reporting accuracy, and operational reliability
-      across fulfillment and financial workflows.;
+      across fulfillment and financial workflows.
     </p>
 
     <p>

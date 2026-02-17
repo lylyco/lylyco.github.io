@@ -13,15 +13,6 @@
     <meta content="{{ site.url }}" property="og:url">
     <meta content="{{ site.url }}/assets/img/{{ site.sharing_image }}" property="og:image">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.social.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.social.twitter }}">
-    <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:url" content="{{ site.url }}">
-    <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ site.sharing_image }}">
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

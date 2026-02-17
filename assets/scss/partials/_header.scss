@@ -2,16 +2,19 @@
   position: relative !important;
 }
 
-a.nav-work {
-  position: absolute !important;
-  top: 40px !important;
-  right: 60px !important;
-  left: auto !important;
+.half__content { position: relative !important; }
 
-  font-weight: 800 !important;
+a.nav-work{
+  position: absolute !important;
+  top: 34px !important;
+  right: 48px !important;   /* smaller number moves it further right */
+  font-weight: 900 !important;
   text-decoration: none !important;
   z-index: 99999 !important;
 }
+
+a.nav-work:hover{ text-decoration: underline !important; }
+
 
 a.nav-work:hover {
   text-decoration: underline !important;

@@ -1164,6 +1164,3 @@ CONTACT PAGE STYLING
     float: right;
     margin-right: 0; } }
 
-.half__content{position:relative}
-a.nav-work{position:absolute;top:24px;right:16px;font-weight:900;text-decoration:none;z-index:99999}
-a.nav-work:hover{text-decoration:underline}

@@ -17,7 +17,7 @@ content: |
   <p> </p>
     <p>
       📧
-      <span id="copyEmail" style="cursor:pointer; color:#ff73d1; font-weight:600; text-decoration:underline;">
+      <span id="copyEmail" style="cursor:pointer; color:#ff73ba; font-weight:600; text-decoration:underline;">
         cortez0715@gmail.com
       </span>
       <span id="copyConfirm" style="display:none; font-size:0.9em; color:#ff11b0; margin-left:6px;">

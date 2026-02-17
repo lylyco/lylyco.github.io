@@ -8,22 +8,29 @@
         class="half--{{ site.half_side }} half__content"
         style="position: relative !important;"
       >
-      <a
-        href="{{ '/work/' | relative_url }}"
-        style="
-          position: absolute !important;
-          top: 24px !important;
-          right: 56px !important;   /* increase to move left */
-          font-weight: 900 !important;
-          text-decoration: underline !important;
-          z-index: 99999 !important;
-        "
-      >
-        Work
-      </a>
+        <a
+          href="{{ '/work/' | relative_url }}"
+          style="
+            position: absolute !important;
+            top: 24px !important;
+            right: 56px !important;
+            font-weight: 900 !important;
+            text-decoration: underline !important;
+            z-index: 99999 !important;
+          "
+        >
+          Work
+        </a>
+
+        <header class="site-header" style="margin-top: 8px;">
+          <h1 class="site-title" style="margin-bottom: 8px;">
+            {{ site.title }}
+          </h1>
+
+          {% include social.html %}
+        </header>
 
         {{ content }}
-        {% include social.html %}
       </div>
 
       <div class="half__image"></div>

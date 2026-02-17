@@ -2,15 +2,12 @@
 <html class="no-js" lang="en">
   {% include head.html %}
 
-
   <body class="half">
     <main>
       <div
         class="half--{{ site.half_side }} half__content"
         style="position: relative !important;"
       >
-        {{ content }}
-        {% include social.html %}
         <a
           href="{{ '/work/' | relative_url }}"
           style="
@@ -25,10 +22,14 @@
           Work
         </a>
 
+        {{ content }}
+        {% include social.html %}
+
       </div>
 
       <div class="half__image"></div>
     </main>
   </body>
 </html>
+
 

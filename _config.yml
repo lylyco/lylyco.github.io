@@ -1,6 +1,13 @@
 # Name
 title: "Lydia Cortez"
 
+# Add your social links
+social:
+  - platform: LinkedIn
+    url: "https://www.linkedin.com/in/lydia-cortez"
+  - platform: GitHub
+    url: "https://github.com/lylyco"
+
 # Description of your website. This is used for social sharing.
 description: "Lydia Cortez"
 
@@ -18,20 +25,12 @@ content: |
 
   </div>
 
-  <div class="email-row">
+   <div class="email-row">
     📧<span id="copyEmail" style="cursor:pointer; color:#9a3864; font-weight:600; text-decoration:underline;">
     cortez0715@gmail.com
     </span>
     <span id="copyConfirm" style="display:none; font-size:0.9em; color:#9a3864; margin-left:6px;">Copied!</span>
   </div>
-
-# Add your social links
-social:
-  - platform: LinkedIn
-    url: "https://www.linkedin.com/in/lydia-cortez"
-  - platform: GitHub
-    url: "https://github.com/lylyco"
-  
 
 # General settings
 markdown: kramdown
@@ -39,7 +38,7 @@ sharing_image: half-sm.jpg
 
 #### LAYOUT OPTIONS #####
 # Half layout
-half_side: right
+half_side: center
 
 # Full layout
-full_text_position: right # left, right or center
+full_text_position: center # left, right or center

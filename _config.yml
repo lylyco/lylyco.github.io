@@ -17,10 +17,10 @@ content: |
   <p> </p>
     <p>
       📧
-      <span id="copyEmail" style="cursor:pointer; color:#f500a4; font-weight:600; text-decoration:underline;">
+      <span id="copyEmail" style="cursor:pointer; color:#ff5dc9; font-weight:600; text-decoration:underline;">
         cortez0715@gmail.com
       </span>
-      <span id="copyConfirm" style="display:none; font-size:0.9em; color:#ff29b8; margin-left:6px;">
+      <span id="copyConfirm" style="display:none; font-size:0.9em; color:#ff11b0; margin-left:6px;">
         Copied!
       </span>
     </p>

@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+  {% include head.html %}
 
-{% include head.html %}
+  <body class="half">
+    <main>
+      <div
+        class="half--{{ site.half_side }} half__content"
+        style="position: relative !important;"
+      >
+        <a
+          href="{{ '/work/' | relative_url }}"
+          class="nav-work"
+          style="
+            position: absolute !important;
+            top: 24px !important;
+            right: 16px !important;
+            left: auto !important;
+            font-weight: 900 !important;
+            text-decoration: none !important;
+            z-index: 99999 !important;
+          "
+        >
+          Work
+        </a>
 
-<body class="half">
-  <main>
-    <div class="half--{{ site.half_side }} half__content">
-      <a class="nav-work" href="{{ '/work/' | relative_url }}">Work</a>
+        {{ content }}
+        {% include social.html %}
+      </div>
 
-      {{ content }}
-      {% include social.html %}
-    </div>
-    <div class="half__image"></div>
-  </main>
-</body>
-
+      <div class="half__image"></div>
+    </main>
+  </body>
 </html>

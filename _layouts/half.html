@@ -12,7 +12,7 @@
           href="{{ '/work/' | relative_url }}"
           style="
             position: absolute !important;
-            top: 36px !important;
+            top: 42px !important;
             right: 56px !important;
             font-weight: 900 !important;
             text-decoration: underline !important;
@@ -22,20 +22,20 @@
           Work
         </a>
 
-
         <h1 class="pageTitle">{{ site.title }}</h1>
 
-        {% include social.html %}
-
         <div class="pageContent">
-          {{ content }}
+          {{ site.content }}
         </div>
+
+        {% include social.html %}
       </div>
 
       <div class="half__image"></div>
     </main>
   </body>
 </html>
+
 
 
 

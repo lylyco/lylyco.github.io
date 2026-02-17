@@ -25,9 +25,8 @@ content: |
       </span>
     </p>
   </div>
-
   <div class="bio">
-    About Me 👋🏽
+    <p>About Me 👋🏽</p>
     <p>
       I architect and lead business systems and technical operations that strengthen governance,
       reduce operational risk, and scale critical workflows.

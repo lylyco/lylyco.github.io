@@ -1,5 +1,12 @@
 <div class="socialLinks">
+
+  <a class="socialLinks__link socialLinks__link--work" href="/my-work/">My Work</a>
+
   {% for link in site.social %}
-      <a class="socialLinks__link socialLInk__{{ link.platform }}" href="{{ link.url }}" target="_blank">{{ link.platform }}</a>
+      <a class="socialLinks__link socialLInk__{{ link.platform }}" href="{{ link.url }}" target="_blank">
+        {{ link.platform }}
+      </a>
   {% endfor %}
+
 </div>
+

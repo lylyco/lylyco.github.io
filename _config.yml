@@ -13,8 +13,6 @@ description: "Lydia Cortez"
 
 # A brief blurb about yourself
 content: | 
-  {% include social.html %}
-  
   <div class="bio">
     <p>About Me👋🏽</p>
 

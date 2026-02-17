@@ -2,10 +2,15 @@
 layout: card
 title: Uni - A simple, one page Jekyll theme
 ---
-  {% if site.title %}
+{% if site.title %}
   <h1 class="pageTitle">{{ site.title }}</h1>
-  {% endif %}
+{% endif %}
 
-  {% if site.content %}
-  <p class="pageContent">{{ site.content }}</p>
-  {% endif %}
+{% include social.html %}
+
+{% if site.content %}
+  <div class="pageContent">
+    {{ site.content }}
+  </div>
+{% endif %}
+

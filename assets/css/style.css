@@ -451,41 +451,41 @@ dd {
 .email-row {
   margin-bottom: 1.5rem;
 }
+/* =============================
+   Center content + 1in border
+   ============================= */
 
-/* 4 inch black border overlay (doesn't change layout) */
+/* .25 inch black border overlay (does not change layout size) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  border: 4in solid #000;
+  border: .25in solid #000;
   pointer-events: none;
   z-index: 9999;
 }
 
-/* Center main content used by this theme */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pageTitle,
-.content,
-.postTitle,
-.post .meta,
-.footer,
-.footer-links ul {
+/* Center the content side */
+.half__content {
   text-align: center;
 }
 
-/* Center nav on desktop if present */
-@media only screen and (min-width: 800px) {
-  .header .container {
-    text-align: center;
+/* On desktop, the columns become flex containers, so this centers children */
+@media screen and (min-width: 768px) {
+  .half__content {
+    align-items: center;
   }
-  .header h1,
-  .header nav {
-    float: none;
-    display: inline-block;
-    vertical-align: middle;
-  }
+}
+
+/* Center the social buttons row */
+.socialLinks {
+  justify-content: center;
+}
+
+/* Keep centered text from getting too wide */
+.half__content > * {
+  max-width: 42rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

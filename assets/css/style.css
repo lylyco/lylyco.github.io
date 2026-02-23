@@ -9,7 +9,7 @@
 
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 95%;
   box-sizing: border-box;
 }
 
@@ -23,7 +23,7 @@ body {
   font-family: Open Sans, Helvetica, Lato, sans-serif;
   font-weight: 350;
   line-height: 1.75;
-  font-size: 55%;
+  font-size: 65%;
   color: #2c282c;
   background-color: #fffefc;
   overflow-x: hidden;

@@ -322,7 +322,7 @@ dd {
   .half main {
     flex-direction: row;
     min-height: 100vh;
-    width: 100%;
+    width: 95%;
     align-items: stretch;
   }
 }

@@ -17,6 +17,7 @@ description: "Lydia Cortez"
 # A brief blurb about yourself
 content: |
   <div class="email-row">
+  <p> </p>
     <p>
       📧
       <span id="copyEmail" style="cursor:pointer; color:#928287; font-weight:580; text-decoration:underline;">

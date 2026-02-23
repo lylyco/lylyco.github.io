@@ -1164,12 +1164,12 @@ CONTACT PAGE STYLING
     float: right;
     margin-right: 0; } }
 
-/* 1 inch black border overlay (doesn't change layout) */
+/* 4 inch black border overlay (doesn't change layout) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  border: 1in solid #000;
+  border: 4in solid #000;
   pointer-events: none;
   z-index: 9999;
 }

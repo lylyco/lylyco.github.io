@@ -23,7 +23,7 @@ body {
   font-family: Open Sans, Helvetica, Lato, sans-serif;
   font-weight: 350;
   line-height: 1.75;
-  font-size: 65%;
+  font-size: 50%;
   color: #2c282c;
   background-color: #fffefc;
   overflow-x: hidden;
@@ -455,12 +455,12 @@ dd {
    Center content + 1in border
    ============================= */
 
-/* .25 inch black border overlay (does not change layout size) */
+/* .15 inch black border overlay (does not change layout size) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  border: .25in solid #000;
+  border: .15in solid #928287;
   pointer-events: none;
   z-index: 9999;
 }

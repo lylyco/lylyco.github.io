@@ -467,19 +467,19 @@ body::before {
 
 /* Center the content side */
 .half__content {
-  text-align: right;
+  text-align: left;
 }
 
 /* On desktop, the columns become flex containers, so this centers children */
 @media screen and (min-width: 768px) {
   .half__content {
-    align-items: right;
+    align-items: left;
   }
 }
 
 /* Center the social buttons row */
 .socialLinks {
-  justify-content: right;
+  justify-content: left;
 }
 
 /* Keep centered text from getting too wide */

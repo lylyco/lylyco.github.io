@@ -1164,3 +1164,47 @@ CONTACT PAGE STYLING
     float: right;
     margin-right: 0; } }
 
+/* =============================
+   Center everything + 1in border
+   ============================= */
+
+/* 1 inch black border that does NOT affect layout size */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  border: 1in solid #000;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Center the content column text and its children */
+.half__content {
+  text-align: center;
+}
+
+/* Center the flex items inside the content column (desktop rules already make it flex) */
+@media screen and (min-width: 768px) {
+  .half__content {
+    align-items: center;
+  }
+}
+
+/* Center the buttons row */
+.socialLinks {
+  justify-content: center;
+}
+
+/* Keep paragraphs/lists centered but not insanely wide */
+.half__content > * {
+  max-width: 42rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* If you want the whole page (including image column) vertically centered on mobile too */
+.half main {
+  min-height: 100vh;
+  justify-content: center;
+}

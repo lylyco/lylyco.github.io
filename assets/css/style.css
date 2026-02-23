@@ -452,40 +452,40 @@ dd {
   margin-bottom: 1.5rem;
 }
 /* =============================
-   Center content + 1in border
+   Center content + .10in border
    ============================= */
 
-/* .15 inch black border overlay (does not change layout size) */
+/* .10 inch black border overlay (does not change layout size) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  border: .15in solid #2c282c;
+  border: .10in solid #2c282c;
   pointer-events: none;
   z-index: 9999;
 }
 
 /* Center the content side */
 .half__content {
-  text-align: center;
+  text-align: right;
 }
 
 /* On desktop, the columns become flex containers, so this centers children */
 @media screen and (min-width: 768px) {
   .half__content {
-    align-items: center;
+    align-items: right;
   }
 }
 
 /* Center the social buttons row */
 .socialLinks {
-  justify-content: center;
+  justify-content: right;
 }
 
 /* Keep centered text from getting too wide */
 .half__content > * {
   max-width: 42rem;
-  width: 120%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

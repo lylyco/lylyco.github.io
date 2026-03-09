@@ -28,6 +28,10 @@
     }
   }
 
+  .socialLinks {
+    margin-bottom: 16px;
+  }
+
   .socialLinks__link {
     @include button--outline;
   }
@@ -44,15 +48,15 @@
     }
   }
 
-&__image {
-  min-height: 35vh; // smaller image on phones
-  order: 1;
-  background-size: cover;
-  background-position: center;
-  @include responsivebackground("half-sm.jpg", "half-md.jpg", "half-lg.jpg");
+  &__image {
+    min-height: 35vh; // smaller image on phones
+    order: 1;
+    background-size: cover;
+    background-position: center;
+    @include responsivebackground("half-sm.jpg", "half-md.jpg", "half-lg.jpg");
 
-  @include min(md) {
-    min-height: 100vh; // keep full height on desktop
-  }
-} 
+    @include min(md) {
+      min-height: 100vh; // keep full height on desktop
+    }
+  } 
 }

@@ -2,7 +2,7 @@
 BUTTON DEFAULTS
 ***************/
 
-@mixin button--outline($btn-color: #dc0093, $btn-font-color: #ffffff) {
+@mixin button--outline($btn-color: #FFD5D5, $btn-font-color: #ffffff) {
   background-color: $btn-color;
   display: inline-block;
   position: relative;

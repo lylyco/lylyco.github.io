@@ -29,22 +29,21 @@ content: |
   </div>
   <div class="bio">
       <p>
-      👋🏽 I lead business systems and technical operations that strengthen governance,
-      reduce operational risk, and scale critical workflows.
+      👋🏽 For more than a decade, I have worked at the intersection of technical systems and business operations, translating 
+      complex infrastructure into practical, reliable outcomes. My experience spans eCommerce, CRM, EHR, payments, billing, 
+      compliance, and subscription revenue models, with a consistent focus on aligning systems, data, and operational strategy.
       </p>
               
     <p>
-      Over the past decade, I have driven both strategy and execution across eCommerce, CRM, EHR, compliance, 
-      logistics, payments, billing, and subscription based revenue models. I have strengthened commission and 
-      reconciliation processes by diagnosing complex data breakdowns, resolving edge cases, and collaborating 
-      with engineering to deliver durable, long term fixes.
-    </p>
-
+      I have a strong track record of diagnosing complex data and system failures, resolving edge cases, and partnering closely 
+      with engineering to deliver durable, scalable solutions. Through this work, I have developed deep expertise in multi-role 
+      user environments, commission structures and reconciliation workflows, data governance, and maintaining core platform stability.
+    </p>  
+       
     <p>
-      Currently I am a Data Manager for a nonprofit organization where I introduced structured planning, Agile 
-      style execution, and continuous improvement practices. I advance data governance frameworks and stabilize 
-      core data infrastructure to improve reporting accuracy, protect data integrity, strengthen program accountability, 
-      and ensure system reliability.
+      In my current role as Data Manager at a nonprofit, I lead data infrastructure initiatives that strengthen reporting accuracy, safeguard 
+      data integrity, and improve program accountability. I manage and mentor two Data Support Specialists, guiding sprint planning and delivery 
+      through Agile workflows to ensure consistent execution and continuous improvement.
     </p>
   </div>
 
@@ -58,3 +57,6 @@ half_side: right
 
 # Full layout
 full_text_position: right # left, right or center
+
+
+Here is the enhanced version:

@@ -2,7 +2,7 @@
 BUTTON DEFAULTS
 ***************/
 
-@mixin button--outline($btn-color: #FFD5D5, $btn-font-color: #6b5d61) {
+@mixin button--outline($btn-color: #FFD5D5, $btn-font-color: #6b5d61, $btn-border-color: #ff7070) {
   background-color: $btn-color;
   display: inline-block;
   position: relative;
@@ -13,7 +13,7 @@ BUTTON DEFAULTS
   line-height: 1.2em;
   font-weight: 505;
   padding: 0.6em 1.8em;
-  border: 1px solid $btn-color;
+  border: 1px solid $btn-border-color;
   border-radius: 999px;
   cursor: pointer;
   margin-bottom: 0.5em;
@@ -22,7 +22,7 @@ BUTTON DEFAULTS
   &:hover,
   &:focus {
     background-color: darken($btn-color, 10%);
-    border-color: darken($btn-color, 10%);
+    border-color: #ff7070;
     color: #6b5d61;
     text-decoration: none;
   }

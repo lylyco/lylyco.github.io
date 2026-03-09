@@ -36,15 +36,14 @@ body {
 
 // Text Selection Styling
 ::-moz-selection {
-  background: $primary-color;
-  color: white;
+  background: #ffdddd;
+  color: black;
 }
 
 ::selection {
-  background: $primary-color;
-  color: white;
+  background: #ffdddd;
+  color: black;
 }
-
 /***************
 MEDIA
 ***************/

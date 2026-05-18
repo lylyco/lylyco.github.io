@@ -18,8 +18,8 @@
     --mauve: #928287;
     --black: #111111;
     --text-body: #222222;
-    --border: rgba(146,130,135,0.18);
-    --border-strong: rgba(146,130,135,0.35);
+    --border:#a4a542;
+    --border-strong: #a4a542;
   }
 
   html { scroll-behavior: smooth; }
@@ -273,7 +273,7 @@ function copyEmail(btn) {
   navigator.clipboard.writeText('cortez0715@gmail.com');
   const span = btn.querySelector('span');
   span.textContent = 'Copied!';
-  btn.style.background = '#5cb85c';
+  btn.style.background = '#404012';
   setTimeout(() => {
     span.textContent = 'cortez0715@gmail.com';
     btn.style.background = '';

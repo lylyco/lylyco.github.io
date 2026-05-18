@@ -11,7 +11,7 @@
 
   :root {
     --bg: #FCFCFA;
-    --bg-alt: #f7f5f3;
+    --bg-alt: #fdfdfd;
     --bg-card: #FFFFFF;
     --red: #ff7070;
     --red-light: #ff9090;
@@ -264,10 +264,22 @@
   <h2>Let's build something<br><em>together.</em></h2>
   <p>Open to roles in technical operations, product management, systems strategy, and business operations. Let's talk.</p>
   <div class="contact-links">
-    <a href="mailto:cortez0715@gmail.com" class="btn-primary">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      cortez0715@gmail.com
-    </a>
+    <button class="btn-primary" onclick="copyEmail(this)">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+  <span>cortez0715@gmail.com</span>
+</button>
+<script>
+function copyEmail(btn) {
+  navigator.clipboard.writeText('cortez0715@gmail.com');
+  const span = btn.querySelector('span');
+  span.textContent = 'Copied!';
+  btn.style.background = '#5cb85c';
+  setTimeout(() => {
+    span.textContent = 'cortez0715@gmail.com';
+    btn.style.background = '';
+  }, 2000);
+}
+</script>
     <a href="https://www.linkedin.com/in/lydia-cortez/" target="_blank" class="btn-ghost">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       LinkedIn

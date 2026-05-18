@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lydia Cortez — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F7F4F0;
+    --bg-alt: #EDE9E4;
+    --bg-card: #FFFFFF;
+    --red: #ff7070;
+    --red-light: #ff9090;
+    --mauve: #928287;
+    --black: #111111;
+    --text-body: #222222;
+    --border: rgba(146,130,135,0.18);
+    --border-strong: rgba(146,130,135,0.35);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-body);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247,244,240,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--red); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.78rem; font-weight: 500; color: var(--mauve); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+
+  .hero { min-height: 90vh; display: flex; align-items: center; padding: 5rem 3rem; position: relative; overflow: hidden; background: var(--bg); }
+  .hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,112,112,0.07) 0%, transparent 68%); pointer-events: none; }
+  .hero-content { max-width: 700px; position: relative; z-index: 1; }
+
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1.5rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--mauve); }
+
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.08; color: var(--black); margin-bottom: 0.3rem; }
+  .hero h1 em { font-style: italic; color: var(--red); }
+
+  .hero-subtitle { font-size: 1.05rem; color: var(--mauve); max-width: 520px; margin: 1.5rem 0 2.5rem; line-height: 1.8; font-weight: 300; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2.5rem; }
+  .tag { padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 100px; font-size: 0.75rem; font-weight: 500; color: var(--mauve); letter-spacing: 0.04em; background: var(--bg-card); }
+  .hero-cta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+  .btn-primary { padding: 13px 28px; background: var(--red); color: #fff; border: none; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transition: background 0.2s, transform 0.15s; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+  .btn-primary:hover { background: var(--red-light); transform: translateY(-1px); }
+
+  .btn-ghost { padding: 13px 22px; background: transparent; color: var(--mauve); border: 1px solid var(--border-strong); border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: border-color 0.2s, color 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
+  .metrics { background: var(--bg-alt); padding: 4rem 3rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .metric-num { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: var(--red); line-height: 1; margin-bottom: 0.5rem; }
+  .metric-label { font-size: 0.8rem; color: var(--mauve); line-height: 1.55; }
+
+  section { padding: 6rem 3rem; }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mauve); display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+  .section-label::after { content: ''; width: 32px; height: 1px; background: var(--mauve); }
+
+  h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; color: var(--black); margin-bottom: 1rem; }
+  h2 em { font-style: italic; color: var(--red); }
+
+  .about { background: var(--bg-alt); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .about-text p { font-size: 0.97rem; color: var(--text-body); margin-bottom: 1.2rem; line-height: 1.85; font-weight: 300; }
+  .about-text p strong { color: var(--black); font-weight: 600; }
+
+  .strengths { display: flex; flex-direction: column; gap: 1.2rem; }
+  .strength-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .strength-icon { width: 36px; height: 36px; background: rgba(255,112,112,0.08); border: 1px solid rgba(255,112,112,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem; margin-top: 2px; }
+  .strength-body h4 { font-size: 0.88rem; font-weight: 600; color: var(--black); margin-bottom: 3px; }
+  .strength-body p { font-size: 0.82rem; color: var(--mauve); line-height: 1.6; }
+
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+  .expertise-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; transition: border-color 0.25s, transform 0.2s; cursor: default; }
+  .expertise-card:hover { border-color: rgba(255,112,112,0.35); transform: translateY(-3px); }
+  .expertise-card .card-icon { font-size: 1.4rem; margin-bottom: 1rem; }
+  .expertise-card h3 { font-size: 0.92rem; font-weight: 600; color: var(--red); margin-bottom: 0.6rem; }
+  .expertise-card p { font-size: 0.82rem; color: var(--mauve); line-height: 1.65; }
+
+  .timeline { background: var(--bg-alt); }
+  .timeline-track { margin-top: 3rem; position: relative; padding-left: 2rem; }
+  .timeline-track::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: var(--border-strong); }
+  .timeline-item { position: relative; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+  .timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .timeline-dot { position: absolute; left: -2rem; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--red); border: 2px solid var(--bg-alt); }
+  .timeline-meta { font-size: 0.73rem; color: var(--red); font-weight: 600; letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase; }
+  .timeline-item h3 { font-size: 1.05rem; font-weight: 600; color: var(--black); margin-bottom: 0.2rem; }
+  .timeline-item .company { font-size: 0.85rem; color: var(--mauve); margin-bottom: 0.8rem; }
+  .timeline-item p { font-size: 0.85rem; color: var(--text-body); line-height: 1.75; font-weight: 300; }
+  .timeline-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
+  .pill { padding: 4px 10px; background: rgba(146,130,135,0.1); border: 1px solid var(--border); border-radius: 100px; font-size: 0.72rem; color: var(--mauve); font-weight: 500; }
+
+  .contact { background: var(--bg); text-align: center; }
+  .contact p { color: var(--mauve); max-width: 440px; margin: 1rem auto 2.5rem; font-weight: 300; line-height: 1.8; }
+  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+  footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--mauve); background: var(--bg-alt); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-content > * { animation: fadeUp 0.65s ease both; }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.2s; }
+  .hero-subtitle { animation-delay: 0.35s; }
+  .hero-tags { animation-delay: 0.45s; }
+  .hero-cta { animation-delay: 0.55s; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Lydia Cortez</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Available for new opportunities</div>
+    <h1>Turning complex<br>systems into <em>results.</em></h1>
+    <p class="hero-subtitle">A decade of experience bridging technical operations, product strategy, and business outcomes — across eCommerce, healthcare, CRM, and compliance platforms.</p>
+    <div class="hero-tags">
+      <span class="tag">Technical Operations</span>
+      <span class="tag">Product Strategy</span>
+      <span class="tag">Systems Design</span>
+      <span class="tag">Business Operations</span>
+      <span class="tag">Agile Delivery</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Get in Touch
+      </a>
+      <a href="https://www.linkedin.com/in/lydia-cortez/" target="_blank" class="btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/lylyco" target="_blank" class="btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="metrics">
+  <div class="metrics-grid">
+    <div><div class="metric-num">10+</div><div class="metric-label">Years driving<br>systems operations</div></div>
+    <div><div class="metric-num">6+</div><div class="metric-label">Industry verticals<br>mastered</div></div>
+    <div><div class="metric-num">2</div><div class="metric-label">Specialists mentored<br>and led</div></div>
+    <div><div class="metric-num">∞</div><div class="metric-label">Systems improved,<br>users served</div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="section-label">About</div>
+  <h2>Operator. Strategist.<br><em>Builder.</em></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I've spent over a decade <strong>inside complex systems</strong> — understanding them from root to surface, fixing what's broken, and designing what's next. My background spans eCommerce, CRM, EHR, compliance, subscription revenue, and payments.</p>
+      <p>What sets me apart isn't just technical depth. It's the ability to <strong>connect systems thinking to business strategy</strong> — and hold the end user at the center of every decision I make.</p>
+      <p>I'm ready to step into roles where I can own product direction, drive operational transformation, or shape the systems that power a business. I'm not just a data manager — <strong>I'm a force multiplier.</strong></p>
+    </div>
+    <div class="strengths">
+      <div class="strength-item">
+        <div class="strength-icon">⚙️</div>
+        <div class="strength-body"><h4>Systems thinking at scale</h4><p>I understand platforms end-to-end — from data models to user flows — and identify where leverage lives.</p></div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-icon">🎯</div>
+        <div class="strength-body"><h4>Business-first orientation</h4><p>Every system I touch is measured by measurable business outcomes — not just uptime or clean data.</p></div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-icon">👥</div>
+        <div class="strength-body"><h4>Multi-role user expertise</h4><p>Deep experience designing for environments with layered user roles, permissions, and workflows.</p></div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-icon">🚀</div>
+        <div class="strength-body"><h4>Agile delivery leadership</h4><p>Sprint planning, backlog ownership, team mentorship — I run execution with discipline and clarity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" style="background: var(--bg); padding: 6rem 3rem;">
+  <div class="section-label">Expertise</div>
+  <h2>Where I create<br><em>leverage.</em></h2>
+  <div class="expertise-grid">
+    <div class="expertise-card"><div class="card-icon">🏗️</div><h3>Technical & Systems Operations</h3><p>Full lifecycle ownership of complex platforms — from requirements to rollout. I identify failure points others miss and design systems that scale.</p></div>
+    <div class="expertise-card"><div class="card-icon">📦</div><h3>Product Ownership</h3><p>Business requirements, stakeholder alignment, sprint planning, and delivery. I translate strategy into executed product roadmaps.</p></div>
+    <div class="expertise-card"><div class="card-icon">📐</div><h3>Business Strategy</h3><p>I analyze operational inefficiencies, identify growth opportunities, and build the business case for transformation — across verticals.</p></div>
+    <div class="expertise-card"><div class="card-icon">🔗</div><h3>Platform Integration</h3><p>EHR, CRM, eCommerce, payment, and compliance platforms — I've operated in all of them and know how to make them work together.</p></div>
+    <div class="expertise-card"><div class="card-icon">📊</div><h3>Data & Reporting Infrastructure</h3><p>Designing reporting pipelines, ensuring data integrity, and building the visibility that teams need to make good decisions quickly.</p></div>
+    <div class="expertise-card"><div class="card-icon">👁️</div><h3>End-User Experience</h3><p>Users aren't a footnote. I embed UX thinking into every operational and product decision — across complex, multi-role environments.</p></div>
+  </div>
+</section>
+
+<section class="timeline" id="experience">
+  <div class="section-label">Experience</div>
+  <h2>A decade of<br><em>impact.</em></h2>
+  <div class="timeline-track">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">2022 – Present</div>
+      <h3>Data Operations Manager</h3>
+      <div class="company">Nonprofit Organization</div>
+      <p>Lead full lifecycle of business requirements for the organization's EHR system. Designed and maintain reporting infrastructure supporting program accountability across teams. Manage and mentor two Data Support Specialists through Agile sprint workflows.</p>
+      <div class="timeline-pills">
+        <span class="pill">EHR Systems</span>
+        <span class="pill">Agile / Scrum</span>
+        <span class="pill">Reporting Infrastructure</span>
+        <span class="pill">Team Leadership</span>
+        <span class="pill">Data Integrity</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">Prior Experience</div>
+      <h3>Technical Systems Operations Leader</h3>
+      <div class="company">Multiple Organizations</div>
+      <p>Led systems operations across eCommerce, CRM, compliance, subscription revenue, and payment platforms. Consistently aligned systems, data, and processes with measurable business outcomes while keeping the end-user experience central.</p>
+      <div class="timeline-pills">
+        <span class="pill">eCommerce</span>
+        <span class="pill">CRM</span>
+        <span class="pill">Payment Platforms</span>
+        <span class="pill">Compliance</span>
+        <span class="pill">Subscription Revenue</span>
+        <span class="pill">Process Optimization</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-label" style="justify-content: center;">Contact</div>
+  <h2>Let's build something<br><em>together.</em></h2>
+  <p>Open to roles in technical operations, product management, systems strategy, and business operations. Let's talk.</p>
+  <div class="contact-links">
+    <a href="mailto:cortez0715@gmail.com" class="btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      cortez0715@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/lydia-cortez/" target="_blank" class="btn-ghost">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/lylyco" target="_blank" class="btn-ghost">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      GitHub
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div style="font-family: 'DM Serif Display', serif; color: var(--red); font-size: 1rem;">Lydia Cortez</div>
+  <div>Technical Operations · Product Strategy · Systems</div>
+</footer>
+
+</body>
+</html>

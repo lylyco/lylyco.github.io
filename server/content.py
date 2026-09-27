@@ -5,9 +5,9 @@ PROFILE = {
     "headline_lead": "Clarity",
     "headline_emphasis": "from Complexity",
     "summary": (
-        "A decade adapting fast across eCommerce, payment processing, WMS, EHR, CRM, "
-        "and compliance platforms. I turn ambiguous problems into clear plans that "
-        "bridge business strategy and technical execution."
+        "Ten years working with eCommerce, payments, EHR, CRM, and compliance "
+        "systems. I build for real users, fix root causes instead of symptoms, "
+        "and I'm the one who finds the edge case before it finds you."
     ),
     "tags": [
         "Problem Solving",
@@ -43,10 +43,6 @@ ABOUT = {
         "The common thread is depth. I learn systems inside and out, view them through every "
         "user's eyes, and catch the edge cases others miss. When something breaks, I find the "
         "root cause and either fix it or recommend how to prevent it from recurring.",
-        "I'm looking for business systems, product, or operations roles where I can own how "
-        "systems serve the people who use them.",
-        "Outside of work, you'll usually find me trying a new food spot, at a live show, or "
-        "walking my Manchester Terrier, Aries, around Los Angeles.",
     ],
     
     "strengths": [

@@ -33,15 +33,22 @@ ABOUT = {
     "title_emphasis": "Builder.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "I've spent over a decade inside complex systems, understanding them from root "
-        "to surface, fixing what's broken, and designing what's next. My background spans "
-        "eCommerce, CRM, EHR, compliance, subscription revenue, and payments.",
-        "What sets me apart isn't just knowing how systems work. It's the ability to connect systems "
-        "thinking to business strategy and hold the end user at the center of every decision I make.",
-        "I'm ready to step into roles where I can own product direction, drive operational "
-        "transformation, or shape the systems that power a business. I'm not just a data ops "
-        "manager. I'm a force multiplier.",
+        "For more than ten years, I've worked where business operations meet the systems "
+        "that run them: eCommerce, CRM, EHR, subscription revenue, payments, and compliance.",
+        "I started on the business side of eCommerce, then moved into QA on ONEHOPE's custom "
+        "React and microservices commerce platform. Most recently, as Data Operations Manager "
+        "at the Alliance for Community Empowerment, I owned business requirements and reporting "
+        "infrastructure for a nonprofit EHR platform, managed two Data Support Specialists, "
+        "and guided Agile delivery.",
+        "The common thread is depth. I learn systems inside and out, view them through every "
+        "user's eyes, and catch the edge cases others miss. When something breaks, I find the "
+        "root cause and either fix it or recommend how to prevent it from recurring.",
+        "I'm looking for business systems, product, or operations roles where I can own how "
+        "systems serve the people who use them.",
+        "Outside of work, you'll usually find me trying a new food spot, at a live show, or "
+        "walking my Manchester Terrier, Aries, around Los Angeles.",
     ],
+    
     "strengths": [
         {"icon": "gear", "title": "Systems thinking at scale",
          "body": "I understand platforms end to end, from data models to user flows, and identify where leverage lives."},

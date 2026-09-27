@@ -6,23 +6,33 @@ Python + GraphQL backend (FastAPI + Strawberry), plain HTML/CSS/JS frontend.
 server/content.py   all site copy: edit this to change the text
 server/schema.py    GraphQL types and the page query
 server/app.py       FastAPI app: serves the site and /graphql
-static/             index.html, styles.css, app.js
-build.py            makes a single static file in dist/ for free hosting
+static/             index.html, styles.css, app.js, img/
+build.py            writes the finished site to index.html for GitHub Pages
 ```
 
-## Run it live
+## One-time setup (use a virtual environment)
+Installing into Anaconda's base environment can break Jupyter, so keep this project separate:
 ```
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+```
+Run `source .venv/bin/activate` again each time you open a new terminal for this project.
+
+## Preview locally with the live GraphQL server
+```
 uvicorn server.app:app --reload
 ```
 Open http://127.0.0.1:8000. The GraphQL explorer is at http://127.0.0.1:8000/graphql.
+Press Ctrl+C to stop the server before typing other commands in that terminal.
 
-## Publish for free (GitHub Pages, Netlify)
+## Publish to GitHub Pages
 ```
 python build.py
+git add .
+git commit -m "Update site"
+git push
 ```
-Upload `dist/index.html`. It runs the same GraphQL query at build time and bakes in the result,
-so it needs no server. Re-run the build after editing `server/content.py`.
-
-To host the live GraphQL version instead, deploy the FastAPI app to Render, Railway, or Fly.io
-with the start command `uvicorn server.app:app --host 0.0.0.0 --port $PORT`.
+`build.py` runs the same GraphQL query and saves the result into `index.html` at the repo root,
+which is the file GitHub Pages serves. Re-run it every time you edit `server/content.py`,
+the styles, or the photos.

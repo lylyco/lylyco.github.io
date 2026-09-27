@@ -1,5 +1,5 @@
-"""Static build: runs the GraphQL query in Python and writes dist/index.html
-with the result baked in. Upload dist/index.html to GitHub Pages, Netlify, etc.
+"""Static build: runs the GraphQL query in Python and writes index.html (repo root,
+for GitHub Pages) and dist/index.html with the result baked in.
 
     python build.py
 """
@@ -44,7 +44,9 @@ def main() -> None:
     )
     DIST.mkdir(exist_ok=True)
     (DIST / "index.html").write_text(html)
-    print(f"Wrote {DIST / 'index.html'} ({len(html):,} bytes)")
+    # GitHub Pages serves index.html from the repo root, so write a copy there too.
+    (ROOT / "index.html").write_text(html)
+    print(f"Wrote index.html and dist/index.html ({len(html):,} bytes)")
 
 
 if __name__ == "__main__":

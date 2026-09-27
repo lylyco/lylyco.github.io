@@ -33,14 +33,14 @@ ABOUT = {
     "title_emphasis": "Builder.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "I've spent over a decade **inside complex systems**, understanding them from root "
+        "I've spent over a decade inside complex systems, understanding them from root "
         "to surface, fixing what's broken, and designing what's next. My background spans "
         "eCommerce, CRM, EHR, compliance, subscription revenue, and payments.",
-        "What sets me apart isn't just technical depth. It's the ability to **connect systems "
-        "thinking to business strategy** and hold the end user at the center of every decision I make.",
+        "What sets me apart isn't just knowing how systems work. It's the ability to connect systems "
+        "thinking to business strategy and hold the end user at the center of every decision I make.",
         "I'm ready to step into roles where I can own product direction, drive operational "
-        "transformation, or shape the systems that power a business. I'm not just a data "
-        "manager. **I'm a force multiplier.**",
+        "transformation, or shape the systems that power a business. I'm not just a data ops "
+        "manager. I'm a force multiplier.",
     ],
     "strengths": [
         {"icon": "gear", "title": "Systems thinking at scale",

@@ -5,7 +5,7 @@ PROFILE = {
     "headline_lead": "Clarity",
     "headline_emphasis": "from Complexity",
     "summary": (
-        "Ten years working with eCommerce, payments, EHR, CRM, and compliance "
+        "Over ten years working with eCommerce, payments, EHR, CRM, and compliance "
         "systems. I build for real users, fix root causes instead of symptoms, "
         "and I'm the one who finds the edge case before it finds you."
     ),

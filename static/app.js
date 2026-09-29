@@ -3,7 +3,7 @@
 
   // Same query the Python build uses (build.py checks they match).
   const PAGE_QUERY = `query Portfolio {
-  profile { name headlineLead headlineEmphasis summary tags email photo { src thumb alt } links { label url kind } }
+  profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { icon title body platforms }
@@ -95,6 +95,7 @@
     bind('headlineLead', p.headlineLead);
     bind('headlineEmphasis', p.headlineEmphasis);
     bind('summary', p.summary);
+    bind('industriesLine', p.industriesLine);
     bind('aboutTitle', d.about.title);
     bind('aboutEmphasis', d.about.titleEmphasis);
     bind('contactTitle', d.contact.title);

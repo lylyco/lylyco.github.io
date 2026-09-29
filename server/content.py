@@ -106,15 +106,6 @@ EXPERTISE = [
      "platforms": ["ecom", "pay", "wms", "ehr", "crm", "comp"]},
 ]
 
-# New section. The page template needs a block that renders this before it shows up.
-UNDER_THE_HOOD = {
-    "title": "Under the Hood",
-    "body": (
-        "I built this site in Python with Claude as a collaborator, from planning the "
-        "structure to writing the code and refining the copy. Why: good operators use the "
-        "right tools to move fast, while every decision stays their own."
-    ),
-}
 
 CONTACT = {
     "title": "Optimize what exists.",

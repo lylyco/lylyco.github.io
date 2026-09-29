@@ -34,13 +34,13 @@ PROFILE = {
 }
 
 ABOUT = {
-    "title": "Operator. Strategist.",
+    "title": "Operator. Strategist. Creative",
     "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
         "For more than ten years, I've worked where business operations meet the systems "
         "that run them, across apparel, distilled spirits, payment processing, subscription "
-        "billing, and social and clinical services. I've been **promoted five times in five "
+        "billing, and social and clinical services. I've been **promoted 5 times in 8 "
         "years**, each time into more scope and more at stake.",
         "I started on the business side of eCommerce, then moved into QA on ONEHOPE's "
         "commerce platform, where I learned how systems break and why. Most recently, as the "
@@ -80,21 +80,21 @@ PLATFORMS = [
     {"id": "ehr", "name": "EHR", "blurb": "Electronic health records with layered clinical and admin roles.",
      "connects_to": ["comp"]},
     {"id": "crm", "name": "CRM", "blurb": "Customer data, lifecycle workflows, and reporting.",
-     "connects_to": ["ecom", "ehr"]},
+     "connects_to": ["ecom"]},
     {"id": "comp", "name": "Compliance", "blurb": "Audit trails, permissions, and regulatory controls, including compliance and distribution management software for distilled spirits.",
      "connects_to": ["ecom", "pay", "ehr"]},
 ]
 
 EXPERTISE = [
     {"icon": "layers", "title": "Technical & Systems Operations",
-     "body": "End-to-end ownership of complex platforms, from requirements to rollout. I catch failure points early and build systems that hold up as the business grows.",
+     "body": "End-to-end ownership of complex platforms, from requirements through configuration to rollout. I catch failure points early and build systems that hold up as the business grows.",
      "platforms": ["ecom", "pay", "wms", "ehr", "comp"]},
     {"icon": "box", "title": "Product Ownership",
      "body": "Business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs.",
      "platforms": ["ehr"]},
     {"icon": "compass", "title": "Business Strategy",
      "body": "I find operational inefficiencies, size the opportunity, and build the business case for change.",
-     "platforms": ["ehr"]},
+     "platforms": ["ehr", "ecom"]},
     {"icon": "chart", "title": "Data & Reporting Infrastructure",
      "body": "Designing reporting pipelines, ensuring data integrity, and giving teams the visibility to make good decisions quickly.",
      "platforms": ["ehr", "ecom"]},
@@ -109,9 +109,10 @@ EXPERTISE = [
 UNDER_THE_HOOD = {
     "title": "Under the Hood",
     "body": (
-        "I built this site in Python with Claude as a collaborator, from planning the "
-        "structure to writing the code and refining the copy. Why: good operators use the "
-        "right tools to move fast, while every decision stays their own."
+        "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
+        "coded by Claude to my spec. I set the structure, made the calls, and wrote "
+        "the copy. The browser sends the query on the right and renders what comes "
+        "back. The platform filter above runs its own query with an argument."
     ),
 }
 

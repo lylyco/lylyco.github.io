@@ -2,19 +2,24 @@
 
 PROFILE = {
     "name": "Lydia Cortez",
-    "headline_lead": "Clarity",
-    "headline_emphasis": "from Complexity",
+    "headline_lead": "Adaptive by nature.",
+    "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Over ten years working with eCommerce, payments, EHR, CRM, and compliance "
-        "systems. I build for real users, fix root causes instead of symptoms, "
-        "and I'm the one who finds the edge case before it finds you."
+        "Over ten years working across eCommerce, fintech, SaaS, EHR, CRM, and compliance "
+        "systems. I build for real users, spot the gaps between teams, processes, and "
+        "systems, and close them at the root. I'm the one who finds the edge case before "
+        "it finds you."
+    ),
+    "industries_line": (
+        "Industries under my belt: apparel, distilled spirits, payment processing, "
+        "subscription billing, and social and clinical services."
     ),
     "tags": [
-        "Problem Solving",
-        "Business & Technical Operations",
-        "Cross-Functional Strategy",
-        "Systems Design",
-        "User-Focus",
+        "Operations Leadership",
+        "Process Improvement",
+        "Business Acumen",
+        "Cross-Functional Collaboration",
+        "Systems & Data",
     ],
     "email": "cortez0715@gmail.com",
     "photo": {
@@ -30,74 +35,91 @@ PROFILE = {
 
 ABOUT = {
     "title": "Operator. Strategist.",
-    "title_emphasis": "Builder.",
+    "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
         "For more than ten years, I've worked where business operations meet the systems "
-        "that run them: eCommerce, CRM, EHR, subscription revenue, payments, and compliance.",
-        "I started on the business side of eCommerce, then moved into QA on ONEHOPE's custom "
-        "React and microservices commerce platform. Most recently, as Data Operations Manager "
-        "at the Alliance for Community Empowerment, I owned business requirements and reporting "
-        "infrastructure for a nonprofit EHR platform, managed two Data Support Specialists, "
-        "and guided Agile delivery.",
-        "The common thread is depth. I learn systems inside and out, view them through every "
-        "user's eyes, and catch the edge cases others miss. When something breaks, I find the "
-        "root cause and either fix it or recommend how to prevent it from recurring.",
+        "that run them, across apparel, distilled spirits, payment processing, subscription "
+        "billing, and social and clinical services. I've been **promoted five times in five "
+        "years**, each time into more scope and more at stake.",
+        "I started on the business side of eCommerce, then moved into QA on ONEHOPE's "
+        "commerce platform, where I learned how systems break and why. Most recently, as the "
+        "first Data Operations Manager at the Alliance for Community Empowerment, I led three "
+        "Data Support Specialists and two engineering contractors supporting an EHR platform "
+        "used by **nine distinct social and clinical service programs**. I brought full "
+        "visibility to the data team's work, introduced formal scoping and strategic planning, "
+        "and closed gaps no one had owned before.",
+        "My QA background is why I go deep. I learn systems inside and out, use data to see "
+        "what's actually happening, and look at every decision through the eyes of the people "
+        "doing the work. When I recommend a solution, I explain why, what it will affect, and "
+        "what it costs. When a full fix has to wait, I put a temporary one in place and I'm "
+        "clear about its tradeoffs. And I don't solve problems alone. I bring the right teams "
+        "together to solve them.",
     ],
-    
+
     "strengths": [
-        {"icon": "gear", "title": "Systems thinking at scale",
-         "body": "I understand platforms end to end, from data models to user flows, and identify where leverage lives."},
-        {"icon": "target", "title": "Business-first orientation",
-         "body": "Every system I touch is measured by business outcomes, not just uptime or clean data."},
-        {"icon": "users", "title": "Multi-role user expertise",
-         "body": "Deep experience designing for environments with layered user roles, permissions, and workflows."},
-        {"icon": "flag", "title": "Agile delivery leadership",
-         "body": "Sprint planning, backlog ownership, team mentorship. I run execution with discipline and clarity."},
+        {"icon": "target", "title": "Business acumen and foresight",
+         "body": "I see where a decision leads before it's made, and I plan for the impact, not just the fix."},
+        {"icon": "compass", "title": "Recommendations with reasoning",
+         "body": "Every solution comes with the why, the tradeoffs, and a short-term plan when the long-term one needs time."},
+        {"icon": "gear", "title": "Operational improvement",
+         "body": "I spot friction in day-to-day workflows and redesign them so programs, and the people supporting them, work more efficiently."},
+        {"icon": "users", "title": "Collaborative leadership",
+         "body": "I lead teams and partner across departments, using sprint planning, backlog ownership, and mentorship to keep execution on track."},
     ],
 }
 
 # The systems map in the hero. connects_to draws the lines between platforms.
 PLATFORMS = [
     {"id": "ecom", "name": "eCommerce", "blurb": "Storefronts, catalogs, and order flow from cart to fulfillment.",
-     "connects_to": ["pay", "wms", "crm"]},
+     "connects_to": ["pay", "wms", "crm", "comp"]},
     {"id": "pay", "name": "Payments", "blurb": "Payment processing, subscription billing, and recurring revenue.",
      "connects_to": ["ecom", "comp"]},
-    {"id": "wms", "name": "WMS", "blurb": "Warehouse management: inventory, picking, and shipping operations.",
+    {"id": "wms", "name": "WMS", "blurb": "Warehouse management and inventory operations.",
      "connects_to": ["ecom"]},
     {"id": "ehr", "name": "EHR", "blurb": "Electronic health records with layered clinical and admin roles.",
-     "connects_to": ["crm", "comp"]},
+     "connects_to": ["comp"]},
     {"id": "crm", "name": "CRM", "blurb": "Customer data, lifecycle workflows, and reporting.",
      "connects_to": ["ecom", "ehr"]},
-    {"id": "comp", "name": "Compliance", "blurb": "Audit trails, permissions, and regulatory controls.",
-     "connects_to": ["pay", "ehr"]},
+    {"id": "comp", "name": "Compliance", "blurb": "Audit trails, permissions, and regulatory controls, including compliance and distribution management software for distilled spirits.",
+     "connects_to": ["ecom", "pay", "ehr"]},
 ]
 
 EXPERTISE = [
     {"icon": "layers", "title": "Technical & Systems Operations",
-     "body": "Full lifecycle ownership of complex platforms, from requirements to rollout. I identify failure points others miss and design systems that scale.",
-     "platforms": ["ecom", "wms", "ehr"]},
+     "body": "End-to-end ownership of complex platforms, from requirements to rollout. I catch failure points early and build systems that hold up as the business grows.",
+     "platforms": ["ecom", "pay", "wms", "ehr", "comp"]},
     {"icon": "box", "title": "Product Ownership",
-     "body": "Business requirements, stakeholder alignment, sprint planning, and delivery. I translate strategy into executed product roadmaps.",
-     "platforms": ["ecom", "crm"]},
+     "body": "Business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs.",
+     "platforms": ["ehr"]},
     {"icon": "compass", "title": "Business Strategy",
-     "body": "I analyze operational inefficiencies, identify growth opportunities, and build the business case for transformation across verticals.",
-     "platforms": ["pay", "crm"]},
-    {"icon": "link", "title": "Platform Integration",
-     "body": "EHR, CRM, eCommerce, payment, and compliance platforms. I've operated in all of them and know how to make them work together.",
-     "platforms": ["ecom", "pay", "wms", "ehr", "crm", "comp"]},
+     "body": "I find operational inefficiencies, size the opportunity, and build the business case for change.",
+     "platforms": ["ehr"]},
     {"icon": "chart", "title": "Data & Reporting Infrastructure",
-     "body": "Designing reporting pipelines, ensuring data integrity, and building the visibility teams need to make good decisions quickly.",
-     "platforms": ["crm", "pay", "comp"]},
-    {"icon": "eye", "title": "End-User Experience",
-     "body": "Users aren't a footnote. I embed UX thinking into every operational and product decision across complex, multi-role environments.",
+     "body": "Designing reporting pipelines, ensuring data integrity, and giving teams the visibility to make good decisions quickly.",
      "platforms": ["ehr", "ecom"]},
+    {"icon": "eye", "title": "End-User Experience",
+     "body": "Users aren't a footnote. I bring the user's perspective into every operational and product decision, especially in multi-role environments.",
+     "platforms": ["ehr", "ecom"]},
+    {"icon": "users", "title": "People Leadership",
+     "body": "I listen first, collaborate openly, and build team morale that lasts. Strong teams keep delivering long after a single project ends.",
+     "platforms": ["ecom", "pay", "wms", "ehr", "crm", "comp"]},
 ]
+
+# New section. The page template needs a block that renders this before it shows up.
+UNDER_THE_HOOD = {
+    "title": "Under the Hood",
+    "body": (
+        "I built this site in Python with Claude as a collaborator, from planning the "
+        "structure to writing the code and refining the copy. Why: good operators use the "
+        "right tools to move fast, while every decision stays their own."
+    ),
+}
 
 CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",
-    "body": "Open to roles in technical operations, product management, systems strategy, and business operations. Let's talk.",
+    "body": "Open to operations leadership roles at the Manager, Associate Director, and Director level, and to select consulting engagements. Let's talk.",
 }
 
-FOOTER = "Technical Operations · Product Strategy · Systems"
+FOOTER = "Business Operations · Technical Operations · Systems Strategy"

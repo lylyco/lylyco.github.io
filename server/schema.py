@@ -70,6 +70,12 @@ class Contact:
 
 
 @strawberry.type
+class UnderTheHood:
+    title: str
+    body: str
+
+
+@strawberry.type
 class Query:
     @strawberry.field
     def profile(self) -> Profile:
@@ -99,6 +105,10 @@ class Query:
         return Contact(**c.CONTACT)
 
     @strawberry.field
+    def under_the_hood(self) -> UnderTheHood:
+        return UnderTheHood(**c.UNDER_THE_HOOD)
+
+    @strawberry.field
     def footer(self) -> str:
         return c.FOOTER
 
@@ -111,6 +121,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { icon title body platforms }
+  underTheHood { title body }
   contact { title titleEmphasis body }
   footer
 }"""

@@ -7,6 +7,7 @@
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { icon title body platforms }
+  underTheHood { title body }
   contact { title titleEmphasis body }
   footer
 }`;
@@ -98,6 +99,7 @@
     bind('industriesLine', p.industriesLine);
     bind('aboutTitle', d.about.title);
     bind('aboutEmphasis', d.about.titleEmphasis);
+    bind('underTheHoodBody', d.underTheHood.body);
     bind('contactTitle', d.contact.title);
     bind('contactEmphasis', d.contact.titleEmphasis);
     bind('contactBody', d.contact.body);

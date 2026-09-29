@@ -46,9 +46,8 @@ ABOUT = {
         "commerce platform, where I learned how systems break and why. Most recently, as the "
         "first Data Operations Manager at the Alliance for Community Empowerment, I led three "
         "Data Support Specialists and two engineering contractors supporting an EHR platform "
-        "used by **nine distinct social and clinical service programs**. I brought full "
-        "visibility to the data team's work, introduced formal scoping and strategic planning, "
-        "and closed gaps no one had owned before.",
+        "used by nine distinct social and clinical service programs. "
+        "I brought full visibility to the data team's work, introduced "
         "My QA background is why I go deep. I learn systems inside and out, use data to see "
         "what's actually happening, and look at every decision through the eyes of the people "
         "doing the work. When I recommend a solution, I explain why, what it will affect, and "

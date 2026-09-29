@@ -5,7 +5,7 @@ PROFILE = {
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Over ten years working across eCommerce, fintech, SaaS, EHR, CRM, and compliance "
+        "Over ten years working across eCommerce, Fintech, EHR, CRM, and compliance "
         "systems. I build for real users, spot the gaps between teams, processes, and "
         "systems, and close them at the root. I'm the one who finds the edge case before "
         "it finds you."
@@ -73,7 +73,7 @@ ABOUT = {
 PLATFORMS = [
     {"id": "ecom", "name": "eCommerce", "blurb": "Storefronts, catalogs, and order flow from cart to fulfillment.",
      "connects_to": ["pay", "wms", "crm", "comp"]},
-    {"id": "pay", "name": "Payments", "blurb": "Payment processing, subscription billing, and recurring revenue.",
+    {"id": "pay", "name": "Fintech", "blurb": "Payment processing, subscription billing, and recurring revenue.",
      "connects_to": ["ecom", "comp"]},
     {"id": "wms", "name": "WMS", "blurb": "Warehouse management and inventory operations.",
      "connects_to": ["ecom"]},
@@ -88,7 +88,7 @@ PLATFORMS = [
 EXPERTISE = [
     {"icon": "layers", "title": "Technical & Systems Operations",
      "body": "End-to-end ownership of complex platforms, from requirements through configuration to rollout. I catch failure points early and build systems that hold up as the business grows.",
-     "platforms": ["ecom", "pay", "wms", "ehr", "comp"]},
+     "platforms": ["ehr", "ecom", "pay", "wms", "crm", "comp"]},
     {"icon": "box", "title": "Product Ownership",
      "body": "Business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs.",
      "platforms": ["ehr"]},
@@ -103,7 +103,7 @@ EXPERTISE = [
      "platforms": ["ehr", "ecom"]},
     {"icon": "users", "title": "People Leadership",
      "body": "I listen first, collaborate openly, and build team morale that lasts. Strong teams keep delivering long after a single project ends.",
-     "platforms": ["ecom", "pay", "wms", "ehr", "crm", "comp"]},
+     "platforms": ["ehr", "ecom"]},
 ]
 
 UNDER_THE_HOOD = {

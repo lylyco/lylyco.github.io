@@ -32,18 +32,10 @@ class Profile:
 
 
 @strawberry.type
-class Strength:
-    icon: str
-    title: str
-    body: str
-
-
-@strawberry.type
 class About:
     title: str
     title_emphasis: str
     paragraphs: List[str]
-    strengths: List[Strength]
 
 
 @strawberry.type
@@ -107,7 +99,6 @@ class Query:
     @strawberry.field
     def about(self) -> About:
         a = dict(c.ABOUT)
-        a["strengths"] = [Strength(**s) for s in a["strengths"]]
         return About(**a)
 
     @strawberry.field
@@ -142,7 +133,7 @@ schema = strawberry.Schema(query=Query)
 # The single query the page runs. Shared by the live server and the static build.
 PAGE_QUERY = """query Portfolio {
   profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
-  about { title titleEmphasis paragraphs strengths { icon title body } }
+  about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }

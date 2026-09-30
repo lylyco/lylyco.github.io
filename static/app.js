@@ -4,7 +4,7 @@
   // Same query the Python build uses (build.py checks they match).
   const PAGE_QUERY = `query Portfolio {
   profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
-  about { title titleEmphasis paragraphs strengths { icon title body } }
+  about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
@@ -136,8 +136,6 @@
     $('#portrait').innerHTML = `<div class="portrait-frame"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="720" height="846" loading="lazy"></div>
       <figcaption><strong>${esc(p.name)}</strong>${esc(d.footer)}</figcaption>`;
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
-    $('#strengths').innerHTML = d.about.strengths.map((s) => `
-      <li class="strength"><h3>${esc(s.title)}</h3><p>${esc(s.body)}</p></li>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `
       <article class="card">

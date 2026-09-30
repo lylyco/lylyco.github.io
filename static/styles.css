@@ -238,12 +238,6 @@ h2 em, h1 em { color: var(--accent); }
 .about-text { display: flex; flex-direction: column; gap: 1.2rem; max-width: 36em; }
 .about-text p { font-size: 1rem; line-height: 1.85; font-weight: 300; }
 .about-text strong { color: var(--black); font-weight: 600; }
-.strengths { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem 2rem; margin-top: clamp(3rem, 6vw, 4.5rem); }
-.strength { display: grid; grid-template-columns: 8px minmax(0, 1fr); column-gap: .75rem; row-gap: .35rem; align-items: start; align-content: start; }
-.strength::before { content: ''; grid-column: 1; grid-row: 1; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-top: .58rem; }
-.strength h3, .strength p { grid-column: 2; }
-.strength h3 { font-size: 1rem; line-height: 1.5; font-weight: 600; color: var(--black); }
-.strength p { font-size: .86rem; color: var(--mauve); line-height: 1.6; }
 
 /* ---------- Expertise ---------- */
 .expertise-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin-top: 3rem; }
@@ -342,7 +336,6 @@ h2 em, h1 em { color: var(--accent); }
   .nav-right { gap: .5rem; }
 }
 @media (max-width: 960px) {
-  .strengths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero, .stack { grid-template-columns: 1fr; }
   .stack { row-gap: 2rem; }
   .stack-copy, .stack .console { grid-column: 1; }
@@ -352,7 +345,6 @@ h2 em, h1 em { color: var(--accent); }
 @media (max-width: 760px) {
   .about-grid { grid-template-columns: 1fr; }
   .portrait { position: relative; top: 0; max-width: 240px; justify-self: start; }
-  .strengths { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .expertise-grid { grid-template-columns: 1fr; }

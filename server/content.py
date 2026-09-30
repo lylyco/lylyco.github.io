@@ -60,17 +60,6 @@ ABOUT = {
         "the right people together to build shared understanding and develop solutions that "
         "are both technically sound and operationally sustainable.",
     ],
-
-    "strengths": [
-        {"icon": "target", "title": "Business acumen and foresight",
-         "body": "I see where a decision leads before it's made, and I plan for the impact, not just the fix."},
-        {"icon": "compass", "title": "Recommendations with reasoning",
-         "body": "Every solution comes with the why, the tradeoffs, and a short-term plan when the long-term one needs time."},
-        {"icon": "gear", "title": "Operational improvement",
-         "body": "I spot friction in day-to-day workflows and redesign them so programs, and the people supporting them, work more efficiently."},
-        {"icon": "users", "title": "Collaborative leadership",
-         "body": "I lead teams and partner across departments, using sprint planning, backlog ownership, and mentorship to keep execution on track."},
-    ],
 }
 
 # The systems map in the hero. connects_to draws the lines between platforms.
@@ -103,17 +92,6 @@ EXPERTISE = [
     {"title": "People Leadership",
      "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
 ]
-
-UNDER_THE_HOOD = {
-    "title": "This Portfolio is",
-    "title_emphasis": "one query.",
-    "body": (
-        "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
-        "coded by Claude to my spec. I set the structure, made the calls, and wrote "
-        "the copy. The browser sends the query on the right and renders what comes "
-        "back."
-    ),
-}
 
 RECOMMENDATIONS = {
     "title": "In their",
@@ -168,6 +146,17 @@ CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",
     "body": "Open to new opportunities across operations, systems, product, and adjacent functions, as well as select consulting engagements. Let's talk.",
+}
+
+UNDER_THE_HOOD = {
+    "title": "This Portfolio is",
+    "title_emphasis": "one query.",
+    "body": (
+        "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
+        "coded by Claude to my spec. I set the structure, made the calls, and wrote "
+        "the copy. The browser sends the query on the right and renders what comes "
+        "back."
+    ),
 }
 
 FOOTER = "Business Operations · Technical Operations · Systems Strategy"

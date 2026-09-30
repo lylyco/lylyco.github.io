@@ -93,21 +93,21 @@ EXPERTISE = [
      "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
 ]
 
-# Each project gets its own page later. Leave "url" empty until that page exists;
-# the title still shows underlined, marked "Coming soon", and is not clickable.
+# Each project links to its own page at "url". build.py creates a "coming soon" page
+# for every project at that address. Leave "url" empty to show the card without a link.
 PROJECTS = {
     "title": "Problems I've",
     "title_emphasis": "solved.",
     "items": [
         {"title": "Project 1",
          "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": ""},
+         "url": "/projects/project-1/"},
         {"title": "Project 2",
          "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": ""},
+         "url": "/projects/project-2/"},
         {"title": "Project 3",
          "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": ""},
+         "url": "/projects/project-3/"},
     ],
 }
 

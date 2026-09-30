@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from server.schema import schema, PAGE_QUERY
+from server.pages import projects_with_pages, project_slug, render_project_page
 
 ROOT = Path(__file__).resolve().parent
 STATIC = ROOT / "static"
@@ -50,6 +51,21 @@ def main() -> None:
     # GitHub Pages serves index.html from the repo root, so write a copy there too.
     (ROOT / "index.html").write_text(html)
     print(f"Wrote index.html and dist/index.html ({len(html):,} bytes)")
+
+    # One "coming soon" page per project, at projects/<slug>/index.html
+    page_js = (STATIC / "page.js").read_text()
+    for project in projects_with_pages():
+        slug = project_slug(project["url"])
+        page = render_project_page(
+            project,
+            styles=f"<style>\n{css}</style>",
+            script=f"<script>\n{page_js}</script>",
+        )
+        for base in (ROOT, DIST):
+            out = base / "projects" / slug / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(page)
+        print(f"Wrote projects/{slug}/index.html")
 
 
 if __name__ == "__main__":

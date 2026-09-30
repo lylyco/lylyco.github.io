@@ -40,28 +40,25 @@ ABOUT = {
     "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "For more than ten years, I have built my career where business operations meet the "
-        "systems that run them, earning **five promotions over eight years** through a "
-        "consistent track record of strong performance, adaptability, and ownership. My "
-        "experience spans retail, distilled spirits, payment processing, subscription "
-        "billing, and social and clinical services.",
-        "I started on the business side of eCommerce before moving into QA for ONEHOPE Wine's "
-        "commerce platform, where I learned not only how systems break, but why they break. "
-        "That foundation shaped how I approach every problem today.",
+        "For more than ten years, I have built my career at the intersection of business "
+        "operations, data, and technology, earning **five promotions over eight years** "
+        "through strong performance, adaptability, and ownership. My experience spans retail, "
+        "distilled spirits, payment processing, subscription billing, and social and clinical "
+        "services.",
+        "I began on the business side of eCommerce before moving into QA for ONEHOPE Wine's "
+        "commerce platform, where I learned not only how systems break, but why. That "
+        "foundation continues to shape how I approach technical problems.",
         "Most recently, as the first Data Operations Manager at the Alliance for Community "
         "Empowerment, I led three Data Support Specialists and two engineering contractors "
-        "supporting an EHR platform used across **nine distinct social and clinical service "
-        "programs**. I brought visibility and structure to the data team's work, introduced "
-        "formal scoping and strategic planning, and addressed operational gaps that had "
-        "previously lacked clear ownership.",
-        "My QA background is what drives me to go deep. I learn systems inside and out, use "
-        "data to understand what is actually happening, and evaluate decisions from the "
-        "perspective of the people doing the work. When I recommend a solution, I explain the "
-        "rationale, the impact, and the cost. When a permanent fix is not immediately "
-        "possible, I put a practical interim solution in place and make the tradeoffs clear.",
-        "Most importantly, I do not believe complex problems are solved in isolation. I bring "
-        "the right people and teams together, create shared understanding, and work toward "
-        "solutions that are both technically sound and operationally sustainable.",
+        "supporting an EHR platform across nine social and clinical service programs. I "
+        "brought structure and visibility to the team's work, introduced formal scoping and "
+        "strategic planning, and addressed gaps that lacked clear ownership.",
+        "My approach combines deep systems knowledge, data-driven problem solving, and the "
+        "perspective of the people doing the work. I evaluate solutions based on their "
+        "impact and cost, communicate the rationale behind decisions, and implement practical "
+        "interim solutions when permanent fixes are not immediately possible. I also bring "
+        "the right people together to build shared understanding and develop solutions that "
+        "are both technically sound and operationally sustainable.",
     ],
 
     "strengths": [

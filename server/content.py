@@ -93,6 +93,24 @@ EXPERTISE = [
      "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
 ]
 
+# Each project gets its own page later. Leave "url" empty until that page exists;
+# the title still shows underlined, marked "Coming soon", and is not clickable.
+PROJECTS = {
+    "title": "Problems I've",
+    "title_emphasis": "solved.",
+    "items": [
+        {"title": "Project 1",
+         "summary": "One or two sentences on the problem, what you did, and the result.",
+         "url": ""},
+        {"title": "Project 2",
+         "summary": "One or two sentences on the problem, what you did, and the result.",
+         "url": ""},
+        {"title": "Project 3",
+         "summary": "One or two sentences on the problem, what you did, and the result.",
+         "url": ""},
+    ],
+}
+
 RECOMMENDATIONS = {
     "title": "In their",
     "title_emphasis": "words.",

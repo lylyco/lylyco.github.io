@@ -60,6 +60,20 @@ class Contact:
 
 
 @strawberry.type
+class Project:
+    title: str
+    summary: str
+    url: str
+
+
+@strawberry.type
+class Projects:
+    title: str
+    title_emphasis: str
+    items: List[Project]
+
+
+@strawberry.type
 class Recommendation:
     name: str
     photo: str
@@ -111,6 +125,12 @@ class Query:
         return [Expertise(**e) for e in c.EXPERTISE]
 
     @strawberry.field
+    def projects(self) -> Projects:
+        p = dict(c.PROJECTS)
+        p["items"] = [Project(**i) for i in p["items"]]
+        return Projects(**p)
+
+    @strawberry.field
     def recommendations(self) -> Recommendations:
         r = dict(c.RECOMMENDATIONS)
         r["items"] = [Recommendation(**i) for i in r["items"]]
@@ -137,6 +157,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }
+  projects { title titleEmphasis items { title summary url } }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
   tagline

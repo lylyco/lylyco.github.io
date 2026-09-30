@@ -159,4 +159,4 @@ UNDER_THE_HOOD = {
     ),
 }
 
-FOOTER = "Business Operations · Technical Operations · Systems Strategy"
+FOOTER = "Business Operations · Data Operations · Technical Operations · Systems Strategy"

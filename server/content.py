@@ -105,7 +105,8 @@ EXPERTISE = [
 ]
 
 UNDER_THE_HOOD = {
-    "title": "Under the Hood",
+    "title": "This Portfolio is",
+    "title_emphasis": "one query.",
     "body": (
         "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
         "coded by Claude to my spec. I set the structure, made the calls, and wrote "

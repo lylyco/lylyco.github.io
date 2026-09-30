@@ -70,6 +70,7 @@ class Contact:
 @strawberry.type
 class UnderTheHood:
     title: str
+    title_emphasis: str
     body: str
 
 
@@ -117,7 +118,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { title body }
-  underTheHood { title body }
+  underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
   footer
 }"""

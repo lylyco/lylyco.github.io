@@ -44,9 +44,11 @@ ABOUT = {
         "operations, data, and technology, earning **five promotions over eight years**. "
         "My experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",
-        "I began on the business side of eCommerce before moving into QA for ONEHOPE Wine's "
-        "commerce platform, where I learned not only how systems break, but why. That "
-        "experience became the foundation for how I approach technical and operational problems.",
+        "I began on the business side of eCommerce, where I was already solving problems: "
+        "supporting users and tracking down platform issues for the engineering team. That "
+        "work led me into QA for ONEHOPE Wine's commerce platform, where I traced issues to "
+        "their root cause and learned not only how systems break, but why. That experience "
+        "became the foundation for how I approach technical and operational problems.",
         "Most recently, as the first Data Operations Manager at the Alliance for Community "
         "Empowerment, I led three Data Support Specialists and two engineering contractors "
         "supporting an EHR platform across nine social and clinical service programs. I "

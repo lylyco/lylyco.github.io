@@ -5,13 +5,14 @@ PROFILE = {
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Over ten years working across eCommerce, Fintech, EHR, CRM, and compliance "
-        "systems. I build for real users, spot the gaps between teams, processes, and "
-        "systems, and close them at the root. I'm the one who finds the edge case before "
-        "it finds you."
+        "Experience in eCommerce, Fintech, EHR, CRM, and compliance "
+        "systems. With a curiuos mind, I am a natural initiatator. I "
+        "build for real users, spot the gaps between teams, processes, and "
+        "systems, and close them at the root. "
+        "I lead teams and partner across departments to get things done."
     ),
     "industries_line": (
-        "Industries under my belt: apparel, distilled spirits, payment processing, "
+        "Industries under my belt: retail, distilled spirits, payment processing, "
         "subscription billing, and social and clinical services."
     ),
     "tags": [
@@ -38,16 +39,17 @@ ABOUT = {
     "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "For more than ten years, I've worked where business operations meet the systems "
-        "that run them, across apparel, distilled spirits, payment processing, subscription "
-        "billing, and social and clinical services. I've been **promoted 5 times in 8 "
-        "years**, each time into more scope and more at stake.",
-        "I started on the business side of eCommerce, then moved into QA on ONEHOPE's "
+        "For over ten years, my strong work ethic has had a result of **5 promotions over "
+        "eight years** I have worked where business operations meet the systems that run "
+        "them. Across retail, distilled spirits, payment processing, subscription "
+        "billing, and social and clinical services.",
+        "I started on the business side of eCommerce, then moved into QA on ONEHOPE Wine "
         "commerce platform, where I learned how systems break and why. Most recently, as the "
         "first Data Operations Manager at the Alliance for Community Empowerment, I led three "
         "Data Support Specialists and two engineering contractors supporting an EHR platform "
-        "used by nine distinct social and clinical service programs. "
-        "I brought full visibility to the data team's work, introduced "
+        "used by **nine distinct social and clinical service programs**. I brought full "
+        "visibility to the data team's work, introduced formal scoping and strategic planning, "
+        "and closed gaps no one had owned before.",
         "My QA background is why I go deep. I learn systems inside and out, use data to see "
         "what's actually happening, and look at every decision through the eyes of the people "
         "doing the work. When I recommend a solution, I explain why, what it will affect, and "

@@ -15,11 +15,11 @@ PROFILE = {
         "subscription billing, and social and clinical services."
     ),
     "tags": [
+        "Systems & Data",
         "Operations Leadership",
         "Process Improvement",
         "Business Acumen",
         "Cross-Functional Collaboration",
-        "Systems & Data",
     ],
     "email": "cortez0715@gmail.com",
     "photo": {
@@ -118,7 +118,7 @@ UNDER_THE_HOOD = {
 CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",
-    "body": "Open to operations leadership roles at the Manager, Associate Director, and Director level, and to select consulting engagements. Let's talk.",
+    "body": "Open to operations specialist, systems operations, and operations leadership roles, and to select consulting engagements. Let's talk.",
 }
 
 FOOTER = "Business Operations · Technical Operations · Systems Strategy"

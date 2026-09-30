@@ -44,8 +44,8 @@ ABOUT = {
         "operations, data, and technology, earning **five promotions over eight years**. "
         "My experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",
-        "I began on the business side of eCommerce, where I was already solving problems: "
-        "supporting users and tracking down platform issues for the engineering team. That "
+        "I began on the business side of eCommerce, where I was already solving problems, "
+        "supporting users and tracking down platform issues. That "
         "work led me into QA for ONEHOPE Wine's commerce platform, where I traced issues to "
         "their root cause and learned not only how systems break, but why. That experience "
         "became the foundation for how I approach technical and operational problems.",

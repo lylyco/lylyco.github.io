@@ -66,6 +66,23 @@
     try { localStorage.setItem('lc-theme', next); } catch (e) { /* ignore */ }
   });
 
+  // ---------- Keep section sizing in step with the real nav/footer height ----------
+  const sizeVars = () => {
+    root.style.setProperty('--nav-h', `${$('.nav').offsetHeight}px`);
+    root.style.setProperty('--footer-h', `${$('.footer').offsetHeight}px`);
+  };
+  sizeVars();
+  addEventListener('resize', sizeVars);
+
+  // ---------- Section arrows that go back to the profile ----------
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-top]');
+    if (!a) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    history.replaceState(null, '', location.pathname + location.search);
+  });
+
   // ---------- Logo: back to top ----------
   $('.nav-logo').addEventListener('click', (e) => {
     e.preventDefault();

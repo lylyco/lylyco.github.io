@@ -46,10 +46,11 @@
       </div>
       <svg id="systemsMap" viewBox="0 0 440 400" role="img" aria-label="Map of platforms Lydia has worked across and how they connect"></svg>
     </figure>
+    <a class="sec-arrow hero-down" href="#about" aria-label="Next: About"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 10 4 4.5 4-4.5"/></svg></a>
   </section>
 
   <section class="about" id="about">
-    <div class="section-label">About</div>
+    <div class="section-head"><div class="section-label">About</div><nav class="sec-nav" aria-label="Section navigation"><a class="sec-arrow" href="#" data-top aria-label="Back to profile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 14 4-4.5 4 4.5"/></svg></a><a class="sec-arrow" href="#expertise" aria-label="Next: Expertise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 10 4 4.5 4-4.5"/></svg></a></nav></div>
     <h2><span data-bind="aboutTitle"></span> <em data-bind="aboutEmphasis"></em></h2>
     <div class="about-grid">
       <figure class="portrait" id="portrait"></figure>
@@ -61,14 +62,14 @@
   </section>
 
   <section class="expertise" id="expertise">
-    <div class="section-label">Expertise</div>
+    <div class="section-head"><div class="section-label">Expertise</div><nav class="sec-nav" aria-label="Section navigation"><a class="sec-arrow" href="#about" aria-label="Back to About"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 14 4-4.5 4 4.5"/></svg></a><a class="sec-arrow" href="#stack" aria-label="Next: Stack"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 10 4 4.5 4-4.5"/></svg></a></nav></div>
     <h2>Where I create <em>leverage.</em></h2>
     <div class="expertise-grid" id="expertiseGrid"></div>
   </section>
 
   <section class="stack" id="stack">
+    <div class="section-head"><div class="section-label">Under the hood</div><nav class="sec-nav" aria-label="Section navigation"><a class="sec-arrow" href="#expertise" aria-label="Back to Expertise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 14 4-4.5 4 4.5"/></svg></a><a class="sec-arrow" href="#contact" aria-label="Next: Contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 10 4 4.5 4-4.5"/></svg></a></nav></div>
     <div class="stack-copy">
-      <div class="section-label">Under the hood</div>
       <h2>This page is <em>one query.</em></h2>
       <p data-bind="underTheHoodBody"></p>
       <p class="stack-mode" id="stackMode">Loading…</p>
@@ -84,7 +85,7 @@
   </section>
 
   <section class="contact" id="contact">
-    <div class="section-label center">Contact</div>
+    <div class="section-head center"><div class="section-label center">Contact</div><nav class="sec-nav" aria-label="Section navigation"><a class="sec-arrow" href="#stack" aria-label="Back to Stack"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m8 14 4-4.5 4 4.5"/></svg></a></nav></div>
     <h2><span data-bind="contactTitle"></span><br><em data-bind="contactEmphasis"></em></h2>
     <p data-bind="contactBody"></p>
     <div class="cta-row center" id="contactCta"></div>

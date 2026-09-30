@@ -68,6 +68,26 @@ class Contact:
 
 
 @strawberry.type
+class Recommendation:
+    name: str
+    title: str
+    relationship: str
+    date: str
+    quote: str
+    paragraphs: List[str]
+
+
+@strawberry.type
+class Recommendations:
+    title: str
+    title_emphasis: str
+    source: str
+    source_label: str
+    source_url: str
+    items: List[Recommendation]
+
+
+@strawberry.type
 class UnderTheHood:
     title: str
     title_emphasis: str
@@ -98,6 +118,12 @@ class Query:
         return [Expertise(**e) for e in c.EXPERTISE]
 
     @strawberry.field
+    def recommendations(self) -> Recommendations:
+        r = dict(c.RECOMMENDATIONS)
+        r["items"] = [Recommendation(**i) for i in r["items"]]
+        return Recommendations(**r)
+
+    @strawberry.field
     def contact(self) -> Contact:
         return Contact(**c.CONTACT)
 
@@ -118,6 +144,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { title body }
+  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name title relationship date quote paragraphs } }
   underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
   footer

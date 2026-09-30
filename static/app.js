@@ -7,6 +7,7 @@
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { title body }
+  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name title relationship date quote paragraphs } }
   underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
   footer
@@ -143,6 +144,24 @@
         <h3>${esc(e.title)}</h3>
         <p>${esc(e.body)}</p>
       </article>`).join('');
+
+    const rec = d.recommendations;
+    bind('recTitle', rec.title);
+    bind('recEmphasis', rec.titleEmphasis);
+    const initials = (n) => n.split(/\s+/).map((w) => w[0]).slice(0, 2).join('');
+    $('#recGrid').innerHTML = rec.items.map((r) => `
+      <article class="rec">
+        <blockquote class="rec-quote">${esc(r.quote)}</blockquote>
+        <details class="rec-full">
+          <summary>Read full recommendation</summary>
+          ${r.paragraphs.map((t) => `<p>${esc(t)}</p>`).join('')}
+        </details>
+        <footer class="rec-by">
+          <span class="rec-avatar" aria-hidden="true">${esc(initials(r.name))}</span>
+          <span><strong>${esc(r.name)}</strong><span class="rec-meta">${esc(r.title)}</span><span class="rec-meta">${esc(r.relationship)} · ${esc(r.date)}</span></span>
+        </footer>
+      </article>`).join('');
+    $('#recSource').innerHTML = `${esc(rec.source)} <a href="${esc(rec.sourceUrl)}" target="_blank" rel="noopener">${esc(rec.sourceLabel)} <span aria-hidden="true">↗</span></a>`;
 
     buildMap(d.platforms);
   }

@@ -115,6 +115,51 @@ UNDER_THE_HOOD = {
     ),
 }
 
+RECOMMENDATIONS = {
+    "title": "In their",
+    "title_emphasis": "words.",
+    "source": "Source: recommendations on my LinkedIn profile.",
+    "source_label": "View on LinkedIn",
+    "source_url": "https://www.linkedin.com/in/lydia-cortez",
+    "items": [
+        {"name": "Rebecca MacLean",
+         "title": "Grant Writer + Writing Consultant",
+         "relationship": "Worked with Lydia on the same team",
+         "date": "January 2025",
+         "quote": "Lydia is the powerhouse behind ACE's success.",
+         "paragraphs": [
+             "Lydia is the powerhouse behind ACE's success. I have seen her tackle challenges that would be daunting to the most talented data managers. She rises to every obstacle and manages to do so while remaining kind, empathetic, and patient. She is truly a pleasure to work with.",
+         ]},
+        {"name": "Gemma Schrum",
+         "title": "Engineering at Onton",
+         "relationship": "Managed Lydia directly",
+         "date": "December 2023",
+         "quote": "Her thoughtful ideas for improvement impacted more than just the tech team.",
+         "paragraphs": [
+             "Lydia was a cornerstone of the tech team. She mastered the product inside out to where she would identify very obscure edge cases and solve very complex bugs. Her communication and tickets are so clear and descriptive that she saved us precious engineering time\u2013 and oftentimes she had already found the root cause of difficult issues that otherwise would have taken an engineer a lot of time to debug.",
+             "Beyond Lydia's testing prowess, she has consistently taken initiative and juggled many tasks and demands beyond her defined role. Her thoughtful ideas for improvement impacted more than just the tech team. Her proactive approach, coupled with a collaborative and kind demeanor, made her a pleasure to work with.",
+             "All to say, Lydia's thorough QA work significantly enhanced the quality and stability of their releases. Her ambition and attitude make her an invaluable asset. She will excel in any role she takes on, and I would be honored to work with Lydia again!",
+         ]},
+        {"name": "Matt Middlesworth",
+         "title": "Engineering Leader",
+         "relationship": "Managed Lydia directly",
+         "date": "December 2023",
+         "quote": "She was always a great communicator with our team and when working with frustrated users.",
+         "paragraphs": [
+             "Lydia and I worked together at OneHope on a custom-built ecommerce platform using ReactJS & Microservices. She was always a great communicator with our team and when working with frustrated users. We started working more closely as she took on additional responsibilities in her role by starting to find issues for the engineering team. Quickly ramping up on QA responsibilities, she joined our engineering team as a dedicated QA engineer, rapidly learning our processes and setting a new QA level of excellence. Lydia has a strong independent drive to learn and drive into more complex scenarios in QA. I hope our paths cross in the future as I would be honored to work together with her.",
+         ]},
+        {"name": "Carmella Winterbauer",
+         "title": "Group Product Manager",
+         "relationship": "Managed Lydia directly",
+         "date": "January 2024",
+         "quote": "She proactively identifies issues and works closely and effectively with engineers toward a resolution.",
+         "paragraphs": [
+             "I had the pleasure of having Lydia on my team at ONEHOPE for many years. Lydia is a passionate QA leader with a rare curiosity that leads her to understand an application inside and out. She proactively identifies issues and works closely and effectively with engineers toward a resolution.",
+             "Her QA plans are thoughtful and thorough. As a product manager, I rested easier at night knowing that Lydia was in charge of QAing a new feature. I believe that a talented QA engineer is worth their weight in gold and I wholeheartedly endorse Lydia as the real deal. Any team would be lucky to have her.",
+         ]},
+    ],
+}
+
 CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",

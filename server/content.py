@@ -41,24 +41,22 @@ ABOUT = {
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
         "For more than ten years, I have built my career at the intersection of business "
-        "operations, data, and technology, earning **five promotions over eight years** "
-        "through strong performance, adaptability, and ownership. My experience spans retail, "
-        "distilled spirits, payment processing, subscription billing, and social and clinical "
-        "services.",
+        "operations, data, and technology, earning **five promotions over eight years**. "
+        "My experience spans retail, distilled spirits, payment processing, subscription "
+        "billing, and social and clinical services.",
         "I began on the business side of eCommerce before moving into QA for ONEHOPE Wine's "
         "commerce platform, where I learned not only how systems break, but why. That "
-        "foundation continues to shape how I approach technical problems.",
+        "experience became the foundation for how I approach technical and operational problems.",
         "Most recently, as the first Data Operations Manager at the Alliance for Community "
         "Empowerment, I led three Data Support Specialists and two engineering contractors "
         "supporting an EHR platform across nine social and clinical service programs. I "
-        "brought structure and visibility to the team's work, introduced formal scoping and "
-        "strategic planning, and addressed gaps that lacked clear ownership.",
-        "My approach combines deep systems knowledge, data-driven problem solving, and the "
-        "perspective of the people doing the work. I evaluate solutions based on their "
-        "impact and cost, communicate the rationale behind decisions, and implement practical "
-        "interim solutions when permanent fixes are not immediately possible. I also bring "
-        "the right people together to build shared understanding and develop solutions that "
-        "are both technically sound and operationally sustainable.",
+        "brought structure and visibility to the team's work, established formal scoping and "
+        "strategic planning, and addressed gaps in ownership.",
+        "My approach combines systems knowledge, data-driven problem solving, and the "
+        "perspective of the people doing the work. I weigh options by impact and cost, "
+        "explain the reasoning behind decisions, and put practical interim fixes in place "
+        "when a permanent one needs time. The result is work that is technically sound and "
+        "holds up in daily operations.",
     ],
 }
 

@@ -35,6 +35,9 @@ def main() -> None:
     for key in ("src", "thumb"):
         img = ROOT / photo[key].lstrip("/")
         photo[key] = "data:image/jpeg;base64," + base64.b64encode(img.read_bytes()).decode()
+    for rec in result.data["recommendations"]["items"]:
+        img = ROOT / rec["photo"].lstrip("/")
+        rec["photo"] = "data:image/jpeg;base64," + base64.b64encode(img.read_bytes()).decode()
 
     data = json.dumps(result.data, ensure_ascii=False).replace("</", "<\\/")
     html = html.replace('<link rel="stylesheet" href="/static/styles.css">', f"<style>\n{css}</style>")

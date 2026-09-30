@@ -70,6 +70,7 @@ class Contact:
 @strawberry.type
 class Recommendation:
     name: str
+    photo: str
     title: str
     relationship: str
     date: str
@@ -144,7 +145,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { title body }
-  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name title relationship date quote paragraphs } }
+  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
   footer

@@ -7,7 +7,7 @@
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
   expertise { title body }
-  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name title relationship date quote paragraphs } }
+  recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
   footer
@@ -148,7 +148,6 @@
     const rec = d.recommendations;
     bind('recTitle', rec.title);
     bind('recEmphasis', rec.titleEmphasis);
-    const initials = (n) => n.split(/\s+/).map((w) => w[0]).slice(0, 2).join('');
     $('#recGrid').innerHTML = rec.items.map((r) => `
       <article class="rec">
         <blockquote class="rec-quote">${esc(r.quote)}</blockquote>
@@ -157,7 +156,7 @@
           ${r.paragraphs.map((t) => `<p>${esc(t)}</p>`).join('')}
         </details>
         <footer class="rec-by">
-          <span class="rec-avatar" aria-hidden="true">${esc(initials(r.name))}</span>
+          <img class="rec-avatar" src="${esc(r.photo)}" alt="" width="40" height="40" loading="lazy">
           <span><strong>${esc(r.name)}</strong><span class="rec-meta">${esc(r.title)}</span><span class="rec-meta">${esc(r.relationship)} · ${esc(r.date)}</span></span>
         </footer>
       </article>`).join('');
@@ -296,7 +295,10 @@
     .replace(/\b(query|String|ID)\b/g, '<span class="tok-k">$1</span>')
     .replace(/([{}()!:])/g, '<span class="tok-p">$1</span>')
     .replace(/(\$\w+)/g, '<span class="tok-k">$1</span>');
-  const hlJson = (obj) => esc(JSON.stringify(obj, null, 2))
+  // Inlined photos are long base64 strings; show a short stand-in in the console
+  const shortData = (k, v) => (typeof v === 'string' && v.startsWith('data:image/'))
+    ? `${v.slice(0, v.indexOf(',') + 1)}… (${Math.round(v.length * 0.75 / 1024)} KB, inlined by build.py)` : v;
+  const hlJson = (obj) => esc(JSON.stringify(obj, shortData, 2))
     .replace(/(&quot;[^&]*?&quot;)(\s*:)/g, '<span class="tok-n">$1</span>$2')
     .replace(/(:\s*|^\s*|\[\s*)(&quot;.*?&quot;)/gm, '$1<span class="tok-s">$2</span>');
   function paintConsole(tab) {

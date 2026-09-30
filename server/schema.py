@@ -81,6 +81,14 @@ class Recommendations:
 
 
 @strawberry.type
+class Footer:
+    credit: str
+    source_label: str
+    source_url: str
+    legal: str
+
+
+@strawberry.type
 class Query:
     @strawberry.field
     def profile(self) -> Profile:
@@ -117,8 +125,8 @@ class Query:
         return c.TAGLINE
 
     @strawberry.field
-    def footer(self) -> str:
-        return c.FOOTER
+    def footer(self) -> Footer:
+        return Footer(**c.FOOTER)
 
 
 schema = strawberry.Schema(query=Query)
@@ -132,5 +140,5 @@ PAGE_QUERY = """query Portfolio {
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
   tagline
-  footer
+  footer { credit sourceLabel sourceUrl legal }
 }"""

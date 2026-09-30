@@ -151,4 +151,9 @@ CONTACT = {
 # Shown under your name beside the portrait in About.
 TAGLINE = "Business Operations · Data Operations · Technical Operations · Systems Strategy"
 
-FOOTER = "Last Updated September 2026. All content © Lydia Cortez. Built with FastAPI, Strawberry, and plain HTML, CSS, and JavaScript. Source code available on GitHub. Coded by Claude to my spec. I set the structure, made the calls, and wrote the copy."
+FOOTER = {
+    "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",
+    "source_label": "View source on GitHub",
+    "source_url": "https://github.com/lylyco/lylyco.github.io",
+    "legal": "© 2026 Lydia Cortez · Last updated September 2026",
+}

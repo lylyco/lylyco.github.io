@@ -286,8 +286,10 @@ h2 em, h1 em { color: var(--accent); }
 .contact p { color: var(--text); max-width: 30em; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
 .footer {
   padding: 2rem var(--gutter); border-top: 1px solid var(--hairline);
-  text-align: center; font-size: .78rem; letter-spacing: .04em; color: var(--mauve); background: var(--bg);
+  text-align: center; font-size: .78rem; letter-spacing: .04em; line-height: 1.6; color: var(--mauve); background: var(--bg);
+  display: flex; flex-direction: column; gap: .35rem;
 }
+.footer a { color: var(--accent); text-underline-offset: 3px; }
 
 /* ---------- Responsive ---------- */
 /* Six menu items need room: collapse to the menu button below 1100px */

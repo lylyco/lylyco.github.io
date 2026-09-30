@@ -10,7 +10,7 @@
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
   tagline
-  footer
+  footer { credit sourceLabel sourceUrl legal }
 }`;
 
   const PREBUILT = window.__PORTFOLIO__ || null;   // set by build.py for static hosting
@@ -124,7 +124,9 @@
     bind('contactTitle', d.contact.title);
     bind('contactEmphasis', d.contact.titleEmphasis);
     bind('contactBody', d.contact.body);
-    bind('footer', d.footer);
+    const f = d.footer;
+    $('.footer').innerHTML = `<p>${esc(f.credit)} <a href="${esc(f.sourceUrl)}" target="_blank" rel="noopener">${esc(f.sourceLabel)}</a></p>
+      <p>${esc(f.legal)}</p>`;
 
     $('#tags').innerHTML = p.tags.map((t) => `<li class="tag">${esc(t)}</li>`).join('');
     $('#heroCta').innerHTML = ctaButtons(p);
@@ -289,6 +291,7 @@
     try {
       DATA = PREBUILT || (await gql(PAGE_QUERY)).data;
       render(DATA);
+      sizeVars();
     } catch (err) {
       console.error(`Could not load content: ${err.message}. Is the Python server running?`);
     }

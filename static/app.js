@@ -6,13 +6,10 @@
   profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
-  expertise { icon title body platforms }
+  expertise { title body }
   underTheHood { title body }
   contact { title titleEmphasis body }
   footer
-}`;
-  const FILTER_QUERY = `query Filter($platform: String) {
-  expertise(platform: $platform) { title }
 }`;
 
   const PREBUILT = window.__PORTFOLIO__ || null;   // set by build.py for static hosting
@@ -115,19 +112,13 @@
     $('#strengths').innerHTML = d.about.strengths.map((s) => `
       <li class="strength"><h3>${esc(s.title)}</h3><p>${esc(s.body)}</p></li>`).join('');
 
-    const names = Object.fromEntries(d.platforms.map((x) => [x.id, x.name]));
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `
-      <article class="card" data-title="${esc(e.title)}">
-        <div class="glyph">${icon(e.icon)}</div>
+      <article class="card">
         <h3>${esc(e.title)}</h3>
         <p>${esc(e.body)}</p>
-        <div class="card-platforms" aria-label="Platforms">${e.platforms.map((id) => `<span>${esc(names[id] || id)}</span>`).join('')}</div>
       </article>`).join('');
 
-    $('#filter').innerHTML = `<button type="button" class="chip" data-platform="" aria-pressed="true">All platforms</button>` +
-      d.platforms.map((x) => `<button type="button" class="chip" data-platform="${esc(x.id)}" aria-pressed="false">${esc(x.name)}</button>`).join('');
-
-    buildMap(d.platforms, d.expertise);
+    buildMap(d.platforms);
   }
 
   // ---------- Copy email ----------
@@ -165,10 +156,7 @@
     if (parent) parent.appendChild(n);
     return n;
   };
-  let selected = null;
-  let mapApi = null;
-
-  function buildMap(platforms, expertise) {
+  function buildMap(platforms) {
     const svg = $('#systemsMap');
     svg.innerHTML = '';
     const cx = 220, cy = 200, rx = 160, ry = 138, R = 38;
@@ -209,21 +197,14 @@
 
     const nodes = {};
     platforms.forEach((p) => {
-      const g = el('g', { class: 'node', tabindex: '0', role: 'button', 'aria-label': `${p.name}: ${p.blurb}` }, gNodes);
+      const g = el('g', { class: 'node' }, gNodes);
       el('circle', { cx: pos[p.id].x, cy: pos[p.id].y, r: R }, g);
       el('text', { x: pos[p.id].x, y: pos[p.id].y + 4.5 }, g).textContent = p.name;
+      el('title', {}, g).textContent = `${p.name}: ${p.blurb}`;
       nodes[p.id] = g;
       g.addEventListener('pointerenter', () => highlight(p.id));
-      g.addEventListener('focus', () => highlight(p.id));
-      g.addEventListener('click', () => select(p.id));
-      g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(p.id); } });
     });
-    svg.addEventListener('pointerleave', () => highlight(selected));
-    svg.addEventListener('focusout', (e) => { if (!svg.contains(e.relatedTarget)) highlight(selected); });
-
-    const byId = Object.fromEntries(platforms.map((p) => [p.id, p]));
-    const caption = $('#mapCaption');
-    const defaultCaption = caption.innerHTML;
+    svg.addEventListener('pointerleave', () => highlight(null));
 
     function highlight(id) {
       const linked = new Set(id ? [id] : []);
@@ -236,30 +217,13 @@
         nodes[k].classList.toggle('on', k === id);
         nodes[k].classList.toggle('dim', !!id && !linked.has(k));
       }
-      if (!id) { caption.innerHTML = defaultCaption; return; }
-      const p = byId[id];
-      const n = expertise.filter((e) => e.platforms.includes(id)).length;
-      caption.innerHTML = `<strong>${esc(p.name)}</strong><span>${esc(p.blurb)}</span>
-        <button type="button" class="map-link" data-goto="${esc(id)}">See ${n} related expertise area${n === 1 ? '' : 's'}</button>`;
     }
-    function select(id) {
-      selected = selected === id ? null : id;
-      highlight(selected);
-      setFilter(selected || '');
-    }
-    caption.addEventListener('click', (e) => {
-      const b = e.target.closest('[data-goto]');
-      if (!b) return;
-      setFilter(b.dataset.goto);
-      $('#expertise').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
 
     // Data packets moving along the lines
     if (!reduceMotion) {
       const packets = Array.from({ length: 9 }, () => ({ dot: el('circle', { r: 3, class: 'packet' }, gPackets), e: null, t: 0, v: 0 }));
       const pick = (pk) => {
-        const pool = selected ? edges.filter((ed) => ed.a === selected || ed.b === selected) : edges;
-        pk.e = pool[Math.floor(Math.random() * pool.length)];
+        pk.e = edges[Math.floor(Math.random() * edges.length)];
         pk.t = 0; pk.v = 0.004 + Math.random() * 0.006; pk.rev = Math.random() < 0.5;
       };
       packets.forEach((pk) => { pick(pk); pk.t = Math.random(); });
@@ -279,40 +243,7 @@
       };
       requestAnimationFrame(tick);
     }
-
-    mapApi = { highlight, setSelected: (id) => { selected = id || null; highlight(selected); } };
   }
-
-  // ---------- Filtering (runs a real GraphQL query when live) ----------
-  let filterSeq = 0;
-  async function setFilter(id) {
-    const seq = ++filterSeq;
-    document.querySelectorAll('#filter .chip').forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.platform === id)));
-    if (mapApi) mapApi.setSelected(id);
-    const variables = { platform: id || null };
-    let titles, meta;
-    if (PREBUILT) {
-      titles = DATA.expertise.filter((e) => !id || e.platforms.includes(id)).map((e) => e.title);
-      meta = 'resolved in browser';
-    } else {
-      try {
-        const r = await gql(FILTER_QUERY, variables);
-        titles = r.data.expertise.map((e) => e.title);
-        meta = `${r.ms} ms`;
-      } catch (err) {
-        titles = DATA.expertise.map((e) => e.title);
-        meta = 'query failed';
-      }
-    }
-    if (seq !== filterSeq) return;
-    const keep = new Set(titles);
-    document.querySelectorAll('#expertiseGrid .card').forEach((c) => c.classList.toggle('muted', !keep.has(c.dataset.title)));
-    showConsole(FILTER_QUERY, { variables, data: { expertise: titles.map((t) => ({ title: t })) } }, meta);
-  }
-  $('#filter').addEventListener('click', (e) => {
-    const chip = e.target.closest('.chip');
-    if (chip) setFilter(chip.dataset.platform);
-  });
 
   // ---------- Console ----------
   let consoleState = { query: PAGE_QUERY, response: null, meta: '' };

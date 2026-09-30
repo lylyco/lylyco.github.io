@@ -56,10 +56,8 @@ class Platform:
 
 @strawberry.type
 class Expertise:
-    icon: str
     title: str
     body: str
-    platforms: List[str] = strawberry.field(description="Platform ids this skill touches")
 
 
 @strawberry.type
@@ -95,10 +93,8 @@ class Query:
         return [Platform(**p) for p in c.PLATFORMS]
 
     @strawberry.field
-    def expertise(self, platform: str | None = None) -> List[Expertise]:
-        """All expertise areas, or only those touching one platform id."""
-        items = [Expertise(**e) for e in c.EXPERTISE]
-        return [e for e in items if platform is None or platform in e.platforms]
+    def expertise(self) -> List[Expertise]:
+        return [Expertise(**e) for e in c.EXPERTISE]
 
     @strawberry.field
     def contact(self) -> Contact:
@@ -120,7 +116,7 @@ PAGE_QUERY = """query Portfolio {
   profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
   about { title titleEmphasis paragraphs strengths { icon title body } }
   platforms { id name blurb connectsTo }
-  expertise { icon title body platforms }
+  expertise { title body }
   underTheHood { title body }
   contact { title titleEmphasis body }
   footer

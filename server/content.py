@@ -90,24 +90,18 @@ PLATFORMS = [
 ]
 
 EXPERTISE = [
-    {"icon": "layers", "title": "Technical & Systems Operations",
-     "body": "End-to-end ownership of complex platforms, from requirements through configuration to rollout. I catch failure points early and build systems that hold up as the business grows.",
-     "platforms": ["ehr", "ecom", "pay", "wms", "crm", "comp"]},
-    {"icon": "box", "title": "Product Ownership",
-     "body": "Business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs.",
-     "platforms": ["ehr"]},
-    {"icon": "compass", "title": "Business Strategy",
-     "body": "I find operational inefficiencies, size the opportunity, and build the business case for change.",
-     "platforms": ["ehr", "ecom"]},
-    {"icon": "chart", "title": "Data & Reporting Infrastructure",
-     "body": "Designing reporting pipelines, ensuring data integrity, and giving teams the visibility to make good decisions quickly.",
-     "platforms": ["ehr", "ecom"]},
-    {"icon": "eye", "title": "End-User Experience",
-     "body": "Users aren't a footnote. I bring the user's perspective into every operational and product decision, especially in multi-role environments.",
-     "platforms": ["ehr", "ecom"]},
-    {"icon": "users", "title": "People Leadership",
-     "body": "I listen first, collaborate openly, and build team morale that lasts. Strong teams keep delivering long after a single project ends.",
-     "platforms": ["ehr", "ecom"]},
+    {"title": "Technical & Systems Operations",
+     "body": "I own complex platforms end to end, from requirements through configuration to rollout. I catch failure points early and build systems that hold up as the business grows."},
+    {"title": "Product Ownership",
+     "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs."},
+    {"title": "Business Strategy",
+     "body": "I find operational inefficiencies, size the opportunity, and build the business case for change."},
+    {"title": "Data & Reporting Infrastructure",
+     "body": "I design reporting pipelines, protect data integrity, and give teams the visibility to make good decisions quickly."},
+    {"title": "End-User Experience",
+     "body": "Users aren't a footnote. I bring their perspective into every operational and product decision, especially in multi-role environments."},
+    {"title": "People Leadership",
+     "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
 ]
 
 UNDER_THE_HOOD = {
@@ -116,7 +110,7 @@ UNDER_THE_HOOD = {
         "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
         "coded by Claude to my spec. I set the structure, made the calls, and wrote "
         "the copy. The browser sends the query on the right and renders what comes "
-        "back. The platform filter above runs its own query with an argument."
+        "back."
     ),
 }
 

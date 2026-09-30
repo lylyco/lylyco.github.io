@@ -148,15 +148,7 @@ CONTACT = {
     "body": "Open to new opportunities across operations, systems, product, and adjacent functions, as well as select consulting engagements. Let's talk.",
 }
 
-UNDER_THE_HOOD = {
-    "title": "This Portfolio is",
-    "title_emphasis": "one query.",
-    "body": (
-        "Every word here comes from a Python GraphQL API (FastAPI and Strawberry), "
-        "coded by Claude to my spec. I set the structure, made the calls, and wrote "
-        "the copy. The browser sends the query on the right and renders what comes "
-        "back."
-    ),
-}
+# Shown under your name beside the portrait in About.
+TAGLINE = "Business Operations · Data Operations · Technical Operations · Systems Strategy"
 
-FOOTER = "Business Operations · Data Operations · Technical Operations · Systems Strategy"
+FOOTER = "Last Updated September 2026. All content © Lydia Cortez. Built with FastAPI, Strawberry, and plain HTML, CSS, and JavaScript. Source code available on GitHub. Coded by Claude to my spec. I set the structure, made the calls, and wrote the copy."

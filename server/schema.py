@@ -81,13 +81,6 @@ class Recommendations:
 
 
 @strawberry.type
-class UnderTheHood:
-    title: str
-    title_emphasis: str
-    body: str
-
-
-@strawberry.type
 class Query:
     @strawberry.field
     def profile(self) -> Profile:
@@ -120,8 +113,8 @@ class Query:
         return Contact(**c.CONTACT)
 
     @strawberry.field
-    def under_the_hood(self) -> UnderTheHood:
-        return UnderTheHood(**c.UNDER_THE_HOOD)
+    def tagline(self) -> str:
+        return c.TAGLINE
 
     @strawberry.field
     def footer(self) -> str:
@@ -137,7 +130,7 @@ PAGE_QUERY = """query Portfolio {
   platforms { id name blurb connectsTo }
   expertise { title body }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
-  underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
+  tagline
   footer
 }"""

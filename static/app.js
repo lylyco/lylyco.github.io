@@ -8,8 +8,8 @@
   platforms { id name blurb connectsTo }
   expertise { title body }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
-  underTheHood { title titleEmphasis body }
   contact { title titleEmphasis body }
+  tagline
   footer
 }`;
 
@@ -121,9 +121,6 @@
     bind('industriesLine', p.industriesLine);
     bind('aboutTitle', d.about.title);
     bind('aboutEmphasis', d.about.titleEmphasis);
-    bind('underTheHoodTitle', d.underTheHood.title);
-    bind('underTheHoodEmphasis', d.underTheHood.titleEmphasis);
-    bind('underTheHoodBody', d.underTheHood.body);
     bind('contactTitle', d.contact.title);
     bind('contactEmphasis', d.contact.titleEmphasis);
     bind('contactBody', d.contact.body);
@@ -134,7 +131,7 @@
     $('#contactCta').innerHTML = ctaButtons(p);
 
     $('#portrait').innerHTML = `<div class="portrait-frame"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="720" height="846" loading="lazy"></div>
-      <figcaption><strong>${esc(p.name)}</strong>${esc(d.footer)}</figcaption>`;
+      <figcaption><strong>${esc(p.name)}</strong>${esc(d.tagline)}</figcaption>`;
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `
@@ -287,48 +284,13 @@
     }
   }
 
-  // ---------- Console ----------
-  let consoleState = { query: PAGE_QUERY, response: null, meta: '' };
-  const hlGql = (q) => esc(q)
-    .replace(/\b(query|String|ID)\b/g, '<span class="tok-k">$1</span>')
-    .replace(/([{}()!:])/g, '<span class="tok-p">$1</span>')
-    .replace(/(\$\w+)/g, '<span class="tok-k">$1</span>');
-  // Inlined photos are long base64 strings; show a short stand-in in the console
-  const shortData = (k, v) => (typeof v === 'string' && v.startsWith('data:image/'))
-    ? `${v.slice(0, v.indexOf(',') + 1)}… (${Math.round(v.length * 0.75 / 1024)} KB, inlined by build.py)` : v;
-  const hlJson = (obj) => esc(JSON.stringify(obj, shortData, 2))
-    .replace(/(&quot;[^&]*?&quot;)(\s*:)/g, '<span class="tok-n">$1</span>$2')
-    .replace(/(:\s*|^\s*|\[\s*)(&quot;.*?&quot;)/gm, '$1<span class="tok-s">$2</span>');
-  function paintConsole(tab) {
-    $('#tabQuery').setAttribute('aria-selected', String(tab === 'query'));
-    $('#tabResponse').setAttribute('aria-selected', String(tab === 'response'));
-    $('#consoleBody').innerHTML = tab === 'query' ? hlGql(consoleState.query) : hlJson(consoleState.response);
-    $('#consoleMeta').textContent = consoleState.meta;
-  }
-  function showConsole(query, response, meta) {
-    consoleState = { query, response, meta };
-    paintConsole($('#tabResponse').getAttribute('aria-selected') === 'true' ? 'response' : 'query');
-  }
-  $('#tabQuery').addEventListener('click', () => paintConsole('query'));
-  $('#tabResponse').addEventListener('click', () => paintConsole('response'));
-
   // ---------- Boot ----------
   async function boot() {
     try {
-      let meta;
-      if (PREBUILT) {
-        DATA = PREBUILT;
-        meta = 'pre-built';
-        $('#stackMode').textContent = 'Static build: the Python build step ran this query and baked in the result';
-      } else {
-        const r = await gql(PAGE_QUERY);
-        DATA = r.data; meta = `${r.ms} ms`;
-        $('#stackMode').textContent = `Live: fetched from ${ENDPOINT} in ${r.ms} ms`;
-      }
+      DATA = PREBUILT || (await gql(PAGE_QUERY)).data;
       render(DATA);
-      showConsole(PAGE_QUERY, { data: DATA }, meta);
     } catch (err) {
-      $('#stackMode').textContent = `Could not load content: ${err.message}. Is the Python server running?`;
+      console.error(`Could not load content: ${err.message}. Is the Python server running?`);
     }
   }
   boot();

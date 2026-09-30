@@ -5,11 +5,12 @@ PROFILE = {
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Experience in eCommerce, Fintech, EHR, CRM, and compliance "
-        "systems. With a curiuos mind, I am a natural initiatator. I "
-        "build for real users, spot the gaps between teams, processes, and "
-        "systems, and close them at the root. "
-        "I lead teams and partner across departments to get things done."
+        "Experience across eCommerce, FinTech, EHR, CRM, and compliance "
+        "systems. With a curious mind, I am a natural initiator and proactive "
+        "problem solver. I build for real users, spot gaps across data, teams, "
+        "processes, and systems, and address them at the root. I lead teams "
+        "and collaborate cross-functionally to turn complex challenges into "
+        "practical solutions and get things done."
     ),
     "industries_line": (
         "Industries under my belt: retail, distilled spirits, payment processing, "
@@ -39,23 +40,28 @@ ABOUT = {
     "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "For over ten years, my strong work ethic has had a result of **5 promotions over "
-        "eight years** I have worked where business operations meet the systems that run "
-        "them. Across retail, distilled spirits, payment processing, subscription "
+        "For more than ten years, I have built my career where business operations meet the "
+        "systems that run them, earning **five promotions over eight years** through a "
+        "consistent track record of strong performance, adaptability, and ownership. My "
+        "experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",
-        "I started on the business side of eCommerce, then moved into QA on ONEHOPE Wine "
-        "commerce platform, where I learned how systems break and why. Most recently, as the "
-        "first Data Operations Manager at the Alliance for Community Empowerment, I led three "
-        "Data Support Specialists and two engineering contractors supporting an EHR platform "
-        "used by **nine distinct social and clinical service programs**. I brought full "
-        "visibility to the data team's work, introduced formal scoping and strategic planning, "
-        "and closed gaps no one had owned before.",
-        "My QA background is why I go deep. I learn systems inside and out, use data to see "
-        "what's actually happening, and look at every decision through the eyes of the people "
-        "doing the work. When I recommend a solution, I explain why, what it will affect, and "
-        "what it costs. When a full fix has to wait, I put a temporary one in place and I'm "
-        "clear about its tradeoffs. And I don't solve problems alone. I bring the right teams "
-        "together to solve them.",
+        "I started on the business side of eCommerce before moving into QA for ONEHOPE Wine's "
+        "commerce platform, where I learned not only how systems break, but why they break. "
+        "That foundation shaped how I approach every problem today.",
+        "Most recently, as the first Data Operations Manager at the Alliance for Community "
+        "Empowerment, I led three Data Support Specialists and two engineering contractors "
+        "supporting an EHR platform used across **nine distinct social and clinical service "
+        "programs**. I brought visibility and structure to the data team's work, introduced "
+        "formal scoping and strategic planning, and addressed operational gaps that had "
+        "previously lacked clear ownership.",
+        "My QA background is what drives me to go deep. I learn systems inside and out, use "
+        "data to understand what is actually happening, and evaluate decisions from the "
+        "perspective of the people doing the work. When I recommend a solution, I explain the "
+        "rationale, the impact, and the cost. When a permanent fix is not immediately "
+        "possible, I put a practical interim solution in place and make the tradeoffs clear.",
+        "Most importantly, I do not believe complex problems are solved in isolation. I bring "
+        "the right people and teams together, create shared understanding, and work toward "
+        "solutions that are both technically sound and operationally sustainable.",
     ],
 
     "strengths": [
@@ -120,7 +126,7 @@ UNDER_THE_HOOD = {
 CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",
-    "body": "Open to operations specialist, systems operations, and operations leadership roles, and to select consulting engagements. Let's talk.",
+    "body": "Open to new opportunities across operations, systems, product, and adjacent functions, as well as select consulting engagements. Let's talk.",
 }
 
 FOOTER = "Business Operations · Technical Operations · Systems Strategy"

@@ -66,6 +66,13 @@
     try { localStorage.setItem('lc-theme', next); } catch (e) { /* ignore */ }
   });
 
+  // ---------- Logo: back to top ----------
+  $('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    history.replaceState(null, '', location.pathname + location.search);
+  });
+
   // ---------- Mobile nav ----------
   const navToggle = $('#navToggle'), navLinks = $('#navLinks');
   navToggle.addEventListener('click', () => {

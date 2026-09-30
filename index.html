@@ -263,7 +263,7 @@ h2 em, h1 em { color: var(--accent); }
 .tok-n { color: #B3A5AA; }       /* keys */
 
 /* ---------- Contact & footer ---------- */
-.contact { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+.contact { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; padding-top: clamp(1.5rem, 3vw, 2.5rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
 .contact p { color: var(--text); max-width: 30em; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
 .footer {
   padding: 2rem var(--gutter); border-top: 1px solid var(--hairline);
@@ -306,7 +306,7 @@ h2 em, h1 em { color: var(--accent); }
 </head>
 <body>
 <!--APP-->
-<nav class="nav" id="top">
+<nav class="nav">
   <a href="#top" class="nav-logo" data-bind="name">Lydia Cortez</a>
   <div class="nav-right">
     <ul class="nav-links" id="navLinks">
@@ -454,6 +454,13 @@ h2 em, h1 em { color: var(--accent); }
     const next = isDark() ? 'light' : 'dark';
     root.dataset.theme = next;
     try { localStorage.setItem('lc-theme', next); } catch (e) { /* ignore */ }
+  });
+
+  // ---------- Logo: back to top ----------
+  $('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    history.replaceState(null, '', location.pathname + location.search);
   });
 
   // ---------- Mobile nav ----------

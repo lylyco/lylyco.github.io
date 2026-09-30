@@ -155,8 +155,8 @@ h2 em, h1 em { color: var(--accent); }
   font-size: clamp(3rem, 7.2vw, 5.6rem); line-height: 1.02; letter-spacing: -.01em;
   color: var(--black); text-wrap: balance;
 }
-.hero-industries { font-size: .95rem; line-height: 1.6; color: var(--mauve); max-width: 34em; margin-top: 12px; opacity: .85; }
-.hero-summary { font-size: 1.08rem; line-height: 1.75; font-weight: 300; color: var(--mauve); max-width: 34em; }
+.hero-industries { font-size: .95rem; line-height: 1.6; color: var(--text); max-width: 34em; margin-top: 12px; }
+.hero-summary { font-size: 1.08rem; line-height: 1.75; font-weight: 300; color: var(--text); max-width: 34em; }
 
 .hero-copy > * { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
 .hero-copy > *:nth-child(2) { animation-delay: .1s; }
@@ -281,7 +281,7 @@ h2 em, h1 em { color: var(--accent); }
 
 /* ---------- Contact & footer ---------- */
 .contact { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
-.contact p { color: var(--mauve); max-width: 30em; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
+.contact p { color: var(--text); max-width: 30em; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
 .footer {
   padding: 2rem var(--gutter); border-top: 1px solid var(--hairline);
   text-align: center; font-size: .78rem; letter-spacing: .04em; color: var(--mauve); background: var(--bg);

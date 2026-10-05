@@ -101,7 +101,7 @@ PROJECTS = {
     "items": [
         {"title": "Closing the Compliance Gap on Client Assessments",
          "summary": "No program owned the organization's main client assessment. I audited the data, defined ownership, and automated compliance reports for 7 programs, raising completion from under 50% to 90%.",
-         "url": "/projects/sana-compliance/",
+         "url": "/projects/compliance-reporting/",
          # The full write-up on the project's own page. Projects without "case_study"
          # get a "coming soon" page instead. Wrap words in ** ** to make them bold.
          "case_study": {

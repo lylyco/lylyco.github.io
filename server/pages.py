@@ -94,8 +94,8 @@ def _snippet(path: str) -> str:
 def _sample(sm: dict) -> str:
     return (
         '<div class="case-block case-sample"><h2>Sample Report</h2>'
-        f'<p class="case-note">{_text(sm["note"])}</p>'
         f'{_snippet(sm["sql_file"])}'
+        f'<p class="case-note">{_text(sm["note"])}</p>'
         f'<iframe class="case-sheet" src="{escape(sm["sheet_embed"])}" title="Sample report" loading="lazy"></iframe>'
         f'<p class="case-note"><a href="{escape(sm["sheet_url"])}" target="_blank" rel="noopener">Open in Google Sheets</a></p>'
         "</div>"

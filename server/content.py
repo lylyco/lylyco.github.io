@@ -93,21 +93,53 @@ EXPERTISE = [
      "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
 ]
 
-# Each project links to its own page at "url". build.py creates a "coming soon" page
-# for every project at that address. Leave "url" empty to show the card without a link.
+# Each project links to its own page at "url". build.py creates that page: the full
+# case study if the project has one, otherwise a "coming soon" page. Leave "url" empty to show the card without a link.
 PROJECTS = {
     "title": "Problems I've",
     "title_emphasis": "solved.",
     "items": [
-        {"title": "Project 1",
-         "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": "/projects/project-1/"},
+        {"title": "Closing the Compliance Gap on Client Assessments",
+         "summary": "No program owned the organization's main client assessment. I audited the data, defined ownership, and automated compliance reports for 7 programs, raising completion from under 50% to 90%.",
+         "url": "/projects/sana-compliance/",
+         # The full write-up on the project's own page. Projects without "case_study"
+         # get a "coming soon" page instead. Wrap words in ** ** to make them bold.
+         "case_study": {
+             "heading": "Closing the compliance gap",
+             "heading_emphasis": "on client assessments.",
+             "problem": "The Strengths and Needs Assessment (SANA) is the organization's main assessment requirement for every enrolled client. When a client was enrolled in more than one program, no one knew which program was responsible for completing it. There was no shared workflow, no policy defining ownership, and no one overseeing the data. Visibility depended on occasional manual spot checks by individual program managers, so no one could see the full picture.",
+             "steps": [
+                 ["Mapped the current process.", "I learned how each program conducted the assessment and confirmed there was no official workflow. I identified the SANA as the core assessment shared across programs, required at enrollment and again every six months. I also flagged edge cases: Behavioral Health and Parenting staff don't conduct these intakes, so they had to be excluded from reporting."],
+                 ["Audited the data.", "I compared SANAs recorded in the system against program enrollment. Fewer than 50% of enrolled clients had a SANA on record. Staff were relying on manual side records that leadership could not see or verify."],
+                 ["Defined ownership.", "Through collaborative discussions with three directors and the COO, I helped establish a policy for which program is responsible for conducting the SANA when a client is enrolled in more than one."],
+                 ["Built the reports.", "I applied my knowledge of the EHR schema to direct AI tools (ChatGPT, Claude) in building compliance reports for 7 programs, including QA and testing, cutting development time from an estimated 3 months to 1 month. Each report shows the staff member responsible for the SANA, even when that responsibility sits with another program, so teams have shared visibility and can coordinate."],
+                 ["Automated delivery.", "I rolled the report out to 7 programs and set up automated email delivery, the first time these programs received compliance reports directly. Each report included documentation explaining how it works."],
+                 ["Advocated for ending manual tracking.", "Using the audit findings, I made the case to leadership for retiring manual records and making the system the single source of truth. The initiative was not fully adopted, but it put the cost of manual tracking on leadership's radar for the first time and laid the groundwork for future data governance."],
+             ],
+             "impact": [
+                 "Raised SANA completion from under 50% of enrolled clients to 90%",
+                 "Gave leadership organization-wide visibility into assessment compliance for the first time, replacing occasional manual spot checks",
+                 "Gave managers a clear way to hold case managers accountable to policy: a SANA at enrollment and every six months",
+                 "Used the reports as a data quality check, surfacing clients with no enrollment date on record",
+             ],
+             "next": [
+                 "Run ongoing audits to measure adoption and track compliance trends over time",
+                 "Continue pushing to fully retire manual tracking so the system becomes the single source of truth",
+             ],
+             # Shown after What's Next. "sql_file" is a path inside the repo.
+             "sample": {
+                 "note": "One program's report, rebuilt with sample data. All names and IDs are fictional.",
+                 "sheet_embed": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/preview",
+                 "sheet_url": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/edit?usp=sharing",
+                 "sql_file": "samples/sana_report.sql",
+             },
+         }},
         {"title": "Project 2",
-         "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": "/projects/project-2/"},
+         "summary": "Coming Soon",
+         "url": "/projects/coming-soon-2/"},
         {"title": "Project 3",
-         "summary": "One or two sentences on the problem, what you did, and the result.",
-         "url": "/projects/project-3/"},
+         "summary": "Coming Soon",
+         "url": "/projects/coming-soon-3/"},
     ],
 }
 
@@ -173,5 +205,5 @@ FOOTER = {
     "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",
     "source_label": "View source on GitHub",
     "source_url": "https://github.com/lylyco/lylyco.github.io",
-    "legal": "© 2026 Lydia Cortez · Last updated September 2026",
+    "legal": "© 2026 Lydia Cortez · Last updated October 4, 2026",
 }

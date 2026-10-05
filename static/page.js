@@ -23,6 +23,18 @@
   sizeVars();
   addEventListener('resize', sizeVars);
 
+  // Code snippets: show all / show less.
+  document.querySelectorAll('.snippet').forEach((sn) => {
+    const code = sn.querySelector('.snippet-code');
+    const toggle = sn.querySelector('.snippet-toggle');
+    toggle.addEventListener('click', () => {
+      const open = code.classList.toggle('is-collapsed') === false;
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? toggle.dataset.less : toggle.dataset.more;
+      if (!open) sn.scrollIntoView({ block: 'nearest' });
+    });
+  });
+
   const navToggle = $('#navToggle'), navLinks = $('#navLinks');
   navToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');

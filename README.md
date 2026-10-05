@@ -6,8 +6,9 @@ Python + GraphQL backend (FastAPI + Strawberry), plain HTML/CSS/JS frontend.
 server/content.py   all site copy: edit this to change the text
 server/schema.py    GraphQL types and the page query
 server/app.py       FastAPI app: serves the site, project pages, and /graphql
-server/pages.py     renders a project page from static/project.html
+server/pages.py     renders each project page (case study or coming soon)
 static/             index.html, styles.css, app.js, project.html, page.js, img/
+samples/            SQL shown on project pages
 build.py            writes index.html and projects/<name>/index.html for GitHub Pages
 ```
 

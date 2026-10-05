@@ -127,7 +127,7 @@ class Query:
     @strawberry.field
     def projects(self) -> Projects:
         p = dict(c.PROJECTS)
-        p["items"] = [Project(**i) for i in p["items"]]
+        p["items"] = [Project(title=i["title"], summary=i["summary"], url=i["url"]) for i in p["items"]]
         return Projects(**p)
 
     @strawberry.field

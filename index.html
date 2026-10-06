@@ -258,6 +258,24 @@ h2 em, h1 em { color: var(--accent); }
 .card h3 { font-size: 1rem; font-weight: 600; color: var(--accent); }
 .card p { font-size: .88rem; color: var(--black); line-height: 1.65; flex: 1; }
 
+/* Expertise disco balls */
+#expertiseGrid { row-gap: 1.75rem; justify-items: center; }
+.disco {
+  --disco-glow: 255, 255, 255;
+  position: relative; width: 100%; max-width: 263px; aspect-ratio: 1 / 1;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.disco canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .72; pointer-events: none; }
+.disco::before {
+  content: ""; position: absolute; inset: 8%; border-radius: 50%; pointer-events: none; z-index: 1;
+  background: radial-gradient(circle, rgba(var(--disco-glow), .78) 0%, rgba(var(--disco-glow), .55) 50%, rgba(var(--disco-glow), 0) 72%);
+}
+.disco-copy { position: relative; z-index: 2; max-width: 76%; display: flex; flex-direction: column; gap: .5rem; }
+.disco h3 { font-size: .94rem; font-weight: 600; color: var(--accent); text-wrap: balance; }
+.disco p { font-size: .79rem; font-weight: 600; line-height: 1.5; color: var(--black); text-wrap: pretty; }
+:root[data-dark] .disco { --disco-glow: 20, 13, 15; }
+:root[data-dark] .disco canvas { opacity: .5; }
+
 /* ---------- Projects ---------- */
 .project-link {
   color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px;
@@ -646,10 +664,14 @@ a.project-link:hover { color: var(--accent-light); }
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `
-      <article class="card">
-        <h3>${esc(e.title)}</h3>
-        <p>${esc(e.body)}</p>
+      <article class="disco">
+        <canvas aria-hidden="true"></canvas>
+        <div class="disco-copy">
+          <h3>${esc(e.title)}</h3>
+          <p>${esc(e.body)}</p>
+        </div>
       </article>`).join('');
+    startDisco();
 
     bind('projectsTitle', d.projects.title);
     bind('projectsEmphasis', d.projects.titleEmphasis);
@@ -708,6 +730,79 @@ a.project-link:hover { color: var(--accent-light); }
     card.style.setProperty('--mx', `${e.clientX - r.left}px`);
     card.style.setProperty('--my', `${e.clientY - r.top}px`);
   });
+
+  // ---------- Expertise disco balls ----------
+  let discoRaf = 0;
+  function startDisco() {
+    cancelAnimationFrame(discoRaf);
+    const canvases = [...document.querySelectorAll('#expertiseGrid .disco canvas')];
+    const hash = (a, b, c) => { const s = Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453; return s - Math.floor(s); };
+    const norm = (v) => { const m = Math.hypot(...v); return v.map((x) => x / m); };
+    const L = norm([-0.45, 0.6, 0.66]), H = norm([L[0], L[1], L[2] + 1]);
+    const visible = new Set();
+    const io = new IntersectionObserver((es) => es.forEach((en) => en.isIntersecting ? visible.add(en.target) : visible.delete(en.target)));
+    canvases.forEach((c) => io.observe(c));
+
+    function draw(c, rot, seed, t) {
+      const dpr = window.devicePixelRatio || 1, w = c.clientWidth;
+      if (!w) return;
+      const size = Math.round(w * dpr);
+      if (c.width !== size) c.width = c.height = size;
+      const ctx = c.getContext('2d'), cx = size / 2, cy = size / 2, R = size * 0.495;
+      const dark = root.hasAttribute('data-dark');
+      ctx.clearRect(0, 0, size, size);
+      const g = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.4, R * 0.1, cx, cy, R);
+      g.addColorStop(0, dark ? '#6b4a55' : '#d9c4cb'); g.addColorStop(1, dark ? '#2a1a20' : '#8c6b76');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+      const P = (la, lo) => [cx + R * Math.cos(la) * Math.sin(lo), cy - R * Math.sin(la)];
+      const bands = 18, glints = [];
+      for (let b = 0; b < bands; b++) {
+        const la0 = -Math.PI / 2 + b * Math.PI / bands, la1 = la0 + Math.PI / bands, lac = (la0 + la1) / 2;
+        const n = Math.max(6, Math.round(36 * Math.cos(lac)));
+        const dLa = (la1 - la0) * 0.07, step = Math.PI * 2 / n, dLo = step * 0.07;
+        for (let k = 0; k < n; k++) {
+          const lo0 = k * step + rot, lo1 = lo0 + step, loc = lo0 + step / 2;
+          const nx = Math.cos(lac) * Math.sin(loc), ny = Math.sin(lac), nz = Math.cos(lac) * Math.cos(loc);
+          if (nz < 0.01) continue;
+          const rnd = hash(b, k, seed);
+          const diff = Math.max(0, nx * L[0] + ny * L[1] + nz * L[2]);
+          const spec = Math.pow(Math.max(0, nx * H[0] + ny * H[1] + nz * H[2]), 60);
+          const tw = 0.5 + 0.5 * Math.sin(t * 1.6 + rnd * 40);
+          let v = 0.42 + 0.38 * diff + 0.2 * (rnd - 0.5) + 0.08 * tw + spec * 0.6;
+          v = Math.min(1, v * (0.55 + 0.45 * Math.sqrt(nz)));
+          const rose = rnd > 0.85 ? 0.35 : 0;
+          const s = dark ? 0.55 : 1;
+          const r = Math.round((150 + 105 * v) * s), gg = Math.round((120 + 130 * v - rose * 60) * s), bb = Math.round((130 + 122 * v - rose * 40) * s);
+          const a = P(la0 + dLa, lo0 + dLo), b2 = P(la0 + dLa, lo1 - dLo), c2 = P(la1 - dLa, lo1 - dLo), d = P(la1 - dLa, lo0 + dLo);
+          ctx.fillStyle = `rgb(${r},${gg},${bb})`;
+          ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b2); ctx.lineTo(...c2); ctx.lineTo(...d); ctx.closePath(); ctx.fill();
+          if (!reduceMotion && (spec > 0.55 || (rnd > 0.975 && tw > 0.85 && nz > 0.3))) glints.push([...P(lac, loc), Math.max(spec, tw * 0.7)]);
+        }
+      }
+      const rim = ctx.createRadialGradient(cx, cy, R * 0.7, cx, cy, R);
+      rim.addColorStop(0, 'rgba(255,255,255,0)'); rim.addColorStop(1, dark ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.35)');
+      ctx.fillStyle = rim; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+      glints.forEach(([x, y, s]) => {
+        const len = (6 + 10 * s) * dpr;
+        ctx.strokeStyle = `rgba(255,255,255,${0.5 + 0.5 * s})`; ctx.lineWidth = 1.2 * dpr;
+        ctx.beginPath(); ctx.moveTo(x - len, y); ctx.lineTo(x + len, y); ctx.moveTo(x, y - len); ctx.lineTo(x, y + len); ctx.stroke();
+        ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y, 1.6 * dpr, 0, Math.PI * 2); ctx.fill();
+      });
+    }
+
+    const t0 = performance.now();
+    const frame = (now) => {
+      const t = reduceMotion ? 0 : (now - t0) / 1000;
+      canvases.forEach((c, i) => { if (reduceMotion || visible.has(c)) draw(c, t * 0.12 + i * 0.9, i, t); });
+      if (!reduceMotion) discoRaf = requestAnimationFrame(frame);
+    };
+    canvases.forEach((c, i) => draw(c, i * 0.9, i, 0));
+    discoRaf = requestAnimationFrame(frame);
+    if (reduceMotion) {
+      addEventListener('resize', () => canvases.forEach((c, i) => draw(c, i * 0.9, i, 0)));
+      new MutationObserver(() => canvases.forEach((c, i) => draw(c, i * 0.9, i, 0))).observe(root, { attributes: true, attributeFilter: ['data-dark'] });
+    }
+  }
 
   // ---------- Systems map ----------
   const NS = 'http://www.w3.org/2000/svg';

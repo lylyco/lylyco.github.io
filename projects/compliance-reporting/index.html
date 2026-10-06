@@ -407,6 +407,10 @@ a.project-link:hover { color: var(--accent-light); }
   display: flex; flex-direction: column; gap: .35rem;
 }
 .footer a { color: var(--accent); text-underline-offset: 3px; }
+/* LydiaCo logo */
+.footer-logo { align-self: center; display: block; margin-top: .9rem; line-height: 0; border-radius: 12px; transition: transform .2s; }
+.footer-logo img { display: block; width: 118px; height: 118px; border-radius: 12px; }
+.footer-logo:hover { transform: translateY(-2px); }
 
 /* ---------- Responsive ---------- */
 /* Six menu items need room: collapse to the menu button below 1100px */
@@ -480,7 +484,8 @@ a.project-link:hover { color: var(--accent-light); }
 
 <footer class="footer">
   <p>Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL. <a href="https://github.com/lylyco/lylyco.github.io" target="_blank" rel="noopener">View source on GitHub</a></p>
-  <p>© 2026 Lydia Cortez · Last updated October 4, 2026</p>
+  <p>© 2026 Lydia Cortez · Last updated October 2026</p>
+  <a class="footer-logo" href="/"><img src="/static/img/logo.png" alt="LydiaCo, Los Angeles" width="118" height="118"></a>
 </footer>
 <script>
 (() => {

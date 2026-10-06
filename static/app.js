@@ -127,7 +127,8 @@
     bind('contactBody', d.contact.body);
     const f = d.footer;
     $('.footer').innerHTML = `<p>${esc(f.credit)} <a href="${esc(f.sourceUrl)}" target="_blank" rel="noopener">${esc(f.sourceLabel)}</a></p>
-      <p>${esc(f.legal)}</p>`;
+      <p>${esc(f.legal)}</p>
+      <a class="footer-logo" href="/"><img src="/static/img/logo.png" alt="LydiaCo, Los Angeles" width="118" height="118"></a>`;
 
     $('#tags').innerHTML = p.tags.map((t) => `<li class="tag">${esc(t)}</li>`).join('');
     $('#heroCta').innerHTML = ctaButtons(p);

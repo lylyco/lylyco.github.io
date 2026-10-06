@@ -205,5 +205,5 @@ FOOTER = {
     "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",
     "source_label": "View source on GitHub",
     "source_url": "https://github.com/lylyco/lylyco.github.io",
-    "legal": "© 2026 Lydia Cortez · Last updated October 4, 2026",
+    "legal": "© 2026 Lydia Cortez · Last updated October 2026",
 }

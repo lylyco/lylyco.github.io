@@ -20,7 +20,7 @@ PROFILE = {
         "Business Operations",
         "Process Improvement",
         "Requirements Gathering",
-        "Reporting & Analytics"
+        "Reporting & Analytics",
         "SQL",
         "Systems Strategy",
         "Team Leadership",

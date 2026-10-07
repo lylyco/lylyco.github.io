@@ -6,8 +6,8 @@ PROFILE = {
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
         "Experience across eCommerce, FinTech, EHR, CRM, and compliance "
-        "systems. With a curious mind, I am a natural initiator and proactive "
-        "problem solver. I build for real users, spot gaps across data, teams, "
+        "systems. Curious and proactive, I am a natural initiator and problem "
+        "solver. I build for real users, spot gaps across data, teams, "
         "processes, and systems, and address them at the root. I lead teams "
         "and collaborate cross-functionally to turn complex challenges into "
         "practical solutions and get things done."
@@ -17,11 +17,13 @@ PROFILE = {
         "subscription billing, and social and clinical services."
     ),
     "tags": [
-        "Systems & Data",
-        "Operations Leadership",
+        "Business Operations",
         "Process Improvement",
-        "Business Acumen",
-        "Cross-Functional Collaboration",
+        "Requirements Gathering",
+        "Reporting & Analytics"
+        "SQL",
+        "Systems Strategy",
+        "Team Leadership",
     ],
     "email": "cortez0715@gmail.com",
     "photo": {
@@ -49,16 +51,12 @@ ABOUT = {
         "work led me into QA for ONEHOPE Wine's commerce platform, where I traced issues to "
         "their root cause and learned not only how systems break, but why. That experience "
         "became the foundation for how I approach technical and operational problems.",
-        "Most recently, as the first Data Operations Manager at the Alliance for Community "
-        "Empowerment, I led three Data Support Specialists and two engineering contractors "
-        "supporting an EHR platform across nine social and clinical service programs. I "
-        "brought structure and visibility to the team's work, established formal scoping and "
-        "strategic planning, and addressed gaps in ownership.",
-        "My approach combines systems knowledge, data-driven problem solving, and the "
-        "perspective of the people doing the work. I weigh options by impact and cost, "
-        "explain the reasoning behind decisions, and put practical interim fixes in place "
-        "when a permanent one needs time. The result is work that is technically sound and "
-        "holds up in daily operations.",
+        "Most recently, as ACE's first Data Operations Manager II, I took on product, systems, and technical "
+        "operations responsibilities while leading three Data Support Specialists and two "
+        "engineering contractors supporting a newly migrated EHR platform across nine social "
+        "and clinical service programs. I established formal scoping, strategic planning, and "
+        "reporting, strengthened the team's technical capabilities, and resolved organizational "
+        "gaps.",
     ],
 }
 
@@ -237,7 +235,7 @@ CONTACT = {
 }
 
 # Shown under your name beside the portrait in About.
-TAGLINE = "Business Operations · Data Operations · Technical Operations · Systems Strategy"
+TAGLINE = "Business Operations · Process Improvement · Requirements Gathering · Reporting & Analytics · SQL · Systems Strategy · Team Leadership"
 
 FOOTER = {
     "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",

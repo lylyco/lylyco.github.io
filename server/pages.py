@@ -91,15 +91,28 @@ def _snippet(path: str) -> str:
     )
 
 
+def _sample_block(b: dict) -> str:
+    if "sql" in b:
+        return _snippet(b["sql"])
+    if "note" in b:
+        return f'<p class="case-note">{_text(b["note"])}</p>'
+    if "sheet" in b:
+        return (
+            f'<iframe class="case-sheet" src="{escape(b["sheet"])}" title="Sample report" loading="lazy"></iframe>'
+            f'<p class="case-note"><a href="{escape(b["url"])}" target="_blank" rel="noopener">Open in Google Sheets</a></p>'
+        )
+    if "image" in b:
+        src = escape(b["image"])
+        return (
+            f'<a class="case-image" href="{src}" target="_blank" rel="noopener" aria-label="Open the full-size image">'
+            f'<img src="{src}" alt="{escape(b["alt"])}" loading="lazy"></a>'
+        )
+    raise ValueError(f"Unknown sample block: {b}")
+
+
 def _sample(sm: dict) -> str:
-    return (
-        '<div class="case-block case-sample"><h2>Sample Report</h2>'
-        f'{_snippet(sm["sql_file"])}'
-        f'<p class="case-note">{_text(sm["note"])}</p>'
-        f'<iframe class="case-sheet" src="{escape(sm["sheet_embed"])}" title="Sample report" loading="lazy"></iframe>'
-        f'<p class="case-note"><a href="{escape(sm["sheet_url"])}" target="_blank" rel="noopener">Open in Google Sheets</a></p>'
-        "</div>"
-    )
+    blocks = "".join(_sample_block(b) for b in sm["blocks"])
+    return f'<div class="case-block case-sample"><h2>{_text(sm["heading"])}</h2>{blocks}</div>'
 
 
 def _coming_soon(project: dict) -> str:

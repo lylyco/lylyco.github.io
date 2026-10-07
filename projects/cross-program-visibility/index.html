@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Project 2 | Lydia Cortez</title>
-<meta name="description" content="Project 2: a project by Lydia Cortez. Coming soon.">
+<title>Creating Cross-Program Visibility for a New Department | Lydia Cortez</title>
+<meta name="description" content="My team had no shared view of its work across 9 programs. I built a central project board, introduced sprint planning, and automated intake. We delivered 773 stories in 2025.">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/static/img/favicon-192.png">
 <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lydia Cortez">
-<meta property="og:title" content="Project 2 | Lydia Cortez">
-<meta property="og:description" content="Project 2: a project by Lydia Cortez. Coming soon.">
-<meta property="og:url" content="https://lylyco.github.io/projects/coming-soon-2/">
+<meta property="og:title" content="Creating Cross-Program Visibility for a New Department | Lydia Cortez">
+<meta property="og:description" content="My team had no shared view of its work across 9 programs. I built a central project board, introduced sprint planning, and automated intake. We delivered 773 stories in 2025.">
+<meta property="og:url" content="https://lylyco.github.io/projects/cross-program-visibility/">
 <meta property="og:image" content="https://lylyco.github.io/static/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -328,6 +328,12 @@ a.project-link:hover { color: var(--accent-light); }
 .case-note a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .case-sample { display: flex; flex-direction: column; gap: 1rem; }
 .case-sample h2 { margin-bottom: 0; }
+.case-image {
+  display: block; border-radius: 12px; overflow: hidden; line-height: 0;
+  border: 1px solid var(--hairline); box-shadow: var(--shadow); transition: transform .25s, border-color .25s;
+}
+.case-image:hover { transform: translateY(-3px); border-color: var(--accent); }
+.case-image img { display: block; width: 100%; height: auto; }
 .case-sheet {
   width: 100%; height: 560px; border: 1px solid var(--hairline); border-radius: 12px; background: #FFFFFF;
 }
@@ -482,8 +488,14 @@ a.project-link:hover { color: var(--accent-light); }
 <main>
   <section class="project-page">
     <div class="section-head"><div class="section-label">Projects</div></div>
-    <h1 class="project-title">Project 2<br><em>coming soon.</em></h1>
-    <p class="project-note">The full write-up for this project is on its way.</p>
+    <h1 class="project-title">Cross-program visibility<br><em>for a new department.</em></h1>
+    <div class="case">
+    <div class="case-block"><h2>The Problem</h2><p>Our core team had no shared view of who was working on what. Sprint planning had never been used in the organization, so there was no structured way to coordinate work, set priorities, or show leadership and partner teams our actual workload across 9 programs.</p></div>
+    <div class="case-block"><h2>What I Did</h2><ol class="case-steps"><li><strong>Took on a growing scope.</strong> I joined as a Data Operations Manager, and the role quickly grew to include systems operations and product work across 9 programs.</li><li><strong>Built a centralized project board.</strong> To manage that scope, I created one board where all of the team&#x27;s work lived, so everyone could see what was in progress, what was next, and who owned it.</li><li><strong>Introduced Agile practices.</strong> I adapted practices from engineering teams, combining Scrum sprint planning with Kanban workflows.</li><li><strong>Automated intake.</strong> I set up work requests and EHR support tickets from across the organization to flow directly onto the board.</li><li><strong>Iterated until it fit.</strong> After several rounds of iteration, the process matched how our team actually works.</li></ol></div>
+    <div class="case-block"><h2>Impact</h2><ul><li><strong>Team clarity:</strong> My immediate team gained full visibility into each other&#x27;s work, priorities, and capacity, along with the structure and rhythm that sprint planning provides.</li><li><strong>Organization-wide transparency:</strong> Partner teams and leadership could see our work in real time. When we said we were at capacity, the board showed why. At the time, no other team in the organization had a comparable process.</li><li><strong>Cross-program tracking:</strong> Because our deliverables directly supported or worked alongside all 9 programs, the board gave us a reliable way to track every deliverable and its dependencies.</li><li><strong>Streamlined intake:</strong> Automating work requests and EHR support tickets into the board removed manual triage and ensured nothing was lost between systems.</li><li><strong>Measurable output:</strong> We completed 773 stories in 2025 with a team of 3 to 4, and have surpassed 1,000 so far in 2026 with 3 staff and 2 contractors.</li><li><strong>Clear ownership:</strong> Defined responsibilities made it possible to hold my direct reports accountable to agreed commitments.</li><li><strong>Reliable upward communication:</strong> I gained a consistent way to report progress and resource needs to my supervisor across all 9 programs.</li></ul></div>
+    <div class="case-block"><h2>What's Next</h2><ul><li>Expand tagging to categorize work by program and type</li><li>Align projects with estimated time and effort</li><li>Introduce story points to estimate and balance workload across the team</li></ul></div>
+    <div class="case-block case-sample"><h2>Example</h2><p class="case-note">I built this dashboard in early 2026 to show leadership everything our team delivered in 2025. I worked on those 773 completed cards alongside my team, not just managed them, and the dashboard gave all of us the recognition we earned.</p><a class="case-image" href="/static/img/projects/dashboard-2025.png" target="_blank" rel="noopener" aria-label="Open the full-size image"><img src="/static/img/projects/dashboard-2025.png" alt="Annual Data Team Delivery Dashboard showing 773 completed cards in 2025, with monthly totals rising from 54 in January to 84 in December" loading="lazy"></a></div>
+    </div>
     <a class="btn btn-ghost" href="/#projects"><span aria-hidden="true">&larr;</span> Back to projects</a>
   </section>
 </main>

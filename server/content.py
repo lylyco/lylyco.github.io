@@ -126,17 +126,55 @@ PROJECTS = {
                  "Run ongoing audits to measure adoption and track compliance trends over time",
                  "Continue pushing to fully retire manual tracking so the system becomes the single source of truth",
              ],
-             # Shown after What's Next. "sql_file" is a path inside the repo.
+             # Shown after What's Next, in this order. Block types: "sql" (a file in the
+             # repo), "note", "sheet" (Google Sheets embed), "image" (with "alt" text).
              "sample": {
-                 "note": "One program's report, rebuilt with sample data. All names and IDs are fictional.",
-                 "sheet_embed": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/preview",
-                 "sheet_url": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/edit?usp=sharing",
-                 "sql_file": "samples/sana_report.sql",
+                 "heading": "Sample Report",
+                 "blocks": [
+                     {"sql": "samples/sana_report.sql"},
+                     {"note": "One program's report, rebuilt with sample data. All names and IDs are fictional."},
+                     {"sheet": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/preview",
+                      "url": "https://docs.google.com/spreadsheets/d/1n68s8y_Ww8uzaVTtRuDXVsrUTddvgakzMm5CjWYTkTg/edit?usp=sharing"},
+                 ],
              },
          }},
-        {"title": "Project 2",
-         "summary": "Coming Soon",
-         "url": "/projects/coming-soon-2/"},
+        {"title": "Creating Cross-Program Visibility for a New Department",
+         "summary": "My team had no shared view of its work across 9 programs. I built a central project board, introduced sprint planning, and automated intake. We delivered 773 stories in 2025.",
+         "url": "/projects/cross-program-visibility/",
+         "case_study": {
+             "heading": "Cross-program visibility",
+             "heading_emphasis": "for a new department.",
+             "problem": "Our core team had no shared view of who was working on what. Sprint planning had never been used in the organization, so there was no structured way to coordinate work, set priorities, or show leadership and partner teams our actual workload across 9 programs.",
+             "steps": [
+                 ["Took on a growing scope.", "I joined as a Data Operations Manager, and the role quickly grew to include systems operations and product work across 9 programs."],
+                 ["Built a centralized project board.", "To manage that scope, I created one board where all of the team's work lived, so everyone could see what was in progress, what was next, and who owned it."],
+                 ["Introduced Agile practices.", "I adapted practices from engineering teams, combining Scrum sprint planning with Kanban workflows."],
+                 ["Automated intake.", "I set up work requests and EHR support tickets from across the organization to flow directly onto the board."],
+                 ["Iterated until it fit.", "After several rounds of iteration, the process matched how our team actually works."],
+             ],
+             "impact": [
+                 "**Team clarity:** My immediate team gained full visibility into each other's work, priorities, and capacity, along with the structure and rhythm that sprint planning provides.",
+                 "**Organization-wide transparency:** Partner teams and leadership could see our work in real time. When we said we were at capacity, the board showed why. At the time, no other team in the organization had a comparable process.",
+                 "**Cross-program tracking:** Because our deliverables directly supported or worked alongside all 9 programs, the board gave us a reliable way to track every deliverable and its dependencies.",
+                 "**Streamlined intake:** Automating work requests and EHR support tickets into the board removed manual triage and ensured nothing was lost between systems.",
+                 "**Measurable output:** We completed 773 stories in 2025 with a team of 3 to 4, and have surpassed 1,000 so far in 2026 with 3 staff and 2 contractors.",
+                 "**Clear ownership:** Defined responsibilities made it possible to hold my direct reports accountable to agreed commitments.",
+                 "**Reliable upward communication:** I gained a consistent way to report progress and resource needs to my supervisor across all 9 programs.",
+             ],
+             "next": [
+                 "Expand tagging to categorize work by program and type",
+                 "Align projects with estimated time and effort",
+                 "Introduce story points to estimate and balance workload across the team",
+             ],
+             "sample": {
+                 "heading": "Example",
+                 "blocks": [
+                     {"note": "I built this dashboard in early 2026 to show leadership everything our team delivered in 2025. I worked on those 773 completed cards alongside my team, not just managed them, and the dashboard gave all of us the recognition we earned."},
+                     {"image": "/static/img/projects/dashboard-2025.png",
+                      "alt": "Annual Data Team Delivery Dashboard showing 773 completed cards in 2025, with monthly totals rising from 54 in January to 84 in December"},
+                 ],
+             },
+         }},
         {"title": "Project 3",
          "summary": "Coming Soon",
          "url": "/projects/coming-soon-3/"},

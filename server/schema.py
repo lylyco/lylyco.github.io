@@ -21,6 +21,7 @@ class Photo:
 @strawberry.type
 class Profile:
     name: str
+    location: str
     headline_lead: str
     headline_emphasis: str
     summary: str
@@ -153,7 +154,7 @@ schema = strawberry.Schema(query=Query)
 
 # The single query the page runs. Shared by the live server and the static build.
 PAGE_QUERY = """query Portfolio {
-  profile { name headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
+  profile { name location headlineLead headlineEmphasis summary industriesLine tags email photo { src thumb alt } links { label url kind } }
   about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }

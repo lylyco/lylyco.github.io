@@ -117,6 +117,12 @@ h2 em, h1 em { color: var(--accent); }
 }
 .nav-logo:hover, .nav-links a:hover { text-decoration-color: currentColor; }
 .nav-right { display: flex; align-items: center; gap: 1.25rem; }
+.nav-brand { display: flex; flex-direction: column; align-items: flex-start; gap: .15rem; }
+.nav-location {
+  display: inline-flex; align-items: center; gap: .25rem; white-space: nowrap; margin-left: -.1rem;
+  font-size: .66rem; letter-spacing: .03em; color: var(--mauve);
+}
+.nav-pin { width: .75rem; height: .75rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
 .nav-links { display: flex; gap: 1.75rem; }
 .nav-links a {
   font-size: .76rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;

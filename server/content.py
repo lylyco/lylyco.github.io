@@ -2,6 +2,7 @@
 
 PROFILE = {
     "name": "Lydia Cortez",
+    "location": "Los Angeles, CA",   # shown under your name in the top bar
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (

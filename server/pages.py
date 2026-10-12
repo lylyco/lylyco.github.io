@@ -131,6 +131,7 @@ def render_project_page(project: dict, *, styles: str, script: str) -> str:
         "description": description,
         "url": project["url"],
         "name": c.PROFILE["name"],
+        "location": c.PROFILE["location"],
         "footer_credit": footer["credit"],
         "footer_source_url": footer["source_url"],
         "footer_source_label": footer["source_label"],

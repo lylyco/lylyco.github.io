@@ -65,12 +65,14 @@ class Project:
     title: str
     summary: str
     url: str
+    tools: List[str]
 
 
 @strawberry.type
 class Projects:
     title: str
     title_emphasis: str
+    intro: str
     items: List[Project]
 
 
@@ -128,7 +130,7 @@ class Query:
     @strawberry.field
     def projects(self) -> Projects:
         p = dict(c.PROJECTS)
-        p["items"] = [Project(title=i["title"], summary=i["summary"], url=i["url"]) for i in p["items"]]
+        p["items"] = [Project(title=i["title"], summary=i["summary"], url=i["url"], tools=i.get("tools", [])) for i in p["items"]]
         return Projects(**p)
 
     @strawberry.field
@@ -158,7 +160,7 @@ PAGE_QUERY = """query Portfolio {
   about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }
-  projects { title titleEmphasis items { title summary url } }
+  projects { title titleEmphasis intro items { title summary url tools } }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
   tagline

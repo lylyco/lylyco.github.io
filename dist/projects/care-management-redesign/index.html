@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Project 3 | Lydia Cortez</title>
-<meta name="description" content="Project 3: a project by Lydia Cortez. Coming soon.">
+<title>Redesigning a Core Service and Building the Guidance Behind It | Lydia Cortez</title>
+<meta name="description" content="I led the redesign of the form and its guidance, raising data accuracy from roughly 25% to 75%.">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/static/img/favicon-192.png">
 <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lydia Cortez">
-<meta property="og:title" content="Project 3 | Lydia Cortez">
-<meta property="og:description" content="Project 3: a project by Lydia Cortez. Coming soon.">
-<meta property="og:url" content="https://lylyco.github.io/projects/coming-soon-3/">
+<meta property="og:title" content="Redesigning a Core Service and Building the Guidance Behind It | Lydia Cortez">
+<meta property="og:description" content="I led the redesign of the form and its guidance, raising data accuracy from roughly 25% to 75%.">
+<meta property="og:url" content="https://lylyco.github.io/projects/care-management-redesign/">
 <meta property="og:image" content="https://lylyco.github.io/static/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -264,6 +264,8 @@ h2 em, h1 em { color: var(--accent); }
 .about-text strong { color: var(--black); font-weight: 600; }
 
 /* ---------- Expertise ---------- */
+.section-intro { margin-top: 1.25rem; max-width: 54em; text-wrap: balance; font-weight: 300; line-height: 1.8; color: var(--text); }
+.section-intro + .expertise-grid { margin-top: 1.5rem; }
 .expertise-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin-top: 3rem; }
 .card {
   --mx: 50%; --my: 0%;
@@ -301,6 +303,8 @@ h2 em, h1 em { color: var(--accent); }
 }
 a.project-link:hover { color: var(--accent-light); }
 .project-link.is-soon { cursor: default; }
+.card p.project-tools { flex: 0; margin-top: .6rem; font-size: .74rem; line-height: 1.6; color: var(--text); }
+.project-tools span { white-space: nowrap; }  /* wrap between tools, never inside one */
 .project-soon { align-self: flex-start; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mauve); }
 
 .project-page {
@@ -380,7 +384,17 @@ a.project-link:hover { color: var(--accent-light); }
 .tk-s { color: var(--sn-str); }
 .tk-n { color: var(--sn-num); }
 .tk-c { color: var(--sn-dim); font-style: italic; }
-.case-steps { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 1.25rem; }
+.case-did { counter-reset: step; }  /* numbering runs across groups */
+.case-steps { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; }
+.case-steps + .case-group { margin-top: 2rem; }
+.case-group {
+  font-family: var(--serif); font-weight: 400; font-size: 1.3rem; line-height: 1.3;
+  color: var(--black); margin: 0 0 1rem;
+}
+.project-kicker {
+  margin: 1.5rem 0 -.75rem; font-size: .78rem; font-weight: 500; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mauve);
+}
 .case-steps li { counter-increment: step; position: relative; padding-left: 2.6rem; }
 .case-steps li::before {
   content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: .1em;
@@ -498,8 +512,13 @@ a.project-link:hover { color: var(--accent-light); }
 <main>
   <section class="project-page">
     <div class="section-head"><div class="section-label">Projects</div></div>
-    <h1 class="project-title">Project 3<br><em>coming soon.</em></h1>
-    <p class="project-note">The full write-up for this project is on its way.</p>
+    <p class="project-kicker">Enhancements, Requirements, and New Tools</p><h1 class="project-title">Redesigning a core service<br><em>and the guidance behind it.</em></h1>
+    <div class="case">
+    <div class="case-block"><h2>The Problem</h2><p>When I joined, the organization was in the middle of moving from Apricot to a new EHR system. Nine programs were operating without a dedicated data manager, which meant no one owned data quality, no audits were taking place, and forms had grown without a clear structure. Staff were not used to entering data into a centralized internal database, and most forms relied on open-ended fields that produced inconsistent, hard-to-report information. Care Management (the organization&#x27;s equivalent of Case Management) needed a full overhaul, and there was no established process for scoping, planning, or defining requirements. There was also no reference material explaining how the service worked, so staff had little guidance on what to document or why.</p></div>
+    <div class="case-block case-did"><h2>What I Did</h2><h3 class="case-group">Part 1: Care Management Service Form Redesign</h3><ol class="case-steps"><li><strong>Challenged the initial scope.</strong> When leadership shared the first outline of desired updates, I pushed back on keeping open-ended responses. Staff needed guidance, and the organization needed data it could measure. I advocated for structured, selectable answer options throughout.</li><li><strong>Audited and tested with SQL.</strong> I wrote queries to audit legacy records, showing how staff were actually documenting the service and where the data fell short, which guided the research behind the redesign. I also used queries to QA the new form and confirm it captured data correctly.</li><li><strong>Led the research and redesign.</strong> Without a background in social services or clinical behavioral health, I treated that gap as a reason to dig deeper rather than defer. With support from my supervisee, I took ownership of redesigning every section of the form, building answer choices grounded in how the work actually happens.</li><li><strong>Designed for the end user.</strong> Every decision was weighed against the staff who would complete the form. I focused on keeping it clear, relevant, and manageable so the added structure would not become a burden.</li></ol><h3 class="case-group">Part 2: Service Documentation and Guidance</h3><ol class="case-steps"><li><strong>Built the reference material.</strong> I created documentation explaining how Care Management works, walked through real-world scenarios, and defined key terms. This gave staff clear direction on what to record and gave the data team the subject knowledge needed to design the form well.</li><li><strong>Introduced new tools.</strong> I brought Notion into the organization and used it to build and house the documentation, creating a central, accessible resource that did not exist before.</li></ol><h3 class="case-group">Across Both</h3><ol class="case-steps"><li><strong>Drove cross-program collaboration.</strong> I worked closely with the COO and all nine programs to align requirements, gather feedback, and build buy-in.</li><li><strong>Set a repeatable approach.</strong> The pairing of a structured form with clear guidance became the model I applied to enhancements across my other projects.</li></ol></div>
+    <div class="case-block"><h2>Impact</h2><ul><li>Improved data accuracy from roughly 25% to 75% by auditing legacy records and redesigning the service form with structured, required fields.</li><li>Strengthened the organization&#x27;s position for grant applications and reporting by making outcomes measurable.</li><li>Gave staff a single source of truth for how to deliver and document the service.</li><li>Made the work of direct service staff visible, which supported recognition, morale, and a culture of celebrating impact</li></ul></div>
+    <div class="case-block"><h2>What's Next</h2><ul><li>Implement regular data audits and analysis to monitor quality and usage.</li><li>Hold ongoing conversations with programs about how they are adapting and where further refinement is needed</li></ul></div>
+    </div>
     <a class="btn btn-ghost" href="/#projects"><span aria-hidden="true">&larr;</span> Back to projects</a>
   </section>
 </main>

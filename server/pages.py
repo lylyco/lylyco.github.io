@@ -24,14 +24,26 @@ def _list(items, tag="ul") -> str:
 
 
 def _case_study(cs: dict) -> str:
-    steps = "".join(
-        f"<li><strong>{_text(title)}</strong> {_text(body)}</li>" for title, body in cs["steps"]
-    )
+    # Steps are [title, body] pairs; a {"group": "..."} entry starts a labeled group.
+    steps, items = [], []
+    for st in cs["steps"]:
+        if isinstance(st, dict):
+            if items:
+                steps.append(f'<ol class="case-steps">{"".join(items)}</ol>')
+                items = []
+            steps.append(f'<h3 class="case-group">{_text(st["group"])}</h3>')
+        else:
+            title, body = st
+            items.append(f"<li><strong>{_text(title)}</strong> {_text(body)}</li>")
+    if items:
+        steps.append(f'<ol class="case-steps">{"".join(items)}</ol>')
+    steps = "".join(steps)
+    kicker = f'<p class="project-kicker">{_text(cs["kicker"])}</p>' if cs.get("kicker") else ""
     parts = [
-        f'<h1 class="project-title">{_text(cs["heading"])}<br><em>{_text(cs["heading_emphasis"])}</em></h1>',
+        f'{kicker}<h1 class="project-title">{_text(cs["heading"])}<br><em>{_text(cs["heading_emphasis"])}</em></h1>',
         '<div class="case">',
         f'<div class="case-block"><h2>The Problem</h2><p>{_text(cs["problem"])}</p></div>',
-        f'<div class="case-block"><h2>What I Did</h2><ol class="case-steps">{steps}</ol></div>',
+        f'<div class="case-block case-did"><h2>What I Did</h2>{steps}</div>',
         f'<div class="case-block"><h2>Impact</h2>{_list(cs["impact"])}</div>',
     ]
     if cs.get("next"):

@@ -97,10 +97,12 @@ EXPERTISE = [
 PROJECTS = {
     "title": "Problems I've",
     "title_emphasis": "solved.",
+    "intro": "I joined as the first Data Operations Manager II in a new department. I introduced the tools, processes, and ways of working that helped our teams collaborate and gave everyone clearer visibility into our work.",
     "items": [
         {"title": "Closing the Compliance Gap on Client Assessments",
-         "summary": "No program owned the organization's main client assessment. I audited the data, defined ownership, and automated compliance reports for 7 programs, raising completion from under 50% to 90%.",
+         "summary": "I audited the data, assigned clear ownership, and automated compliance reports across 7 programs, raising assessment completion from under 50% to 90%",
          "url": "/projects/compliance-reporting/",
+         "tools": ["Google Sheets", "Navicat", "SQL"],   # shown at the bottom of the card
          # The full write-up on the project's own page. Projects without "case_study"
          # get a "coming soon" page instead. Wrap words in ** ** to make them bold.
          "case_study": {
@@ -116,13 +118,13 @@ PROJECTS = {
                  ["Advocated for ending manual tracking.", "Using the audit findings, I made the case to leadership for retiring manual records and making the system the single source of truth. The initiative was not fully adopted, but it put the cost of manual tracking on leadership's radar for the first time and laid the groundwork for future data governance."],
              ],
              "impact": [
-                 "Raised SANA completion from under 50% of enrolled clients to 90%",
-                 "Gave leadership organization-wide visibility into assessment compliance for the first time, replacing occasional manual spot checks",
-                 "Gave managers a clear way to hold case managers accountable to policy: a SANA at enrollment and every six months",
-                 "Used the reports as a data quality check, surfacing clients with no enrollment date on record",
+                 "Raised SANA completion from under 50% of enrolled clients to 90%.",
+                 "Gave leadership organization-wide visibility into assessment compliance for the first time, replacing occasional manual spot checks.",
+                 "Gave managers a clear way to hold case managers accountable to policy: a SANA at enrollment and every six months.",
+                 "Used the reports as a data quality check, surfacing clients with no enrollment date on record.",
              ],
              "next": [
-                 "Run ongoing audits to measure adoption and track compliance trends over time",
+                 "Run ongoing audits to measure adoption and track compliance trends over time.",
                  "Continue pushing to fully retire manual tracking so the system becomes the single source of truth",
              ],
              # Shown after What's Next, in this order. Block types: "sql" (a file in the
@@ -137,9 +139,44 @@ PROJECTS = {
                  ],
              },
          }},
+        {"title": "Redesigning a Core Service and Building the Guidance Behind It",
+         "summary": "I led the redesign of the form and its guidance, raising data accuracy from roughly 25% to 75%.",
+         "url": "/projects/care-management-redesign/",
+         "tools": ["EHR Configuration", "Google Sheets", "Navicat", "Notion", "SQL"],
+         "case_study": {
+             "kicker": "Enhancements, Requirements, and New Tools",
+             "heading": "Redesigning a core service",
+             "heading_emphasis": "and the guidance behind it.",
+             "problem": "When I joined, the organization was in the middle of moving from Apricot to a new EHR system. Nine programs were operating without a dedicated data manager, which meant no one owned data quality, no audits were taking place, and forms had grown without a clear structure. Staff were not used to entering data into a centralized internal database, and most forms relied on open-ended fields that produced inconsistent, hard-to-report information. Care Management (the organization's equivalent of Case Management) needed a full overhaul, and there was no established process for scoping, planning, or defining requirements. There was also no reference material explaining how the service worked, so staff had little guidance on what to document or why.",
+             # A {"group": "..."} entry starts a labeled group; numbering continues across groups.
+             "steps": [
+                 {"group": "Part 1: Care Management Service Form Redesign"},
+                 ["Challenged the initial scope.", "When leadership shared the first outline of desired updates, I pushed back on keeping open-ended responses. Staff needed guidance, and the organization needed data it could measure. I advocated for structured, selectable answer options throughout."],
+                 ["Audited and tested with SQL.", "I wrote queries to audit legacy records, showing how staff were actually documenting the service and where the data fell short, which guided the research behind the redesign. I also used queries to QA the new form and confirm it captured data correctly."],
+                 ["Led the research and redesign.", "Without a background in social services or clinical behavioral health, I treated that gap as a reason to dig deeper rather than defer. With support from my supervisee, I took ownership of redesigning every section of the form, building answer choices grounded in how the work actually happens."],
+                 ["Designed for the end user.", "Every decision was weighed against the staff who would complete the form. I focused on keeping it clear, relevant, and manageable so the added structure would not become a burden."],
+                 {"group": "Part 2: Service Documentation and Guidance"},
+                 ["Built the reference material.", "I created documentation explaining how Care Management works, walked through real-world scenarios, and defined key terms. This gave staff clear direction on what to record and gave the data team the subject knowledge needed to design the form well."],
+                 ["Introduced new tools.", "I brought Notion into the organization and used it to build and house the documentation, creating a central, accessible resource that did not exist before."],
+                 {"group": "Across Both"},
+                 ["Drove cross-program collaboration.", "I worked closely with the COO and all nine programs to align requirements, gather feedback, and build buy-in."],
+                 ["Set a repeatable approach.", "The pairing of a structured form with clear guidance became the model I applied to enhancements across my other projects."],
+             ],
+             "impact": [
+                 "Improved data accuracy from roughly 25% to 75% by auditing legacy records and redesigning the service form with structured, required fields.",
+                 "Strengthened the organization's position for grant applications and reporting by making outcomes measurable.",
+                 "Gave staff a single source of truth for how to deliver and document the service.",
+                 "Made the work of direct service staff visible, which supported recognition, morale, and a culture of celebrating impact",
+             ],
+             "next": [
+                 "Implement regular data audits and analysis to monitor quality and usage.",
+                 "Hold ongoing conversations with programs about how they are adapting and where further refinement is needed",
+             ],
+         }},
         {"title": "Creating Cross-Program Visibility for a New Department",
-         "summary": "My team had no shared view of its work across 9 programs. I built a central project board, introduced sprint planning, and automated workflows.",
+         "summary": "I built a central project board, introduced sprint planning, and automated recurring workflows. The team closed 773 work items in 2025 and passed 1,000 by October 2026.",
          "url": "/projects/cross-program-visibility/",
+         "tools": ["Google Sheets", "Trello"],
          "case_study": {
              "heading": "Cross-program visibility",
              "heading_emphasis": "for a new department.",
@@ -161,8 +198,8 @@ PROJECTS = {
                  "**Reliable upward communication:** I gained a consistent way to report progress and resource needs to my supervisor across all 9 programs.",
              ],
              "next": [
-                 "Expand tagging to categorize work by program and type",
-                 "Align projects with estimated time and effort",
+                 "Expand tagging to categorize work by program and type.",
+                 "Align projects with estimated time and effort.",
                  "Introduce story points to estimate and balance workload across the team",
              ],
              "sample": {
@@ -174,9 +211,6 @@ PROJECTS = {
                  ],
              },
          }},
-        {"title": "Project 3",
-         "summary": "Coming Soon",
-         "url": "/projects/coming-soon-3/"},
     ],
 }
 

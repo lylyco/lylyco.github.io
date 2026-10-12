@@ -7,7 +7,7 @@
   about { title titleEmphasis paragraphs }
   platforms { id name blurb connectsTo }
   expertise { title body }
-  projects { title titleEmphasis items { title summary url } }
+  projects { title titleEmphasis intro items { title summary url tools } }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
   tagline
@@ -151,12 +151,14 @@
 
     bind('projectsTitle', d.projects.title);
     bind('projectsEmphasis', d.projects.titleEmphasis);
+    bind('projectsIntro', d.projects.intro);
     $('#projectGrid').innerHTML = d.projects.items.map((pr) => `
       <article class="card project">
         <h3>${pr.url
           ? `<a class="project-link" href="${esc(pr.url)}">${esc(pr.title)}</a>`
           : `<span class="project-link is-soon">${esc(pr.title)}</span>`}</h3>
         <p>${esc(pr.summary)}</p>
+        ${pr.tools.length ? `<p class="project-tools">${pr.tools.map((t, i) => `<span>${i ? '· ' : ''}${esc(t)}</span>`).join(' ')}</p>` : ''}
         ${pr.url ? '' : '<span class="project-soon">Coming soon</span>'}
       </article>`).join('');
 

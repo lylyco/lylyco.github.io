@@ -113,6 +113,14 @@ def _sample_block(b: dict) -> str:
             f'<iframe class="case-sheet" src="{escape(b["sheet"])}" title="Sample report" loading="lazy"></iframe>'
             f'<p class="case-note"><a href="{escape(b["url"])}" target="_blank" rel="noopener">Open in Google Sheets</a></p>'
         )
+    if "gallery" in b:
+        figs = "".join(
+            f'<figure><a class="case-image" href="{escape(g["image"])}" target="_blank" rel="noopener" aria-label="Open the full-size image">'
+            f'<img src="{escape(g["image"])}" alt="{escape(g["alt"])}" loading="lazy"></a>'
+            f'<figcaption>{_text(g["caption"])}</figcaption></figure>'
+            for g in b["gallery"]
+        )
+        return f'<div class="case-gallery">{figs}</div>'
     if "image" in b:
         src = escape(b["image"])
         return (

@@ -171,6 +171,24 @@ PROJECTS = {
                  "Implement regular data audits and analysis to monitor quality and usage.",
                  "Hold ongoing conversations with programs about how they are adapting and where further refinement is needed",
              ],
+             "sample": {
+                 "heading": "Example",
+                 "blocks": [
+                     {"note": "Screenshots from the Care Management guide in Notion. Each section pairs the redesigned form with plain-language definitions, so staff know what to select and why. Click any image to view it full size."},
+                     # A gallery shows the first image full width and the rest side by side.
+                     {"gallery": [
+                         {"image": "/static/img/projects/care-guide-overview.png",
+                          "alt": "Care Management Service Record guide home page in Notion, with a jump-to-section menu, collapsible sections, and a quick reference list",
+                          "caption": "The guide's home page: a jump-to-section menu, a section for each part of the form, and a quick reference for common edge cases."},
+                         {"image": "/static/img/projects/care-guide-interaction.png",
+                          "alt": "Interaction Details section showing the required form fields and a definition for each answer choice",
+                          "caption": "Interaction Details: every required field, with a definition for each answer choice."},
+                         {"image": "/static/img/projects/care-guide-resources.png",
+                          "alt": "Resource Support section showing structured checkboxes for public assistance benefits with examples",
+                          "caption": "Resource Support: structured checkboxes in place of open-ended notes, with examples staff can match their work to."},
+                     ]},
+                 ],
+             },
          }},
         {"title": "Creating Cross-Program Visibility for a New Department",
          "summary": "I built a central project board, introduced sprint planning, and automated recurring workflows. The team closed 773 work items in 2025 and passed 1,000 by October 2026.",

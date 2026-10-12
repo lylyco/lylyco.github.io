@@ -144,7 +144,6 @@ PROJECTS = {
          "url": "/projects/care-management-redesign/",
          "tools": ["EHR Configuration", "Google Sheets", "Navicat", "Notion", "SQL"],
          "case_study": {
-             "kicker": "Enhancements, Requirements, and New Tools",
              "heading": "Redesigning a core service",
              "heading_emphasis": "and the guidance behind it.",
              "problem": "When I joined, the organization was in the middle of moving from Apricot to a new EHR system. Nine programs were operating without a dedicated data manager, which meant no one owned data quality, no audits were taking place, and forms had grown without a clear structure. Staff were not used to entering data into a centralized internal database, and most forms relied on open-ended fields that produced inconsistent, hard-to-report information. Care Management (the organization's equivalent of Case Management) needed a full overhaul, and there was no established process for scoping, planning, or defining requirements. There was also no reference material explaining how the service worked, so staff had little guidance on what to document or why.",

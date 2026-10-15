@@ -56,7 +56,7 @@ ABOUT = {
         "their root cause and learned not only how systems break, but why. That experience "
         "became the foundation for how I approach technical and operational problems.",
         "Most recently, as ACE's first Data Operations Manager II, I took on product, systems, and technical "
-        "operations responsibilities while leading three Data Support Specialists and two "
+        "operations responsibilities while leading an intern, two Data Support Specialists, and two "
         "engineering contractors supporting a newly migrated EHR platform across nine social "
         "and clinical service programs. I established formal scoping, strategic planning, and "
         "reporting, strengthened the team's technical capabilities, and resolved organizational "

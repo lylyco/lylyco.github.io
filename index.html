@@ -259,7 +259,7 @@ h2 em, h1 em { color: var(--accent); }
   position: relative; display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 720 / 846; object-fit: cover;
   border-radius: 14px; background: var(--bg-soft);
 }
-.portrait figcaption { position: relative; margin-top: 2.2rem; font-size: .72rem; color: var(--mauve); letter-spacing: .02em; }
+.portrait figcaption { position: relative; margin-top: 2.2rem; font-size: .66rem; color: var(--mauve); letter-spacing: .02em; }
 .portrait figcaption .cap-skill { white-space: nowrap; }  /* wrap between skills, never inside one */
 .portrait figcaption strong { color: var(--black); font-family: var(--serif); font-weight: 400; font-size: 1.15rem; display: block; }
 .about-text { display: flex; flex-direction: column; gap: 1.2rem; max-width: 36em; }
@@ -718,7 +718,7 @@ a.project-link:hover { color: var(--accent-light); }
     $('#contactCta').innerHTML = ctaButtons(p);
 
     $('#portrait').innerHTML = `<div class="portrait-frame"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="720" height="846" loading="lazy"></div>
-      <figcaption><strong>${esc(p.name)}</strong>${p.tags.map((t, i) => `<span class="cap-skill">${i ? '· ' : ''}${esc(t)}</span>`).join(' ')}</figcaption>`;
+      <figcaption><strong>${esc(p.name)}</strong>${p.tags.map((t, i) => `<span class="cap-skill">· ${esc(t)}</span>`).join(' ')}</figcaption>`;
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `

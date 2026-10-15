@@ -137,7 +137,7 @@
     $('#contactCta').innerHTML = ctaButtons(p);
 
     $('#portrait').innerHTML = `<div class="portrait-frame"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="720" height="846" loading="lazy"></div>
-      <figcaption><strong>${esc(p.name)}</strong>${p.tags.map((t, i) => `<span class="cap-skill">${i ? '· ' : ''}${esc(t)}</span>`).join(' ')}</figcaption>`;
+      <figcaption><strong>${esc(p.name)}</strong>${p.tags.map((t, i) => `<span class="cap-skill">· ${esc(t)}</span>`).join(' ')}</figcaption>`;
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `

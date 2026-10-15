@@ -235,7 +235,8 @@ h2 em, h1 em { color: var(--accent); }
   position: relative; display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 720 / 846; object-fit: cover;
   border-radius: 14px; background: var(--bg-soft);
 }
-.portrait figcaption { position: relative; margin-top: 2.2rem; font-size: .66rem; color: var(--mauve); letter-spacing: .02em; }
+.portrait figcaption { position: relative; margin-top: 2.2rem; font-size: .6rem; color: var(--mauve); letter-spacing: .02em; }
+.portrait figcaption .cap-line { display: block; }
 .portrait figcaption .cap-skill { white-space: nowrap; }  /* wrap between skills, never inside one */
 .portrait figcaption strong { color: var(--black); font-family: var(--serif); font-weight: 400; font-size: 1.15rem; display: block; }
 .about-text { display: flex; flex-direction: column; gap: 1.2rem; max-width: 36em; }

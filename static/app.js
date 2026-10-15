@@ -103,6 +103,12 @@
 
   // ---------- Render ----------
   let DATA = null;
+  // Photo caption: the skill tags in three lines (2, 3, 3 for eight tags).
+  const capLines = (tags) => {
+    const cuts = [0, Math.round(tags.length / 4), Math.round(tags.length * 5 / 8), tags.length];
+    return cuts.slice(1).map((end, i) => `<span class="cap-line">${tags.slice(cuts[i], end)
+      .map((t) => `<span class="cap-skill">· ${esc(t)}</span>`).join(' ')}</span>`).join('');
+  };
   const bind = (key, value) => document.querySelectorAll(`[data-bind="${key}"]`).forEach((el) => { el.textContent = value; });
 
   function ctaButtons(profile) {
@@ -137,7 +143,7 @@
     $('#contactCta').innerHTML = ctaButtons(p);
 
     $('#portrait').innerHTML = `<div class="portrait-frame"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="720" height="846" loading="lazy"></div>
-      <figcaption><strong>${esc(p.name)}</strong>${p.tags.map((t, i) => `<span class="cap-skill">· ${esc(t)}</span>`).join(' ')}</figcaption>`;
+      <figcaption><strong>${esc(p.name)}</strong>${capLines(p.tags)}</figcaption>`;
     $('#aboutText').innerHTML = d.about.paragraphs.map((t) => `<p>${bold(t)}</p>`).join('');
 
     $('#expertiseGrid').innerHTML = d.expertise.map((e) => `

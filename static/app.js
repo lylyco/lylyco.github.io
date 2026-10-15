@@ -131,7 +131,9 @@
       <p>${esc(f.legal)}</p>
       <a class="footer-logo" href="/"><img src="/static/img/logo.png" alt="LydiaCo, Los Angeles" width="118" height="118"></a>`;
 
-    $('#tags').innerHTML = p.tags.map((t) => `<li class="tag">${esc(t)}</li>`).join('');
+    const half = Math.ceil(p.tags.length / 2);
+    $('#tags').innerHTML = p.tags.map((t, i) =>
+      (i === half ? '<li class="tag-break" aria-hidden="true"></li>' : '') + `<li class="tag">${esc(t)}</li>`).join('');
     $('#heroCta').innerHTML = ctaButtons(p);
     $('#contactCta').innerHTML = ctaButtons(p);
 

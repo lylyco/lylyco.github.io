@@ -17,11 +17,12 @@ PROFILE = {
         "Industries under my belt: retail, distilled spirits, payment processing, "
         "subscription billing, and social and clinical services."
     ),
+    # Shown as two rows of four on wide screens (split in half, in this order).
     "tags": [
         "Business Operations",
         "Process Improvement",
         "Quality Assurance",
-        "Requirements Gathering",
+        "Requirements",
         "Reporting & Analytics",
         "SQL",
         "Systems Strategy",

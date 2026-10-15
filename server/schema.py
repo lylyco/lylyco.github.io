@@ -144,10 +144,6 @@ class Query:
         return Contact(**c.CONTACT)
 
     @strawberry.field
-    def tagline(self) -> str:
-        return c.TAGLINE
-
-    @strawberry.field
     def footer(self) -> Footer:
         return Footer(**c.FOOTER)
 
@@ -163,6 +159,5 @@ PAGE_QUERY = """query Portfolio {
   projects { title titleEmphasis intro items { title summary url tools } }
   recommendations { title titleEmphasis source sourceLabel sourceUrl items { name photo title relationship date quote paragraphs } }
   contact { title titleEmphasis body }
-  tagline
   footer { credit sourceLabel sourceUrl legal }
 }"""

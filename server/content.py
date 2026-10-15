@@ -17,7 +17,8 @@ PROFILE = {
         "Industries under my belt: retail, distilled spirits, payment processing, "
         "subscription billing, and social and clinical services."
     ),
-    # Shown as two rows of four on wide screens (split in half, in this order).
+    # Shown as two rows of four on wide screens (split in half, in this order),
+    # and under your name beside the photo in About.
     "tags": [
         "Business Operations",
         "Process Improvement",
@@ -287,9 +288,6 @@ CONTACT = {
     "title_emphasis": "Build what's next.",
     "body": "Open to new opportunities across operations, systems, product, and adjacent functions, as well as select consulting engagements. Let's talk.",
 }
-
-# Shown under your name beside the portrait in About.
-TAGLINE = "Business Operations · Process Improvement · Requirements Gathering · Reporting & Analytics · SQL · Systems Strategy · Team Leadership"
 
 FOOTER = {
     "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",

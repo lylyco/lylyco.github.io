@@ -20,6 +20,7 @@ PROFILE = {
     "tags": [
         "Business Operations",
         "Process Improvement",
+        "Quality Assurance",
         "Requirements Gathering",
         "Reporting & Analytics",
         "SQL",

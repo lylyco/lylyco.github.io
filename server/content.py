@@ -103,7 +103,7 @@ PROJECTS = {
     "intro": "I joined as the first Data Operations Manager II in a new department. I introduced the tools, processes, and ways of working that helped our teams collaborate and gave everyone clearer visibility into our work.",
     "items": [
         {"title": "Closing the Compliance Gap on Client Assessments",
-         "summary": "I audited the data, assigned clear ownership, and automated compliance reports across 7 programs, raising assessment completion from under 50% to 90%",
+         "summary": "I audited the data, assigned clear ownership, and automated compliance reports across seven programs, raising assessment completion from under 50% to 90%.",
          "url": "/projects/compliance-reporting/",
          "tools": ["Google Sheets", "Navicat", "SQL"],   # shown at the bottom of the card
          # The full write-up on the project's own page. Projects without "case_study"
@@ -116,9 +116,9 @@ PROJECTS = {
                  ["Mapped the current process.", "I learned how each program conducted the assessment and confirmed there was no official workflow. I identified the SANA as the core assessment shared across programs, required at enrollment and again every six months. I also flagged edge cases: Behavioral Health and Parenting staff don't conduct these intakes, so they had to be excluded from reporting."],
                  ["Audited the data.", "I compared SANAs recorded in the system against program enrollment. Fewer than 50% of enrolled clients had a SANA on record. Staff were relying on manual side records that leadership could not see or verify."],
                  ["Defined ownership.", "Through collaborative discussions with three directors and the COO, I helped establish a policy for which program is responsible for conducting the SANA when a client is enrolled in more than one."],
-                 ["Built the reports.", "I applied my knowledge of the EHR schema to direct AI tools (ChatGPT, Claude) in building compliance reports for 7 programs, cutting development time from an estimated 3 months to 1 month. Each report shows the staff member responsible for the SANA, even when that responsibility sits with another program, so teams have shared visibility and can coordinate."],
+                 ["Built the reports.", "I applied my knowledge of the EHR schema to direct AI tools (ChatGPT, Claude) in building compliance reports for seven programs, cutting development time from an estimated 3 months to 1 month. Each report shows the staff member responsible for the SANA, even when that responsibility sits with another program, so teams have shared visibility and can coordinate."],
                  ["Quality Assurance.", "I tested each report for accuracy before rollout, checking results against records in the EHR. I built data checks into the queries themselves: excluding test records and flagging issues such as clients marked active with a discharge date or clients with no enrollment date on record."],
-                 ["Automated delivery.", "I rolled the report out to 7 programs and set up automated email delivery, the first time these programs received compliance reports directly. Each report included documentation explaining how it works."],
+                 ["Automated delivery.", "I rolled the report out to seven programs and set up automated email delivery, the first time these programs received compliance reports directly. Each report included documentation explaining how it works."],
                  ["Advocated for ending manual tracking.", "Using the audit findings, I made the case to leadership for retiring manual records and making the system the single source of truth. The initiative was not fully adopted, but it put the cost of manual tracking on leadership's radar for the first time and laid the groundwork for future data governance."],
              ],
              "impact": [
@@ -129,7 +129,7 @@ PROJECTS = {
              ],
              "next": [
                  "Run ongoing audits to measure adoption and track compliance trends over time.",
-                 "Continue pushing to fully retire manual tracking so the system becomes the single source of truth",
+                 "Continue pushing to fully retire manual tracking so the system becomes the single source of truth.",
              ],
              # Shown after What's Next, in this order. Block types: "sql" (a file in the
              # repo), "note", "sheet" (Google Sheets embed), "image" (with "alt" text).
@@ -170,11 +170,11 @@ PROJECTS = {
                  "Improved data accuracy from roughly 25% to 75% by auditing legacy records and redesigning the service form with structured, required fields.",
                  "Strengthened the organization's position for grant applications and reporting by making outcomes measurable.",
                  "Gave staff a single source of truth for how to deliver and document the service.",
-                 "Made the work of direct service staff visible, which supported recognition, morale, and a culture of celebrating impact",
+                 "Made the work of direct service staff visible, which supported recognition, morale, and a culture of celebrating impact.",
              ],
              "next": [
                  "Implement regular data audits and analysis to monitor quality and usage.",
-                 "Hold ongoing conversations with programs about how they are adapting and where further refinement is needed",
+                 "Hold ongoing conversations with programs about how they are adapting and where further refinement is needed.",
              ],
              "sample": {
                  "heading": "Example",
@@ -202,9 +202,9 @@ PROJECTS = {
          "case_study": {
              "heading": "Cross-program visibility",
              "heading_emphasis": "for a new department.",
-             "problem": "Our core team had no shared view of who was working on what. Sprint planning had never been used in the organization, so there was no structured way to coordinate work, set priorities, or show leadership and partner teams our actual workload across 9 programs.",
+             "problem": "Our core team had no shared view of who was working on what. Sprint planning had never been used in the organization, so there was no structured way to coordinate work, set priorities, or show leadership and partner teams our actual workload across nine programs.",
              "steps": [
-                 ["Took on a growing scope.", "I joined as a Data Operations Manager, and the role quickly grew to include systems operations and product work across 9 programs."],
+                 ["Took on a growing scope.", "I joined as a Data Operations Manager II, and the role quickly grew to include systems operations and product work across nine programs."],
                  ["Built a centralized project board.", "To manage that scope, I created one board where all of the team's work lived, so everyone could see what was in progress, what was next, and who owned it."],
                  ["Introduced Agile practices.", "I adapted practices from engineering teams, combining Scrum sprint planning with Kanban workflows."],
                  ["Automated workflows.", "I set up work requests and EHR support tickets from across the organization to flow directly onto the board."],
@@ -213,21 +213,21 @@ PROJECTS = {
              "impact": [
                  "**Team clarity:** My immediate team gained full visibility into each other's work, priorities, and capacity, along with the structure and rhythm that sprint planning provides.",
                  "**Organization-wide transparency:** Partner teams and leadership could see our work in real time. When we said we were at capacity, the board showed why. At the time, no other team in the organization had a comparable process.",
-                 "**Cross-program tracking:** Because our deliverables directly supported or worked alongside all 9 programs, the board gave us a reliable way to track every deliverable and its dependencies.",
+                 "**Cross-program tracking:** Because our deliverables directly supported or worked alongside all nine programs, the board gave us a reliable way to track every deliverable and its dependencies.",
                  "**Streamlined workflows:** Automating work requests and EHR support tickets into the board removed manual triage and ensured nothing was lost between systems.",
-                 "**Measurable output:** We completed 773 stories in 2025 with a team of 3 to 4, and have surpassed 1,000 so far in 2026 with 3 staff and 2 contractors.",
+                 "**Measurable output:** We completed 773 work items in 2025 with a team of 3 to 4, and have surpassed 1,000 so far in 2026 with 3 staff and 2 contractors.",
                  "**Clear ownership:** Defined responsibilities made it possible to hold my direct reports accountable to agreed commitments.",
-                 "**Reliable upward communication:** I gained a consistent way to report progress and resource needs to my supervisor across all 9 programs.",
+                 "**Reliable upward communication:** I gained a consistent way to report progress and resource needs to my supervisor across all nine programs.",
              ],
              "next": [
                  "Expand tagging to categorize work by program and type.",
                  "Align projects with estimated time and effort.",
-                 "Introduce story points to estimate and balance workload across the team",
+                 "Introduce story points to estimate and balance workload across the team.",
              ],
              "sample": {
                  "heading": "Example",
                  "blocks": [
-                     {"note": "I built this dashboard in early 2026 to show leadership everything our team delivered in 2025. I worked on those 773 completed cards alongside my team, not just managed them, and the dashboard gave all of us the recognition we earned."},
+                     {"note": "I built this dashboard in early 2026 to show leadership everything our team delivered in 2025. I worked on those 773 work items alongside my team, not just managed them, and the dashboard gave all of us the recognition we earned."},
                      {"image": "/static/img/projects/dashboard-2025.png",
                       "alt": "Annual Data Team Delivery Dashboard showing 773 completed cards in 2025, with monthly totals rising from 54 in January to 84 in December"},
                  ],

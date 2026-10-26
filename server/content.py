@@ -196,7 +196,7 @@ PROJECTS = {
              },
          }},
         {"title": "Creating Cross-Program Visibility for a New Department",
-         "summary": "I built a central project board, introduced sprint planning, and automated recurring workflows. The team closed 773 work items in 2025 and 1,000+ in 2026 through September.",
+         "summary": "I built a central project board, introduced sprint planning, and automated intake of work requests and EHR tickets, enabling the team to close 773 work items in 2025 and 1,000+ through September 2026.",
          "url": "/projects/cross-program-visibility/",
          "tools": ["Google Sheets", "Trello"],
          "case_study": {

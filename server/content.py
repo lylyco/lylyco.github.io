@@ -46,7 +46,7 @@ ABOUT = {
     "title_emphasis": "Leader.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "For more than ten years, I have built my career at the intersection of business "
+        "For more than 8 years, I have built my career at the intersection of business "
         "operations, data, and technology, earning **five promotions over eight years**. "
         "My experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",

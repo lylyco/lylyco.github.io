@@ -47,7 +47,7 @@ ABOUT = {
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
         "For more than 8 years, I have built my career at the intersection of business "
-        "operations, data, and technology, earning **five promotions over eight years**. "
+        "operations, data, and technology, earning **four promotions** along the way.",
         "My experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",
         "I began on the business side of eCommerce, where I was already solving problems, "

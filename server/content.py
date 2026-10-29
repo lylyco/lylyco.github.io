@@ -288,7 +288,7 @@ RECOMMENDATIONS = {
 CONTACT = {
     "title": "Optimize what exists.",
     "title_emphasis": "Build what's next.",
-    "body": "Open to new opportunities across operations, systems, product, and adjacent functions, as well as select consulting engagements. Let's talk.",
+    "body": "Open to roles in Business Systems, Technical Operations, and Product Operations, as well as select consulting engagements focused on systems implementation and workflow improvement.",
 }
 
 FOOTER = {

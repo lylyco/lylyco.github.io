@@ -6,12 +6,12 @@ PROFILE = {
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Experience across eCommerce, FinTech, EHR, CRM, and compliance "
-        "systems. Curious and proactive, I am a natural initiator and problem "
-        "solver. I build for real users, spot gaps across data, teams, "
-        "processes, and systems, and address them at the root. I lead teams "
-        "and collaborate cross-functionally to turn complex challenges into "
-        "practical solutions and get things done."
+        "Business systems and operations professional with experience across "
+        "eCommerce, payments and subscription billing, EHR, CRM, and compliance "
+        "systems. I troubleshoot issues to the root cause, manage the platforms "
+        "teams depend on, and spot gaps across data, processes, and systems "
+        "before they become problems. I build for real users and work across "
+        "teams to turn complex challenges into practical fixes."
     ),
     "industries_line": (
         "Industries under my belt: retail, distilled spirits, payment processing, "
@@ -41,20 +41,21 @@ PROFILE = {
 }
 
 ABOUT = {
-    "title": "Operator. Strategist. Creative",
-    "title_emphasis": "Leader.",
+    "title": "Systems Thinker.",
+    "title_emphasis": "Creative Builder.",
     # **double asterisks** mark bold phrases; the frontend renders them safely.
     "paragraphs": [
-        "For more than 8 years, I have built my career at the intersection of business "
+        "For more than 10 years, I have built my career at the intersection of business "
         "operations, data, and technology, earning **four promotions** along the way. My "
         "experience spans retail, distilled spirits, payment processing, subscription "
         "billing, and social and clinical services.",
-        "I began on the business side of eCommerce, where I was already solving problems, "
-        "supporting users and tracking down platform issues. That "
-        "work led me into QA for ONEHOPE Wine's commerce platform, where I traced issues to "
-        "their root cause and learned not only how systems break, but why. That experience "
-        "became the foundation for how I approach technical and operational problems.",
-        "Most recently, as ACE's first Data Operations Manager II, I took on product, systems, and technical "
+        "I began on the business side of eCommerce at Fornia Apparel and Nordstrom Rack | "
+        "HauteLook, building product listings, managing samples, and resolving customer issues. "
+        "At ONEHOPE Wine, I kept solving problems, supporting users and tracking down platform "
+        "issues, which led me into QA for its commerce platform. There I traced issues to their "
+        "root cause and learned not only how systems break, but why. That experience became the "
+        "foundation for how I approach technical and operational problems.",
+        "Most recently, as ACE's first Data Operations Manager, later promoted to Manager II, I took on product, systems, and technical "
         "operations responsibilities while leading an intern, two Data Support Specialists, and two "
         "engineering contractors supporting a newly migrated EHR platform across nine social "
         "and clinical service programs. I established formal scoping, strategic planning, and "
@@ -67,7 +68,7 @@ ABOUT = {
 PLATFORMS = [
     {"id": "ecom", "name": "eCommerce", "blurb": "Storefronts, catalogs, and order flow from cart to fulfillment.",
      "connects_to": ["pay", "wms", "crm", "comp"]},
-    {"id": "pay", "name": "Fintech", "blurb": "Payment processing, subscription billing, and recurring revenue.",
+    {"id": "pay", "name": "Payments", "blurb": "Payment processing, subscription billing, and recurring revenue.",
      "connects_to": ["ecom", "comp"]},
     {"id": "wms", "name": "WMS", "blurb": "Warehouse management and inventory operations.",
      "connects_to": ["ecom","comp"]},
@@ -84,7 +85,7 @@ EXPERTISE = [
     {"title": "Business Systems",
      "body": "I manage user roles, access, and configuration across platforms, and translate between business teams and engineering."},
     {"title": "Troubleshooting & Root Cause",
-     "body": "I identify root causes and resolve issues independently. When engineering or vendor support is needed, I provide clear, actionable tickets with reproducible steps ready to act on."},
+     "body": "I identify root causes and resolve what I can on my own. When engineering or vendor support is needed, I hand off clear tickets with reproducible steps."},
     {"title": "Reporting & Analytics",
      "body": "I build SQL reports with data quality checks built in, so teams can trust the numbers and act on them quickly."},
     {"title": "End-User Experience",
@@ -92,7 +93,7 @@ EXPERTISE = [
     {"title": "Product Ownership",
      "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery, then monitor adoption and fix issues after launch."},
     {"title": "People Leadership",
-     "body": "I listen first, collaborate openly, build morale that lasts, and coach where needed. e.g., At ACE, I led specialists, an intern, engineering contractors, and managed our EHR vendor relationship."},
+     "body": "I listen first, collaborate openly, and coach where needed. At ACE, I led specialists, an intern, and engineering contractors, and managed our EHR vendor relationship."},
 ]
 
 # Each project links to its own page at "url". build.py creates that page: the full
@@ -100,7 +101,7 @@ EXPERTISE = [
 PROJECTS = {
     "title": "Problems I've",
     "title_emphasis": "solved.",
-    "intro": "I joined as the first Data Operations Manager II in a new department. I introduced the tools, processes, and ways of working that helped our teams collaborate and gave everyone clearer visibility into our work.",
+    "intro": "I joined as the first Data Operations Manager in a new department. I introduced the tools, processes, and ways of working that helped our teams collaborate and gave everyone clearer visibility into our work.",
     "items": [
         {"title": "Closing the Compliance Gap on Client Assessments",
          "summary": "I audited the data, assigned clear ownership, and automated compliance reports across seven programs, raising assessment completion from under 50% to 90%.",
@@ -143,12 +144,12 @@ PROJECTS = {
                  ],
              },
          }},
-        {"title": "Redesigning a Core Service and Building the Guidance Behind It",
-         "summary": "I led the redesign of the form and its guidance, raising data accuracy from roughly 25% to 75%.",
+        {"title": "Redesigning the Care Management Form and the Guidance Behind It",
+         "summary": "The form relied on open-ended fields that produced inconsistent, hard-to-report data. I led the redesign with structured answer options and clear staff guidance, raising data accuracy from roughly 25% to 75%.",
          "url": "/projects/care-management-redesign/",
          "tools": ["EHR Configuration", "Google Sheets", "Navicat", "Notion", "SQL"],
          "case_study": {
-             "heading": "Redesigning a core service",
+             "heading": "Redesigning the Care Management form",
              "heading_emphasis": "and the guidance behind it.",
              "problem": "When I joined, the organization was in the middle of moving from Apricot to a new EHR system. Nine programs were operating without a dedicated data manager, which meant no one owned data quality, no audits were taking place, and forms had grown without a clear structure. Staff were not used to entering data into a centralized internal database, and most forms relied on open-ended fields that produced inconsistent, hard-to-report information. Care Management (the organization's equivalent of Case Management) needed a full overhaul, and there was no established process for scoping, planning, or defining requirements. There was also no reference material explaining how the service worked, so staff had little guidance on what to document or why.",
              # A {"group": "..."} entry starts a labeled group; numbering continues across groups.

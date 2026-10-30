@@ -159,7 +159,7 @@
           ? `<a class="project-link" href="${esc(pr.url)}">${esc(pr.title)}</a>`
           : `<span class="project-link is-soon">${esc(pr.title)}</span>`}</h3>
         <p>${esc(pr.summary)}</p>
-        ${pr.tools.length ? `<p class="project-tools">${pr.tools.map((t, i) => `<span>${i ? '· ' : ''}${esc(t)}</span>`).join(' ')}</p>` : ''}
+        ${pr.tools.length ? `<p class="project-tools">${pr.tools.map((t, i) => `<span>${esc(t)}${i < pr.tools.length - 1 ? ' ·' : ''}</span>`).join(' ')}</p>` : ''}
         ${pr.url ? '' : '<span class="project-soon">Coming soon</span>'}
       </article>`).join('');
 

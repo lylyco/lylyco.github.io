@@ -6,7 +6,7 @@ PROFILE = {
     "headline_lead": "Adaptive by nature.",
     "headline_emphasis": "Problem solver by instinct.",
     "summary": (
-        "Business systems and operations professional with experience across "
+        "Business systems and technical operations professional with experience across "
         "eCommerce, payments and subscription billing, EHR, CRM, and compliance "
         "systems. I troubleshoot issues to the root cause, manage the platforms "
         "teams depend on, and spot gaps across data, processes, and systems "
@@ -81,19 +81,19 @@ PLATFORMS = [
 ]
 
 EXPERTISE = [
-    # Top row: the systems. Bottom row: the people and product.
+    # Order: technical foundation first, then users and leadership.
     {"title": "Business Systems",
      "body": "I manage user roles, access, and configuration across platforms, and translate between business teams and engineering."},
     {"title": "Troubleshooting & Root Cause",
      "body": "I identify root causes and resolve what I can on my own. When engineering or vendor support is needed, I hand off clear tickets with reproducible steps."},
+    {"title": "Requirements & Delivery",
+     "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery, then monitor adoption and fix issues after launch."},
     {"title": "Reporting & Analytics",
      "body": "I build SQL reports with data quality checks built in, so teams can trust the numbers and act on them quickly."},
     {"title": "End-User Experience",
      "body": "Users aren’t a footnote. I put myself in their shoes and build for how each role actually works."},
-    {"title": "Product Ownership",
-     "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery, then monitor adoption and fix issues after launch."},
     {"title": "People Leadership",
-     "body": "I listen first, collaborate openly, and coach where needed. At ACE, I led specialists, an intern, and engineering contractors, and managed our EHR vendor relationship."},
+     "body": "I listen first and coach where needed. At ACE, I led specialists, an intern, and engineering contractors, managed our EHR vendor relationship, and guided stakeholders through system changes."},
 ]
 
 # Each project links to its own page at "url". build.py creates that page: the full
@@ -293,7 +293,7 @@ CONTACT = {
 }
 
 FOOTER = {
-    "credit": "Written and directed by Lydia Cortez. Built with Claude to my spec using FastAPI and Strawberry GraphQL.",
+    "credit": "Directed by Lydia Cortez. Written and built with Claude to my spec using FastAPI and Strawberry GraphQL.",
     "source_label": "View source on GitHub",
     "source_url": "https://github.com/lylyco/lylyco.github.io",
     "legal": "© 2026 Lydia Cortez · Last updated October 2026",

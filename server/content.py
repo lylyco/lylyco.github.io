@@ -101,7 +101,7 @@ EXPERTISE = [
 PROJECTS = {
     "title": "Problems I've",
     "title_emphasis": "solved.",
-    "intro": "I joined as the first Data Operations Manager in a new department. I introduced the tools, processes, and ways of working that helped our teams collaborate and gave everyone clearer visibility into our work.",
+    "intro": "I joined as the first Data Operations Manager in a new department, with no existing processes for data quality, reporting, or tracking work. These projects show how I built them from the ground up.",
     "items": [
         {"title": "Closing the Compliance Gap on Client Assessments",
          "summary": "I audited the data, assigned clear ownership, and automated compliance reports across seven programs, raising assessment completion from under 50% to 90%.",

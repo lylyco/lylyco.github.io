@@ -17,16 +17,15 @@ PROFILE = {
         "Industries under my belt: retail, distilled spirits, payment processing, "
         "subscription billing, and social and clinical services."
     ),
-    # Shown as two rows of four on wide screens (split in half, in this order),
-    # and under your name beside the photo in About.
+    # Shown as two rows of four on wide screens (split in half, in this order).
     "tags": [
-        "Business Operations",
-        "Process Improvement",
+        "Business Systems",
+        "Troubleshooting",
+        "Systems Administration",
         "Quality Assurance",
-        "Requirements",
+        "Process Improvement",
         "Reporting & Analytics",
         "SQL",
-        "Systems Strategy",
         "Team Leadership",
     ],
     "email": "cortez0715@gmail.com",
@@ -81,18 +80,19 @@ PLATFORMS = [
 ]
 
 EXPERTISE = [
-    {"title": "Technical & Systems Operations",
-     "body": "I own complex platforms end to end, from requirements through configuration to rollout. I catch failure points early and build systems that hold up as the business grows."},
-    {"title": "Product Ownership",
-     "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery for a platform serving nine programs."},
-    {"title": "Business Strategy",
-     "body": "I find operational inefficiencies, size the opportunity, and build the business case for change."},
-    {"title": "Data & Reporting Infrastructure",
-     "body": "I design reporting pipelines, protect data integrity, and give teams the visibility to make good decisions quickly."},
+    # Top row: the systems. Bottom row: the people and product.
+    {"title": "Business Systems",
+     "body": "I manage user roles, access, and configuration across platforms, and translate between business teams and engineering."},
+    {"title": "Troubleshooting & Root Cause",
+     "body": "I identify root causes and resolve issues independently. When engineering or vendor support is needed, I provide clear, actionable tickets with reproducible steps ready to act on."},
+    {"title": "Reporting & Analytics",
+     "body": "I build SQL reports with data quality checks built in, so teams can trust the numbers and act on them quickly."},
     {"title": "End-User Experience",
-     "body": "Users aren't a footnote. I bring their perspective into every operational and product decision, especially in multi-role environments."},
+     "body": "Users aren’t a footnote. I put myself in their shoes and build for how each role actually works."},
+    {"title": "Product Ownership",
+     "body": "I drive business requirements, stakeholder alignment, sprint planning, and delivery, then monitor adoption and fix issues after launch."},
     {"title": "People Leadership",
-     "body": "I listen first, collaborate openly, and build morale that lasts. Strong teams keep delivering long after a single project ends."},
+     "body": "I listen first, collaborate openly, build morale that lasts, and coach where needed. e.g., At ACE, I led specialists, an intern, engineering contractors, and managed our EHR vendor relationship."},
 ]
 
 # Each project links to its own page at "url". build.py creates that page: the full
